@@ -1,25 +1,24 @@
-/**
- * Created by zhanghuanxin on 2017-11-16.
- */
+package front_end.view_information;
+
+import front_end.mainPage;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.List;
 
-public class product_information extends JFrame
+public class salary extends JFrame
 {
 
     private static final int width = 450;
-    private static final int height = 350;
+    private static final int height = 400;
 
-    public product_information(List<List> list)
+    public salary(List<List> list)
     {
+        //headers for the table
         String[] columns = new String[] {
-                "product id", "price", "stock amount", "return?", "product type"
+                "tier", "frequency", "bonus"
         };
-
+        //actual data for the table in a 2d array
         Object[][] data = new Object[list.size()][list.get(0).size()];
 
         for (int y = 0; y < list.size(); y++)
@@ -27,13 +26,12 @@ public class product_information extends JFrame
             data[y][0] = list.get(y).get(0);
             data[y][1] = list.get(y).get(1);
             data[y][2] = list.get(y).get(2);
-            data[y][3] = list.get(y).get(3);
-            data[y][4] = list.get(y).get(4);
-
         }
+
+        //create table with data
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
-        JButton back = new JButton("Bact to main page");
+        JButton back = new JButton("Back to main page");
 
         panel.add(back);
 
@@ -44,22 +42,16 @@ public class product_information extends JFrame
         this.add(table, BorderLayout.CENTER);
         this.add(panel,BorderLayout.SOUTH);
 
-        //add the table to the frame
-        this.add(new JScrollPane(table));
-
-        this.setTitle("Product");
+        this.setTitle("Salary");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
         this.setLocationRelativeTo(null);
         this.setSize(width,height);
         this.setVisible(true);
 
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                setVisible(false);
-                new mainPage();
-            }
+        back.addActionListener(e -> {
+            setVisible(false);
+            new mainPage();
         });
     }
 }

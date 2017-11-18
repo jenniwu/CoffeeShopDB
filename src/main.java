@@ -1,4 +1,4 @@
-import oracleDBA.OracleManager;
+import front_end.login;
 
 /**
  * Created by user on 8/30/2017.
@@ -6,9 +6,9 @@ import oracleDBA.OracleManager;
 public class main {
        public static void main(String[] args){
 
-        new mainPage();
-           OracleManager oraManager = new OracleManager();
-           oraManager.buildConnection();
+        new login();
+        //   OracleManager oraManager = new OracleManager();
+        //   oraManager.buildConnection();
 
     }
 }
