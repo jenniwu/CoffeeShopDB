@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class mainPage {
     private static final int width = 450;
-    private static final int height = 700;
+    private static final int height = 650;
 
     private JFrame frame;
     private JPanel panel;
