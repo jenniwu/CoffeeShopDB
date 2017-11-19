@@ -13,6 +13,9 @@ public class ProductOra {
         conn = oraMgr.getConnection();
     }
 
+    /** gets all rows in Product table
+     * @return      list of ProductInfo objects
+     */
     public List<ProductInfo> getProducts() {
         List<ProductInfo> ret = new ArrayList<>();
 
@@ -36,7 +39,13 @@ public class ProductOra {
         return ret;
     }
 
-    public void addProduct(int pID, int price, int stockAmount, boolean returnable, String pType) {
+    /** adds new product to Product table
+     * @param price             price of product
+     * @param stockAmount       stock amount of product
+     * @param returnable        whether the product is returnable
+     * @param pType             type of product
+     */
+    public void addProduct(int price, int stockAmount, boolean returnable, String pType) {
         try {
             PreparedStatement ps = conn.prepareStatement("insert into Product values (?,?,?,?)");
             ps.setInt(1, price);
@@ -52,6 +61,11 @@ public class ProductOra {
         }
     }
 
+    /** checks whether ptype for the specified order amount is available in stock
+     * @param orderAmount   the amount to order
+     * @param pType         the type of product to order
+     * @return              boolean to indicate whether order amount is feasible
+     */
     public boolean isAvailable(int orderAmount, String pType) {
         try {
             Statement st = conn.createStatement();
@@ -68,6 +82,10 @@ public class ProductOra {
         return true;
     }
 
+    /** updates the stock amount of specified product
+     * @param deltaAmount       change to be made to the stock amount
+     * @param pType             type of product to update
+     */
     public void updateStock(int deltaAmount, String pType) {
         try {
             Statement st = conn.createStatement();

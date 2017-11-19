@@ -29,12 +29,11 @@ drop table Product;
 commit;
 
 create table Product
-  (pid int not null,
-  price int not null,
+  (price int not null,
   stockAmount int not null,
   returnableFlag varchar(10) not null,
   ptype varchar(30) not null,
-  primary key (pid));
+  primary key (ptype));
 grant select on Product to public;
 
 
