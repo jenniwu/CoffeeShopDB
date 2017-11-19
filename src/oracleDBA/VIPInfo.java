@@ -3,25 +3,18 @@
  */
 package oracleDBA;
 
-import org.omg.PortableInterceptor.INACTIVE;
-
 import java.util.Date;
 
 public class VIPInfo {
-
-/*	phone	         email		        loyalty points           birthday       balance        VIP#
-	-------------------- -------------------- ------------------------------------------------------------
-	6047796888 	     huanxin@11.com 		 2                   1998-11-21      2              1
-	*/
 
     String PHONE;
     String EMAIL;
     int  LOYALTYPOINTS;
     Date BIRTHDAY;
     int BALANCE;
-    String VIPNUM;
+    int VIPNUM;
 
-    public VIPInfo(String phone, String email, int loyapoints, Date birthday, int balance, String vipnum){
+    public VIPInfo(String phone, String email, int loyapoints, Date birthday, int balance, int vipnum){
         this.PHONE = phone;
         this.EMAIL  = email;
         this.LOYALTYPOINTS  = loyapoints;
@@ -48,7 +41,7 @@ public class VIPInfo {
     public int getBALANCE(){
         return BALANCE;
     }
-    public String getVIPNUM(){
+    public int getVIPNUM(){
         return VIPNUM;
     }
 
@@ -70,15 +63,10 @@ public class VIPInfo {
     public void setBALANCE(int b){
          BALANCE=b;
     }
-    public void setVIPNUM(String   v){
+    public void setVIPNUM(int v){
          VIPNUM=v;
     }
 
-    public void viewInfo() {
-        // TODO Auto-generated method stub
-        System.out.println(PHONE + " " + EMAIL + " " + LOYALTYPOINTS + " " + BIRTHDAY);
-
-    }
 
 }
 

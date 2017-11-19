@@ -42,7 +42,7 @@ public class SalaryOra {
     }
 
     public void InsertSalary(SalaryInfo s,int tier , String  frequency , int bonus){
-        String sqlCommand1 = "insert into Employee values("
+        String sqlCommand1 = "insert into Salary values("
                 +  tier  + ", "
                 +  frequency + ", "
                 + bonus + ", "

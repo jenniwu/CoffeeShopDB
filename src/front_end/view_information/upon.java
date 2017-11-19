@@ -3,6 +3,7 @@ package front_end.view_information; /**
  */
 
 import front_end.mainPage;
+import oracleDBA.uponInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,20 +16,19 @@ public class upon extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public upon(List<List> list)
+    public upon(List<uponInfo> list)
     {
         //headers for the table
         String[] columns = new String[] {
                 "transaction id","product id"
         };
         //actual data for the table in a 2d array
-        Object[][] data = new Object[list.size()][list.get(0).size()];
+        Object[][] data = new Object[list.size()][2];
 
-        for (int x = 0; x < list.size(); x++)
+        for (int y = 0; y < list.size(); y++)
         {
-            for(int y = 0; y < list.get(0).size(); y++){
-                data[x][y] = list.get(x).get(y);
-            }
+            data[y][0] = list.get(y).getTid();
+            data[y][1] = list.get(y).getPid();
         }
 
         //create table with data

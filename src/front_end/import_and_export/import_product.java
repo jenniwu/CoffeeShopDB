@@ -93,6 +93,7 @@ public class import_product {
                 invalid.setForeground(Color.red);
                 return;
             }
+
             frame.setVisible(false);
             new mainPage();
         });

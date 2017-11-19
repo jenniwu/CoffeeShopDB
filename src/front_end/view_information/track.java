@@ -1,8 +1,7 @@
-package front_end.view_information; /**
- * Created by zhanghuanxin on 2017-11-16.
- */
+package front_end.view_information;
 
 import front_end.mainPage;
+import oracleDBA.trackInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,25 +9,22 @@ import java.util.List;
 
 public class track extends JFrame
 {
-    // TODO: table makes only have one attribute, I think we need to create view and then do rating
-
     private static final int width = 450;
     private static final int height = 400;
 
-    public track(List<List> list)
+    public track(List<trackInfo> list)
     {
         //headers for the table
         String[] columns = new String[] {
                 "product id","phone","mid"
         };
-        //actual data for the table in a 2d array
-        Object[][] data = new Object[list.size()][list.get(0).size()];
+        Object[][] data = new Object[list.size()][3];
 
-        for (int x = 0; x < list.size(); x++)
+        for (int y = 0; y < list.size(); y++)
         {
-            for(int y = 0; y < list.get(0).size(); y++){
-                data[x][y] = list.get(x).get(y);
-            }
+            data[y][0] = list.get(y).getPid();
+            data[y][1] = list.get(y).getSphone();
+            data[y][2] = list.get(y).getMmid();
         }
 
         //create table with data

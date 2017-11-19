@@ -18,18 +18,17 @@ public class product extends JFrame
     public product(List<ProductInfo> list)
     {
         String[] columns = new String[] {
-                "product id", "price", "stock amount", "return?", "product type"
+                "product type", "price", "stock amount", "return?"
         };
 
-        Object[][] data = new Object[list.size()][5];
+        Object[][] data = new Object[list.size()][4];
 
         for (int x = 0; x < list.size(); x++)
         {
-            data[x][0] = list.get(x).getpID();
+            data[x][0] = list.get(x).getProductType();
             data[x][1] = list.get(x).getPrice();
             data[x][2] = list.get(x).getStockAmount();
             data[x][3] = list.get(x).getReturnable();
-            data[x][4] = list.get(x).getProductType();
 
         }
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));

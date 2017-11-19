@@ -184,25 +184,8 @@ public class mainPage {
 
         VIPInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("778-681-4862");
-            list1.add("anna@gmail.com");
-            list1.add("21");
-            list1.add("1996-1-11");
-            list1.add("100");
-            list1.add("1234");
-            List list2 = new ArrayList();
-            list2.add("778-674-5692");
-            list2.add("ben@gmail.com");
-            list2.add("50");
-            list2.add("1995-1-21");
-            list2.add("10");
-            list2.add("3077");
-            list.add(list1);
-            list.add(list2);
-            new vip(list);
+            VIPOra vipOra = new VIPOra();
+            new vip(vipOra.getVIPs());
         });
         transactionInformation.addActionListener(e -> {
             frame.setVisible(false);
@@ -226,76 +209,33 @@ public class mainPage {
         });
         productInformation.addActionListener(e -> {
             frame.setVisible(false);
-            ProductOra temp = new ProductOra();
-//             TODO:  mock object need to be replaced
-//            List list = new ArrayList();
-//            ProductInfo temp2 = new ProductInfo(123456,20,10,false,"coffee");
-//            list.add(temp2);
-//            new product(list);
-
-//            List<ProductInfo> curr = temp.getProducts();
-//            System.out.println(curr);
-            new product(temp.getProducts());
+            // TODO: only view Salary information
+            ProductOra productOra = new ProductOra();
+            new product(productOra.getProducts());
         });
         supplierInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("778-693-3079");
-            list1.add("Swagger");
-            List list2 = new ArrayList();
-            list2.add("778-803-5783");
-            list2.add("Malcom");
-            list.add(list1);
-            list.add(list2);
-            new supplier(list);
+            // TODO: only view Salary information
+            SupplierOra supplierOra = new SupplierOra();
+            new supplier(supplierOra.getSuppliers());
         });
         managerInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("123");
-            list1.add("Knorr");
-            List list2 = new ArrayList();
-            list2.add("206");
-            list2.add("Mike");
-            list.add(list1);
-            list.add(list2);
-            new manager(list);
+            // TODO: only view Salary information
+            ManagerOra managerOra = new ManagerOra();
+            new manager(managerOra.getManagers());
         });
         employeeInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("1234");
-            list1.add("A");
-            list1.add("2");
-            list1.add("stuff");
-            list1.add("123");
-            List list2 = new ArrayList();
-            list2.add("2234");
-            list2.add("B");
-            list2.add("1");
-            list2.add("super stuff");
-            list2.add("123");
-            list.add(list1);
-            list.add(list2);
-            new employee(list);
+            // TODO: only view Salary information
+            EmployeeOra employeeOra = new EmployeeOra();
+            new employee(employeeOra.getEmployees());
         });
         salaryInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-
-//            List<SalaryInfo> temp = new ArrayList<>();
-//            SalaryInfo s1 = new SalaryInfo(1,"monthly",100);
-//            temp.add(s1);
-//            new salary(temp);
-
-            SalaryOra so = new SalaryOra();
-            new salary(so.getSalaries());
+            // TODO: only view salary information
+            SalaryOra salaryOra = new SalaryOra();
+            new salary(salaryOra.getSalaries());
         });
         makesInformation.addActionListener(e -> {
             frame.setVisible(false);
@@ -311,33 +251,13 @@ public class mainPage {
         });
         uponInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("12345");
-            list1.add("123456");
-            List list2 = new ArrayList();
-            list2.add("23456");
-            list2.add("234567");
-            list.add(list1);
-            list.add(list2);
-            new upon(list);
+            uponOra upon = new uponOra();
+            new upon(upon.getUpons());
         });
         trackInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("123456");
-            list1.add("778-893-3079");
-            list1.add("123");
-            List list2 = new ArrayList();
-            list2.add("234567");
-            list2.add("778-893-3079");
-            list2.add("123");
-            list.add(list1);
-            list.add(list2);
-            new track(list);
+            trackOra t = new trackOra();
+            new track(t.getTracks());
         });
     }
 }

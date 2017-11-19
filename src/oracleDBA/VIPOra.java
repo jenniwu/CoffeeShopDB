@@ -1,37 +1,49 @@
 package oracleDBA;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 
 public class VIPOra {
 
     OracleManager oracleManager;
+    Connection conn;
 
     public VIPOra(){
-
-        oracleManager = new OracleManager();
+        oracleManager = OracleManager.getInstance();
+        conn = oracleManager.getConnection();
     }
 
 
 
-    public VIPInfo getReservation(String resID) {
-        VIPInfo res = null;
-        oracleManager.getConnection();
-        ResultSet rs = oracleManager.query("select * from VIP ");
-        //RESID FROMDATE TODATE   FIRSTNAME	LASTNAME PHONENUM RTNAME
-        try {
-            while(rs.next())
-            {
-                res = new VIPInfo(res.getPHONE(),res.getEMAIL(),res.getLOYALTYPOINTS(),res.getBIRTHDAY(),res.getBALANCE(),res.getVIPNUM());
+    public List<VIPInfo> getVIPs() {
+        List<VIPInfo> ret = new ArrayList<>();
 
+        try {
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery("select * from Vip");
+
+            while(rs.next()) {
+                String phone = rs.getString("phone");
+                String email = rs.getString("email");
+                int loyaltyPoints = rs.getInt("loyaltyPoints");
+                Date birthday = rs.getDate("birthday");
+                int dollarBalance = rs.getInt("dollarBalance");
+                int eid = rs.getInt("eid");
+
+                VIPInfo vipInfo = new VIPInfo(phone,email,loyaltyPoints,birthday,dollarBalance,eid);
+                ret.add(vipInfo);
             }
         } catch (SQLException e) {
-
             e.printStackTrace();
         }
 
-        return res;
+        return ret;
     }
 
 }

@@ -3,6 +3,7 @@ package front_end.view_information; /**
  */
 
 import front_end.mainPage;
+import oracleDBA.VIPInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,20 +15,24 @@ public class vip extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public vip(List<List> list)
+    public vip(List<VIPInfo> list)
     {
         //headers for the table
         String[] columns = new String[] {
                 "phone", "email", "loyalty points", "birthday", "balance", "VIP#"
         };
         //actual data for the table in a 2d array
-        Object[][] data = new Object[list.size()][list.get(0).size()];
+        Object[][] data = new Object[list.size()][6];
 
         for (int x = 0; x < list.size(); x++)
         {
-            for(int y = 0; y < list.get(0).size(); y++){
-                data[x][y] = list.get(x).get(y);
-            }
+            data[x][0] = list.get(x).getPHONE();
+            data[x][1] = list.get(x).getEMAIL();
+            data[x][2] = list.get(x).getLOYALTYPOINTS();
+            data[x][3] = list.get(x).getBIRTHDAY();
+            data[x][4] = list.get(x).getBALANCE();
+            data[x][5] = list.get(x).getVIPNUM();
+
         }
 
         //create table with data

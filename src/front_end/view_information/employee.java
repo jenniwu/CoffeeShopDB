@@ -3,6 +3,7 @@ package front_end.view_information; /**
  */
 
 import front_end.mainPage;
+import oracleDBA.EmployeeInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,20 +15,23 @@ public class employee extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public employee(List<List> list)
+    public employee(List<EmployeeInfo> list)
     {
         //headers for the table
         String[] columns = new String[] {
-                "employee id", "name", "tier", "position", "emid"
+                "employee id", "name", "tier", "position", "manager id"
         };
         //actual data for the table in a 2d array
-        Object[][] data = new Object[list.size()][list.get(0).size()];
+        Object[][] data = new Object[list.size()][5];
 
         for (int x = 0; x < list.size(); x++)
         {
-            for(int y = 0; y < list.get(0).size(); y++){
-                data[x][y] = list.get(x).get(y);
-            }
+            data[x][0] = list.get(x).getEID();
+            data[x][1] = list.get(x).getENAME();
+            data[x][2] = list.get(x).getTIER();
+            data[x][3] = list.get(x).getPOSITION();
+            data[x][4] = list.get(x).getMMID();
+
         }
 
         //create table with data
