@@ -45,12 +45,13 @@ public class ProductOra {
      * @param returnable        whether the product is returnable
      * @param pType             type of product
      */
-    public void addProduct(int price, int stockAmount, boolean returnable, String pType) {
+    public void addProduct(int price, int stockAmount, String returnable, String pType) {
+        //todo stretch goal: add to UI only if we finish all other queries
         try {
             PreparedStatement ps = conn.prepareStatement("insert into Product values (?,?,?,?)");
             ps.setInt(1, price);
             ps.setInt(2, stockAmount);
-            ps.setBoolean(3, returnable);
+            ps.setString(3, returnable);
             ps.setString(4, pType);
             ps.executeUpdate();
             conn.commit();

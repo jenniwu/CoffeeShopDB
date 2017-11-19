@@ -1,20 +1,18 @@
 package oracleDBA;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 public class EmployeeOra {
 
     OracleManager oracleManager;
     Connection conn;
+    Random rand;
 
-    public EmployeeOra(){
-
+    public EmployeeOra() {
         oracleManager = OracleManager.getInstance();
         conn = oracleManager.getConnection();
     }
@@ -43,13 +41,35 @@ public class EmployeeOra {
         return ret;
     }
 
-    public void insertEmployee(EmployeeInfo e, int eid , String ename , String position ,  int tier , int mmid){
-        String sqlCommand1 = "insert into Employee values("
-                + eid  + ", "
-                + ename + ", "
-                + position + ", "
-                + tier + ", "
-                + mmid+  "'" + ")";
-        oracleManager.execute(sqlCommand1);
+    public void insertEmployee(String ename, String position,  int tier, int mmid) {
+        rand = new Random();
+        int eid = rand.nextInt(9999);
+        if (!isValidEID(eid)) {
+            try {
+                PreparedStatement ps = conn.prepareStatement("insert into Employee values (?,?,?,?,?)");
+                ps.setInt(1, eid);
+                ps.setString(2, ename);
+                ps.setString(3, position);
+                ps.setInt(4, tier);
+                ps.setInt(5, mmid);
+                ps.executeUpdate();
+                conn.commit();
+                ps.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public boolean isValidEID(int eid) {
+        try {
+            Statement st = conn.createStatement();
+            String query = "select 1 from Employee where eid = " + eid;
+            ResultSet rs = st.executeQuery(query);
+            if (!rs.next()) return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
     }
 }
