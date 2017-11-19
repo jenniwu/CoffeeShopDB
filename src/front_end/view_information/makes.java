@@ -3,6 +3,7 @@ package front_end.view_information; /**
  */
 
 import front_end.mainPage;
+import oracleDBA.makesInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,20 +15,19 @@ public class makes extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public makes(List<List> list)
+    public makes(List<makesInfo> list)
     {
         //headers for the table
         String[] columns = new String[] {
                 "rating"
         };
         //actual data for the table in a 2d array
-        Object[][] data = new Object[list.size()][list.get(0).size()];
+        Object[][] data = new Object[list.size()][1];
 
         for (int x = 0; x < list.size(); x++)
         {
-            for(int y = 0; y < list.get(0).size(); y++){
-                data[x][y] = list.get(x).get(y);
-            }
+            data[x][0] = list.get(x).getRating();
+
         }
 
         //create table with data

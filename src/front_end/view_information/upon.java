@@ -45,7 +45,7 @@ public class upon extends JFrame
         this.add(table, BorderLayout.CENTER);
         this.add(panel,BorderLayout.SOUTH);
 
-        this.setTitle("Makes");
+        this.setTitle("Upon");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
         this.setLocationRelativeTo(null);

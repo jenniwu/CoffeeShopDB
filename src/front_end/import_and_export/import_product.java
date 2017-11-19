@@ -93,6 +93,8 @@ public class import_product {
                 invalid.setForeground(Color.red);
                 return;
             }
+//            ProductOra productOra = new ProductOra();
+//            if(productOra.isAvailable(a,))
 
             frame.setVisible(false);
             new mainPage();

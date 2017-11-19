@@ -3,6 +3,7 @@ package front_end.view_information; /**
  */
 
 import front_end.mainPage;
+import oracleDBA.CustomerInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,20 +15,21 @@ public class customer extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public customer(List<List> list)
+    public customer(List<CustomerInfo> list)
     {
         //headers for the table
         String[] columns = new String[] {
                 "customer id", "name", "phone"
         };
         //actual data for the table in a 2d array
-        Object[][] data = new Object[list.size()][list.get(0).size()];
+        Object[][] data = new Object[list.size()][3];
 
         for (int x = 0; x < list.size(); x++)
         {
-            for(int y = 0; y < list.get(0).size(); y++){
-                data[x][y] = list.get(x).get(y);
-            }
+            data[x][0] = list.get(x).getCid();
+            data[x][1] = list.get(x).getCname();
+            data[x][2] = list.get(x).getPhone();
+
         }
 
         //create table with data
@@ -41,7 +43,7 @@ public class customer extends JFrame
         this.add(table, BorderLayout.CENTER);
         this.add(panel,BorderLayout.SOUTH);
 
-        this.setTitle("Employee");
+        this.setTitle("Customer");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
         this.setLocationRelativeTo(null);

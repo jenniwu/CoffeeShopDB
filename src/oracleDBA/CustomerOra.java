@@ -26,7 +26,7 @@ public class CustomerOra {
 
             while (rs.next()) {
                 int cid = rs.getInt("cid");
-                String sname = rs.getString("sname");
+                String sname = rs.getString("cname");
                 String phone = rs.getString("phone");
 
                 CustomerInfo ci = new CustomerInfo(cid, sname, phone);

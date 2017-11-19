@@ -8,8 +8,6 @@ import front_end.view_information.*;
 import oracleDBA.*;
 
 import javax.swing.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by user on 11/16/2017.
@@ -167,45 +165,22 @@ public class mainPage {
         });
         customerInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("1");
-            list1.add("A. Anna");
-            list1.add("778-681-4862");
-            List list2 = new ArrayList();
-            list2.add("2");
-            list2.add("B. Ben");
-            list2.add("778-674-5692");
-            list.add(list1);
-            list.add(list2);
-            new customer(list);
+            // TODO: only view Salary information
+            CustomerOra customerOra = new CustomerOra();
+            new customer(customerOra.getCustomer());
         });
 
         VIPInformation.addActionListener(e -> {
             frame.setVisible(false);
+            // TODO: only view Salary information
             VIPOra vipOra = new VIPOra();
             new vip(vipOra.getVIPs());
         });
         transactionInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("12345");
-            list1.add("2017-11-15");
-            list1.add("20:20:20");
-            list1.add("1");
-            list1.add("1234");
-            List list2 = new ArrayList();
-            list2.add("23456");
-            list2.add("2017-11-02");
-            list2.add("18:30:00");
-            list2.add("2");
-            list2.add("9504");
-            list.add(list1);
-            list.add(list2);
-            new transaction(list);
+            // TODO: only view Salary information
+            TransactionsOra transactionOra = new TransactionsOra();
+            new transaction(transactionOra.getTransactions());
         });
         productInformation.addActionListener(e -> {
             frame.setVisible(false);
@@ -239,20 +214,14 @@ public class mainPage {
         });
         makesInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("10");
-            List list2 = new ArrayList();
-            list2.add("6");
-            list.add(list1);
-            list.add(list2);
-            new makes(list);
+            // TODO: only view salary information
+            makesOra make = new makesOra();
+            new makes(make.getMakes());
         });
         uponInformation.addActionListener(e -> {
             frame.setVisible(false);
-            uponOra upon = new uponOra();
-            new upon(upon.getUpons());
+            uponOra up = new uponOra();
+            new upon(up.getUpons());
         });
         trackInformation.addActionListener(e -> {
             frame.setVisible(false);

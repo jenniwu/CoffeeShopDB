@@ -3,6 +3,7 @@ package front_end.view_information; /**
  */
 
 import front_end.mainPage;
+import oracleDBA.TransactionsInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,20 +15,23 @@ public class transaction extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public transaction(List<List> list)
+    public transaction(List<TransactionsInfo> list)
     {
         //headers for the table
         String[] columns = new String[] {
                 "transaction id", "date", "time", "customer id", "employee id"
         };
         //actual data for the table in a 2d array
-        Object[][] data = new Object[list.size()][list.get(0).size()];
+        Object[][] data = new Object[list.size()][5];
 
         for (int x = 0; x < list.size(); x++)
         {
-            for(int y = 0; y < list.get(0).size(); y++){
-                data[x][y] = list.get(x).get(y);
-            }
+            data[x][0] = list.get(x).getTid();
+            data[x][1] = list.get(x).getTday();
+            data[x][2] = list.get(x).getTtime();
+            data[x][3] = list.get(x).getCid();
+            data[x][4] = list.get(x).getEid();
+
         }
 
         //create table with data
