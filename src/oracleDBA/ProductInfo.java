@@ -5,10 +5,10 @@ public class ProductInfo {
     int pID;
     int price;
     int stockAmount;
-    boolean returnable;
+    String returnable;
     String productType;
 
-    public ProductInfo(int pID, int price, int stockAmount, boolean returnable, String productType) {
+    public ProductInfo(int pID, int price, int stockAmount, String returnable, String productType) {
         this.pID = pID;
         this.price = price;
         this.stockAmount = stockAmount;
@@ -28,7 +28,7 @@ public class ProductInfo {
         return stockAmount;
     }
 
-    public boolean getReturnable() {
+    public String getReturnable() {
         return returnable;
     }
 

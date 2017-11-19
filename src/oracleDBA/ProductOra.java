@@ -24,13 +24,12 @@ public class ProductOra {
                 int pID = rs.getInt("pid");
                 int price = rs.getInt("price");
                 int stockAmount = rs.getInt("stockAmount");
-                boolean flag = rs.getBoolean("returnableFlag");
+                String flag = rs.getString("returnableFlag");
                 String pType = rs.getString("ptype");
 
                 ProductInfo p = new ProductInfo(pID,price,stockAmount,flag,pType);
                 ret.add(p);
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }

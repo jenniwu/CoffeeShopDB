@@ -23,7 +23,7 @@ public class OracleManager {
                 DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
                 // Class.forName("oracle.jdbc.driver.OracleDriver");
                 //oracle.jdbc.driver.OracleDriver
-                Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1522:ug", "ora_m1l0b", "a28488154");
+                conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1522:ug", "ora_m1l0b", "a28488154");
                 //stmt = conn.createStatement();
                 System.out.println("Connection succeeded");
             } catch (SQLException e) {
@@ -52,14 +52,12 @@ public class OracleManager {
     //stringForQuery is the sql command for query
     public ResultSet query(String stringForQuery){
         ResultSet rs = null;
-        //System.out.println("00000" + stringForQuery);
-        if(stmt==null)
-            System.out.println("stmt nullllll");
+        if(stmt == null)
+            System.out.println("NULL QUERY");
         try {
             rs = stmt.executeQuery(stringForQuery);
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println(stringForQuery + " : query fails");
         }
         return rs;
     }
