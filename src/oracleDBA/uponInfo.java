@@ -5,18 +5,18 @@ package oracleDBA;
  */
 public class uponInfo {
     int tid;
-    int pid;
+    String ptype;
 
-    public uponInfo(int tid, int pid){
+    public uponInfo(int tid, String ptype){
         this.tid = tid;
-        this.pid = pid;
+        this.ptype = ptype;
     }
 
     public int getTid() {
         return tid;
     }
 
-    public int getPid() {
-        return pid;
+    public String getPid() {
+        return ptype;
     }
 }

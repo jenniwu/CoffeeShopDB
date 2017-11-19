@@ -21,11 +21,11 @@ public class trackOra {
             ResultSet rs = st.executeQuery("select * from track");
 
             while(rs.next()) {
-                int pid = rs.getInt("pid");
+                String ptype = rs.getString("ptype");
                 String sphone = rs.getString("sphone");
                 int mmid = rs.getInt("mmid");
 
-                trackInfo trackInfo = new trackInfo(pid,sphone,mmid);
+                trackInfo trackInfo = new trackInfo(ptype,sphone,mmid);
                 ret.add(trackInfo);
             }
         } catch (SQLException e) {

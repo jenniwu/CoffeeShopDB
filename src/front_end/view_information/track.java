@@ -22,7 +22,7 @@ public class track extends JFrame
 
         for (int y = 0; y < list.size(); y++)
         {
-            data[y][0] = list.get(y).getPid();
+            data[y][0] = list.get(y).getPtype();
             data[y][1] = list.get(y).getSphone();
             data[y][2] = list.get(y).getMmid();
         }

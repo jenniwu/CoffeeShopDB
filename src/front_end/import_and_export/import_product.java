@@ -1,6 +1,7 @@
 package front_end.import_and_export;
 
 import front_end.mainPage;
+import oracleDBA.ProductOra;
 
 import javax.swing.*;
 import java.awt.*;
@@ -93,8 +94,10 @@ public class import_product {
                 invalid.setForeground(Color.red);
                 return;
             }
-//            ProductOra productOra = new ProductOra();
-//            if(productOra.isAvailable(a,))
+            ProductOra productOra = new ProductOra();
+            productOra.updateStock(a,"coffee");
+            productOra.updateStock(b,"coffee beans");
+            productOra.updateStock(c,"coffee machine");
 
             frame.setVisible(false);
             new mainPage();

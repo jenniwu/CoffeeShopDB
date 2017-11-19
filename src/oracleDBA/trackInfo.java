@@ -4,18 +4,18 @@ package oracleDBA;
  * Created by shadongliu on 2017-11-18.
  */
 public class trackInfo {
-    int pid;
+    String ptype;
     String sphone;
     int mmid;
 
-    public trackInfo(int pid, String sphone, int mmid){
-        this.pid = pid;
+    public trackInfo(String ptype, String sphone, int mmid){
+        this.ptype = ptype;
         this.sphone = sphone;
         this.mmid = mmid;
     }
 
-    public int getPid() {
-        return pid;
+    public String getPtype() {
+        return ptype;
     }
 
     public String getSphone() {
