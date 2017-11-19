@@ -3,9 +3,6 @@ package oracleDBA;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.swing.JOptionPane;
-
-
 
 public class VIPOra {
 
@@ -20,7 +17,7 @@ public class VIPOra {
 
     public VIPInfo getReservation(String resID) {
         VIPInfo res = null;
-        oracleManager.buildConnection();
+        oracleManager.getConnection();
         ResultSet rs = oracleManager.query("select * from VIP ");
         //RESID FROMDATE TODATE   FIRSTNAME	LASTNAME PHONENUM RTNAME
         try {

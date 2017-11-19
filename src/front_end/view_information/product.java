@@ -3,6 +3,7 @@ package front_end.view_information; /**
  */
 
 import front_end.mainPage;
+import oracleDBA.ProductInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,19 +15,22 @@ public class product extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public product(List<List> list)
+    public product(List<ProductInfo> list)
     {
         String[] columns = new String[] {
                 "product id", "price", "stock amount", "return?", "product type"
         };
 
-        Object[][] data = new Object[list.size()][list.get(0).size()];
+        Object[][] data = new Object[list.size()][5];
 
         for (int x = 0; x < list.size(); x++)
         {
-            for(int y = 0; y < list.get(0).size(); y++){
-                data[x][y] = list.get(x).get(y);
-            }
+            data[x][0] = list.get(x).getpID();
+            data[x][1] = list.get(x).getPrice();
+            data[x][2] = list.get(x).getStockAmount();
+            data[x][3] = list.get(x).getReturnable();
+            data[x][4] = list.get(x).getProductType();
+
         }
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 

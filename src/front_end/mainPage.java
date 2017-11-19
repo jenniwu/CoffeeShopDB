@@ -5,6 +5,7 @@ import front_end.import_and_export.make_order;
 import front_end.registration.register_VIP;
 import front_end.registration.register_employee;
 import front_end.view_information.*;
+import oracleDBA.ProductOra;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -225,30 +226,13 @@ public class mainPage {
         });
         productInformation.addActionListener(e -> {
             frame.setVisible(false);
-            // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("123456");
-            list1.add("20");
-            list1.add("10");
-            list1.add("NO");
-            list1.add("coffee");
-            List list2 = new ArrayList();
-            list2.add("234567");
-            list2.add("150");
-            list2.add("10");
-            list2.add("YES");
-            list2.add("coffee bean");
-            List list3 = new ArrayList();
-            list3.add("345678");
-            list3.add("5");
-            list3.add("50");
-            list3.add("YES");
-            list3.add("coffee machine");
-            list.add(list1);
-            list.add(list2);
-            list.add(list3);
-            new product(list);
+            ProductOra temp = new ProductOra();
+//             TODO:  mock object need to be replaced
+//            List list = new ArrayList();
+//            ProductInfo temp = new ProductInfo(123456,20,10,false,"coffee");
+//            list.add(temp);
+
+            new product(temp.getProducts());
         });
         supplierInformation.addActionListener(e -> {
             frame.setVisible(false);

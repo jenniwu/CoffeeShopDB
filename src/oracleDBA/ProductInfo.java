@@ -15,5 +15,25 @@ public class ProductInfo {
         this.returnable = returnable;
         this.productType = productType;
     }
+
+    public int getpID() {
+        return pID;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public int getStockAmount() {
+        return stockAmount;
+    }
+
+    public boolean getReturnable() {
+        return returnable;
+    }
+
+    public String getProductType() {
+        return productType;
+    }
 }
 
