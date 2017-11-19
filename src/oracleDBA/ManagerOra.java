@@ -47,4 +47,16 @@ public class ManagerOra {
             e.printStackTrace();
         }
     }
+
+    public boolean isValidMID(int mid) {
+        try {
+            Statement st = conn.createStatement();
+            String query = "select 1 from Manager where mid = " + mid;
+            ResultSet rs = st.executeQuery(query);
+            if (!rs.next()) return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
 }
