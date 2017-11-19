@@ -2,22 +2,16 @@ package oracleDBA;
 
 public class ProductInfo {
 
-    int pID;
     int price;
     int stockAmount;
     String returnable;
     String productType;
 
-    public ProductInfo(int pID, int price, int stockAmount, String returnable, String productType) {
-        this.pID = pID;
+    public ProductInfo(int price, int stockAmount, String returnable, String productType) {
         this.price = price;
         this.stockAmount = stockAmount;
         this.returnable = returnable;
         this.productType = productType;
-    }
-
-    public int getpID() {
-        return pID;
     }
 
     public int getPrice() {
