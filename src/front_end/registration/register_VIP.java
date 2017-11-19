@@ -1,6 +1,6 @@
 package front_end.registration;
 
-import front_end.mainPage;
+import front_end.mainPageVIP;
 
 import javax.swing.*;
 import java.awt.*;
@@ -82,12 +82,12 @@ public class register_VIP {
                 return;
             }
             frame.setVisible(false);
-            new mainPage();
+            new mainPageVIP();
         });
 
         backButton.addActionListener(e -> {
             frame.setVisible(false);
-            new mainPage();
+            new mainPageVIP();
         });
     }
 }

@@ -1,6 +1,6 @@
 package front_end.view_information;
 
-import front_end.mainPage;
+import front_end.mainPageVIP;
 import oracleDBA.SalaryInfo;
 
 import javax.swing.*;
@@ -52,7 +52,7 @@ public class salary extends JFrame
 
         back.addActionListener(e -> {
             setVisible(false);
-            new mainPage();
+            new mainPageVIP();
         });
     }
 }

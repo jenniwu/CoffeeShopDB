@@ -2,7 +2,7 @@ package front_end.view_information; /**
  * Created by zhanghuanxin on 2017-11-16.
  */
 
-import front_end.mainPage;
+import front_end.mainPageVIP;
 import oracleDBA.TransactionsInfo;
 
 import javax.swing.*;
@@ -57,7 +57,7 @@ public class transaction extends JFrame
 
         back.addActionListener(e -> {
             setVisible(false);
-            new mainPage();
+            new mainPageVIP();
         });
     }
 }

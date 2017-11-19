@@ -2,15 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6219c361-4379-4fd3-a563-1faa6b6a06dd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/front_end/mainPageEmployee.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/front_end/mainPageManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/front_end/mainPageTemp.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/mainPage.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/front_end/mainPage.java" afterPath="$PROJECT_DIR$/src/front_end/mainPageVIP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/import_and_export/import_product.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/import_and_export/import_product.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/import_and_export/make_order.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/import_and_export/make_order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/mainPage.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/mainPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/login$1.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/login$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/login.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/login.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/registration/register_VIP.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/registration/register_VIP.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/registration/register_employee.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/registration/register_employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/oracleDBA/ProductOra.class" afterPath="$PROJECT_DIR$/out/production/J 2/oracleDBA/ProductOra.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/customer.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/customer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/employee.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/employee.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/makes.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/makes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/manager.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/manager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/product.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/salary.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/salary.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/supplier.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/supplier.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/track.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/track.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/transaction.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/transaction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/upon.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/upon.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/vip.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/view_information/vip.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/import_and_export/import_product.java" afterPath="$PROJECT_DIR$/src/front_end/import_and_export/import_product.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/import_and_export/make_order.java" afterPath="$PROJECT_DIR$/src/front_end/import_and_export/make_order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/mainPage.java" afterPath="$PROJECT_DIR$/src/front_end/mainPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/login.java" afterPath="$PROJECT_DIR$/src/front_end/login.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/registration/register_VIP.java" afterPath="$PROJECT_DIR$/src/front_end/registration/register_VIP.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/registration/register_employee.java" afterPath="$PROJECT_DIR$/src/front_end/registration/register_employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/ProductOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/ProductOra.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/customer.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/customer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/employee.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/employee.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/makes.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/makes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/manager.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/manager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/product.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/salary.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/salary.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/supplier.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/supplier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/track.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/track.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/transaction.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/transaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/upon.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/upon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/vip.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/vip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.java" afterPath="$PROJECT_DIR$/src/main.java" />
     </list>
     <ignored path="CoffeeShopDB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,31 +63,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="register_employee.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/front_end/registration/register_employee.java">
+      <file leaf-file-name="login.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/front_end/login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36630037">
-              <caret line="126" column="55" selection-start-line="126" selection-start-column="55" selection-end-line="126" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="import_product.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/front_end/import_and_export/import_product.java">
+      <file leaf-file-name="mainPageEmployee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/front_end/mainPageEmployee.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="51" selection-start-line="85" selection-start-column="51" selection-end-line="85" selection-end-column="51" />
-              <folding />
+              <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeOra.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java">
+      <file leaf-file-name="mainPageVIP.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/front_end/mainPageVIP.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+              <caret line="19" column="105" selection-start-line="19" selection-start-column="105" selection-end-line="19" selection-end-column="105" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainPageManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/front_end/mainPageManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="131" column="32" selection-start-line="131" selection-start-column="32" selection-end-line="131" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.15114874">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -100,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/front_end/import_and_export/importProduct.java" />
         <option value="$PROJECT_DIR$/src/front_end/view_information/employee_information.java" />
         <option value="$PROJECT_DIR$/src/front_end/view_information/view_customer.java" />
-        <option value="$PROJECT_DIR$/src/front_end/login.java" />
         <option value="$PROJECT_DIR$/src/front_end/view_information/rating_maked.java" />
         <option value="$PROJECT_DIR$/src/front_end/view_information/salary.java" />
         <option value="$PROJECT_DIR$/src/front_end/view_information/vip.java" />
@@ -111,7 +167,6 @@
         <option value="$PROJECT_DIR$/src/front_end/import_and_export/make_order.java" />
         <option value="$PROJECT_DIR$/src/front_end/view_information/product.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/SupplierInfo.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/SupplierOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/ManagerInfo.java" />
@@ -122,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/front_end/view_information/upon.java" />
         <option value="$PROJECT_DIR$/src/front_end/view_information/makes.java" />
         <option value="$PROJECT_DIR$/src/front_end/view_information/transaction.java" />
-        <option value="$PROJECT_DIR$/src/front_end/mainPage.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/trackInfo.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/trackOra.java" />
         <option value="$PROJECT_DIR$/src/front_end/view_information/track.java" />
@@ -135,6 +189,13 @@
         <option value="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/ManagerOra.java" />
         <option value="$PROJECT_DIR$/src/front_end/registration/register_employee.java" />
+        <option value="$PROJECT_DIR$/src/front_end/mainPage.java" />
+        <option value="$PROJECT_DIR$/src/front_end/mainPageTemp.java" />
+        <option value="$PROJECT_DIR$/src/front_end/login.java" />
+        <option value="$PROJECT_DIR$/src/front_end/mainPageEmployee.java" />
+        <option value="$PROJECT_DIR$/src/front_end/mainPageVIP.java" />
+        <option value="$PROJECT_DIR$/src/front_end/mainPageManager.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
       </list>
     </option>
   </component>
@@ -175,9 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -207,24 +265,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoffeeShopDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoffeeShopDB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oracleDBA" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,6 +332,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -598,7 +641,13 @@
       <option name="project" value="LOCAL" />
       <updated>1511081252476</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="good job">
+      <created>1511082074959</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1511082074959</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -608,16 +657,17 @@
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17538299" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32790697" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3267442" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267442" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17538299" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32790697" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988372" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -634,7 +684,6 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288948" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -659,7 +708,8 @@
     <MESSAGE value="only missing view of transaction and makes" />
     <MESSAGE value="debugged productora" />
     <MESSAGE value="added functionality to insert employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="added functionality to insert employee" />
+    <MESSAGE value="good job" />
+    <option name="LAST_COMMIT_MESSAGE" value="good job" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -668,22 +718,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/front_end/import_and_export/make_order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="51" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/front_end/view_information/employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/front_end/view_information/salary.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -719,13 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/front_end/login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/VIPOra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -738,13 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="10" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -787,6 +807,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -809,6 +832,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -833,13 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/oracleDBA/CustomerOra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/SupplierInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -858,6 +875,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -865,6 +883,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -893,6 +912,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -914,16 +934,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/front_end/mainPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="212" column="33" selection-start-line="212" selection-start-column="33" selection-end-line="212" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -931,6 +942,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -978,7 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,7 +998,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="65" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -997,7 +1008,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1018,26 +1029,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/front_end/import_and_export/import_product.java">
+    <entry file="file://$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="51" selection-start-line="85" selection-start-column="51" selection-end-line="85" selection-end-column="51" />
+          <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java">
+    <entry file="file://$PROJECT_DIR$/src/front_end/import_and_export/import_product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        <state vertical-scroll-proportion="1.7255139">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/front_end/registration/register_employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36630037">
-          <caret line="126" column="55" selection-start-line="126" selection-start-column="55" selection-end-line="126" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oracleDBA/CustomerOra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/front_end/mainPageTemp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.45344618">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/front_end/login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/front_end/mainPageEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/front_end/mainPageVIP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="105" selection-start-line="19" selection-start-column="105" selection-end-line="19" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/front_end/mainPageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="32" selection-start-line="131" selection-start-column="32" selection-end-line="131" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15114874">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
       </provider>

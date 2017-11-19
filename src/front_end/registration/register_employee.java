@@ -1,6 +1,6 @@
 package front_end.registration;
 
-import front_end.mainPage;
+import front_end.mainPageVIP;
 import oracleDBA.EmployeeOra;
 import oracleDBA.ManagerOra;
 
@@ -135,14 +135,14 @@ public class register_employee {
                 employeeOra.insertEmployee(name,position,tierNum,mIDInt);
 
                 frame.setVisible(false);
-                new mainPage();
+                new mainPageVIP();
             }
 
         });
 
         backButton.addActionListener(e -> {
             frame.setVisible(false);
-            new mainPage();
+            new mainPageVIP();
         });
     }
 }

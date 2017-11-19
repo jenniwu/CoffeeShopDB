@@ -1,6 +1,6 @@
 package front_end.view_information;
 
-import front_end.mainPage;
+import front_end.mainPageVIP;
 import oracleDBA.trackInfo;
 
 import javax.swing.*;
@@ -50,7 +50,7 @@ public class track extends JFrame
 
         back.addActionListener(e -> {
             setVisible(false);
-            new mainPage();
+            new mainPageVIP();
         });
     }
 }

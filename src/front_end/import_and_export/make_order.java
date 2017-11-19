@@ -1,6 +1,6 @@
 package front_end.import_and_export;
 
-import front_end.mainPage;
+import front_end.mainPageVIP;
 import oracleDBA.ProductOra;
 
 import javax.swing.*;
@@ -107,12 +107,12 @@ public class make_order {
             }
 
             frame.setVisible(false);
-            new mainPage();
+            new mainPageVIP();
         });
 
         backButton.addActionListener(e -> {
             frame.setVisible(false);
-            new mainPage();
+            new mainPageVIP();
         });
     }
 }
