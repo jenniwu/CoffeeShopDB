@@ -13,29 +13,12 @@ public class ProductOra {
         conn = oraMgr.getConnection();
     }
 
-    public void addProduct(int pID, int price, int stockAmount, boolean returnable, String pName) {
-        try {
-            PreparedStatement ps = conn.prepareStatement("insert into Product values (?,?,?,?,?)");
-            ps.setInt(1, pID);
-            ps.setInt(2, price);
-            ps.setInt(3, stockAmount);
-            ps.setBoolean(4, returnable);
-            ps.setString(5, pName);
-            ps.executeUpdate();
-            conn.commit();
-            ps.close();
+    public List<ProductInfo> getProducts() {
+        List<ProductInfo> ret = new ArrayList<>();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void viewProducts() {
         try {
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery("select * from Product");
-
-            List<ProductInfo> ret = new ArrayList<>();
 
             while(rs.next()) {
                 int pID = rs.getInt("pid");
@@ -52,5 +35,23 @@ public class ProductOra {
             e.printStackTrace();
         }
 
+        return ret;
+    }
+
+    public void addProduct(int pID, int price, int stockAmount, boolean returnable, String pName) {
+        try {
+            PreparedStatement ps = conn.prepareStatement("insert into Product values (?,?,?,?,?)");
+            ps.setInt(1, pID);
+            ps.setInt(2, price);
+            ps.setInt(3, stockAmount);
+            ps.setBoolean(4, returnable);
+            ps.setString(5, pName);
+            ps.executeUpdate();
+            conn.commit();
+            ps.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
