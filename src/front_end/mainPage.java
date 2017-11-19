@@ -5,7 +5,7 @@ import front_end.import_and_export.make_order;
 import front_end.registration.register_VIP;
 import front_end.registration.register_employee;
 import front_end.view_information.*;
-import oracleDBA.ProductOra;
+import oracleDBA.*;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -229,9 +229,12 @@ public class mainPage {
             ProductOra temp = new ProductOra();
 //             TODO:  mock object need to be replaced
 //            List list = new ArrayList();
-//            ProductInfo temp = new ProductInfo(123456,20,10,false,"coffee");
-//            list.add(temp);
+//            ProductInfo temp2 = new ProductInfo(123456,20,10,false,"coffee");
+//            list.add(temp2);
+//            new product(list);
 
+//            List<ProductInfo> curr = temp.getProducts();
+//            System.out.println(curr);
             new product(temp.getProducts());
         });
         supplierInformation.addActionListener(e -> {
@@ -285,18 +288,14 @@ public class mainPage {
         salaryInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO:  mock object need to be replaced
-            List list = new ArrayList();
-            List list1 = new ArrayList();
-            list1.add("1");
-            list1.add("monthly");
-            list1.add("100");
-            List list2 = new ArrayList();
-            list2.add("2");
-            list2.add("weekly");
-            list2.add("50");
-            list.add(list1);
-            list.add(list2);
-            new salary(list);
+
+//            List<SalaryInfo> temp = new ArrayList<>();
+//            SalaryInfo s1 = new SalaryInfo(1,"monthly",100);
+//            temp.add(s1);
+//            new salary(temp);
+
+            SalaryOra so = new SalaryOra();
+            new salary(so.getSalaries());
         });
         makesInformation.addActionListener(e -> {
             frame.setVisible(false);
