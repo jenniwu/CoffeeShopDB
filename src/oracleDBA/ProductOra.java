@@ -106,4 +106,19 @@ public class ProductOra {
             e.printStackTrace();
         }
     }
+
+    public int getStockAmount(String pType) {
+        try {
+            Statement st = conn.createStatement();
+            String query = "select stockAmount from Product where ptype = \'" + pType + "\'";
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                return rs.getInt("stockAmount");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return 0;
+    }
 }
