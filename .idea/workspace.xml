@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6219c361-4379-4fd3-a563-1faa6b6a06dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/oracleDBA/ManagerInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/oracleDBA/ManagerOra.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/oracleDBA/SupplierInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/oracleDBA/SupplierOra.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/oracleDBA/ProductOra.class" afterPath="$PROJECT_DIR$/out/production/J 2/oracleDBA/ProductOra.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -564,15 +560,21 @@
       <option name="project" value="LOCAL" />
       <updated>1511057348311</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added supplier and manager">
+      <created>1511059500146</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1511059500146</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3400000" />
+    <option name="totallyTimeSpent" value="3493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="823" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -644,7 +646,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="At least this version of code has all the tables and the attributes." />
     <MESSAGE value="added gitignore and debugged getproducts" />
-    <option name="LAST_COMMIT_MESSAGE" value="added gitignore and debugged getproducts" />
+    <MESSAGE value="added supplier and manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="added supplier and manager" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
