@@ -1,45 +1,56 @@
 package oracleDBA;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import javax.swing.JOptionPane;
-
-
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductOra {
+    OracleManager oraMgr;
+    Connection conn;
 
-    OracleManager oracleManager;
-
-    public ProductOra(){
-
-        oracleManager = new OracleManager();
+    public ProductOra() {
+        oraMgr = OracleManager.getInstance();
+        conn = oraMgr.getConnection();
     }
 
-
-
-    public ProductInfo getReservation(String resID) {
-        ProductInfo res = null;
-        oracleManager.buildConnection();
-        ResultSet rs = oracleManager.query("select * from Product ");
-        //RESID FROMDATE TODATE   FIRSTNAME	LASTNAME PHONENUM RTNAME
-        // int PRODUCTID;
-       // int  PRICE;
-        //int STOCKAMOUNT;
-        //boolean RETURN;
-        //String PRODUCTTYPE;
+    public void addProduct(int pID, int price, int stockAmount, boolean returnable, String pName) {
         try {
-            while(rs.next())
-            {
-                res = new ProductInfo(res.getPRODUCTID(),res.getPRICE(),res.getSTOCKAMOUNT(),res.getRETURN(),res.getPRODUCTTYPE());
+            PreparedStatement ps = conn.prepareStatement("insert into Product values (?,?,?,?,?)");
+            ps.setInt(1, pID);
+            ps.setInt(2, price);
+            ps.setInt(3, stockAmount);
+            ps.setBoolean(4, returnable);
+            ps.setString(5, pName);
+            ps.executeUpdate();
+            conn.commit();
+            ps.close();
 
-            }
         } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void viewProducts() {
+        try {
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery("select * from Product");
+
+            List<ProductInfo> ret = new ArrayList<>();
+
+            while(rs.next()) {
+                int pID = rs.getInt("pid");
+                int price = rs.getInt("price");
+                int stockAmount = rs.getInt("stockAmount");
+                boolean flag = rs.getBoolean("returnableFlag");
+                String pType = rs.getString("ptype");
+
+                ProductInfo p = new ProductInfo(pID,price,stockAmount,flag,pType);
+                ret.add(p);
+            }
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return res;
     }
-
 }
