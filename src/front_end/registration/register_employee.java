@@ -1,6 +1,8 @@
 package front_end.registration;
 
 import front_end.mainPage;
+import oracleDBA.EmployeeOra;
+import oracleDBA.ManagerOra;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,16 +23,19 @@ public class register_employee {
     private JButton backButton;
     private JLabel title;
     private JLabel labelEmployeeName;
-    private JLabel labelSIN;
-    private JLabel labelPosition;
+    private JLabel labelEmployeePosition;
+    private JLabel labelEmployeeTier;
+    private JLabel labelEmployeeManager;
     private JTextField eName;
-    private JTextField eSIN;
+    private JTextField ePosition;
+    private JTextField eManager;
 
     private JLabel invalid;
 
 
-    private JCheckBox stuffCheckBox;
-    private JCheckBox superStuffCheckBox;
+    private JCheckBox tierOneCheckBox;
+    private JCheckBox tierTwoCheckBox;
+    private JCheckBox tierThreeCheckBox;
 
     public register_employee()
     {
@@ -51,26 +56,32 @@ public class register_employee {
 
         title = new JLabel("Employee Register");
         labelEmployeeName = new JLabel("name:");
-        labelSIN = new JLabel("SIN #:");
-        labelPosition = new JLabel("position:");
+        labelEmployeePosition = new JLabel("position:");
+        labelEmployeeTier = new JLabel("tier:");
+        labelEmployeeManager = new JLabel("manager id:");
         submitButton = new JButton("Submit");
         backButton = new JButton("Back to main page");
         eName = new JTextField(5);
-        eSIN = new JTextField(5);
+        ePosition = new JTextField(5);
+        eManager = new JTextField(5);
         invalid = new JLabel();
 
-        stuffCheckBox = new JCheckBox("stuff");
-        superStuffCheckBox = new JCheckBox("super stuff");
+        tierOneCheckBox = new JCheckBox("tier 1");
+        tierTwoCheckBox = new JCheckBox("tier 2");
+        tierThreeCheckBox = new JCheckBox("tier 3");
 
         panelTop.add(title);
         panelMiddle.add(labelEmployeeName);
         panelMiddle.add(eName);
-        panelMiddle.add(labelSIN);
-        panelMiddle.add(eSIN);
-        panelMiddle.add(labelPosition);
-        panelPosition.add(stuffCheckBox);
-        panelPosition.add(superStuffCheckBox);
+        panelMiddle.add(labelEmployeePosition);
+        panelMiddle.add(ePosition);
+        panelMiddle.add(labelEmployeeTier);
+        panelPosition.add(tierOneCheckBox);
+        panelPosition.add(tierTwoCheckBox);
+        panelPosition.add(tierThreeCheckBox);
         panelMiddle.add(panelPosition);
+        panelMiddle.add(labelEmployeeManager);
+        panelMiddle.add(eManager);
         panelBottom.add(submitButton);
         panelBottom.add(backButton);
         panelBottom.add(invalid,BorderLayout.AFTER_LINE_ENDS);
@@ -81,21 +92,52 @@ public class register_employee {
 
         frame.setVisible(true);
 
-        stuffCheckBox.addActionListener(e -> superStuffCheckBox.setSelected(false));
+        tierOneCheckBox.addActionListener(e -> {
+            tierTwoCheckBox.setSelected(false);
+            tierThreeCheckBox.setSelected(false);
+        });
 
-        superStuffCheckBox.addActionListener(e -> stuffCheckBox.setSelected(false));
+        tierTwoCheckBox.addActionListener(e -> {
+            tierOneCheckBox.setSelected(false);
+            tierThreeCheckBox.setSelected(false);
+        });
+
+        tierThreeCheckBox.addActionListener(e -> {
+            tierOneCheckBox.setSelected(false);
+            tierTwoCheckBox.setSelected(false);
+        });
 
         submitButton.addActionListener(e -> {
-            String username = eName.getText();
-            String password = eSIN.getText();
-            if(username.equals("") || password.length()<5) {
+            String name = eName.getText();
+            String position = ePosition.getText();
+            String managerID = eManager.getText();
+            int mIDInt = Integer.parseInt(managerID);
+            ManagerOra managerOra = new ManagerOra();
+            EmployeeOra employeeOra = new EmployeeOra();
+
+            if(name.length() == 0|| position.length() == 0 || !managerOra.isValidMID(mIDInt)) {
                 System.out.println("Invalid inputs");
                 invalid.setText("Missing user info");
                 invalid.setForeground(Color.red);
                 return;
+            }else {
+                int tierNum = 0;
+                if(tierOneCheckBox.isSelected()){
+                    tierNum = 1;
+                }else if(tierTwoCheckBox.isSelected()){
+                    tierNum = 2;
+                }else if(tierThreeCheckBox.isSelected()){
+                    tierNum = 3;
+                }else {
+                    invalid.setText("Please select tier");
+                    return;
+                }
+                employeeOra.insertEmployee(name,position,tierNum,mIDInt);
+
+                frame.setVisible(false);
+                new mainPage();
             }
-            frame.setVisible(false);
-            new mainPage();
+
         });
 
         backButton.addActionListener(e -> {

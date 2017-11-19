@@ -1,6 +1,7 @@
 package front_end.import_and_export;
 
 import front_end.mainPage;
+import oracleDBA.ProductOra;
 
 import javax.swing.*;
 import java.awt.*;
@@ -93,6 +94,18 @@ public class make_order {
                 invalid.setForeground(Color.red);
                 return;
             }
+
+            ProductOra productOra = new ProductOra();
+            if(!productOra.isAvailable(a,"coffee")|| !productOra.isAvailable(b,"coffee beans")|| !productOra.isAvailable(c,"coffee machine")){
+                invalid.setText("Not enough products in stock");
+                invalid.setForeground(Color.red);
+                return;
+            }else {
+                productOra.updateStock(-a,"coffee");
+                productOra.updateStock(-b,"coffee beans");
+                productOra.updateStock(-c,"coffee machine");
+            }
+
             frame.setVisible(false);
             new mainPage();
         });

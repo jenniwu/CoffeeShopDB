@@ -220,15 +220,13 @@ public class mainPage {
         });
         uponInformation.addActionListener(e -> {
             frame.setVisible(false);
-//            List<uponInfo> temp = new ArrayList<uponInfo>();
-//            uponInfo a = new uponInfo(1,2);
-//            temp.add(a);
-//            new upon(temp);
+            // TODO: only view salary information
             uponOra up = new uponOra();
             new upon(up.getUpons());
         });
         trackInformation.addActionListener(e -> {
             frame.setVisible(false);
+            // TODO: only view salary information
             trackOra t = new trackOra();
             new track(t.getTracks());
         });
