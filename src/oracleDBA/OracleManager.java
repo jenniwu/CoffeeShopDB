@@ -12,25 +12,35 @@ import java.awt.event.ActionListener;
 
 public class OracleManager {
 
-    public Connection conn;
-    public Statement stmt;
+    private Connection conn;
+    private Statement stmt;
 
-    public OracleManager(){
+    private static OracleManager instance = new OracleManager();
+
+    private OracleManager() {
 
     }
 
-    public void buildConnection(){
-        try {
-            DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
-            // Class.forName("oracle.jdbc.driver.OracleDriver");
-            //oracle.jdbc.driver.OracleDriver
-            Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1522:ug", "ora_m1l0b", "a28488154");
-            //stmt = conn.createStatement();
-            System.out.println("Connection Success.");
-        } catch (SQLException e) {
-            e.printStackTrace();
-            System.out.println("Connection fail");
+    public static OracleManager getInstance() {
+        return instance;
+    }
+
+    public Connection getConnection() {
+        if (conn == null) {
+            try {
+                DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+                // Class.forName("oracle.jdbc.driver.OracleDriver");
+                //oracle.jdbc.driver.OracleDriver
+                Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1522:ug", "ora_m1l0b", "a28488154");
+                //stmt = conn.createStatement();
+                System.out.println("Connection succeeded");
+            } catch (SQLException e) {
+                e.printStackTrace();
+                System.out.println("Connection failed");
+            }
         }
+
+        return conn;
     }
 
     //stringForUpdate is the sql command for executing Inserts, Updates, and Deletes in the DBA
