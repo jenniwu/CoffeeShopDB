@@ -73,7 +73,7 @@ create table Employee
   mmid int not null,
   primary key (eid),
   foreign key (tier) references Salary ON DELETE CASCADE,
-  foreign key (mmid) references Manager ON DELETE CASCADE);
+  foreign key (mmid) references Manager ON DELETE SET NULL);
 grant select on Employee to public;
 
 
@@ -108,8 +108,8 @@ create table Transactions
   cid int not null,
   eid int not null,
   primary key (tid),
-  foreign key (cid) references Customer ON DELETE CASCADE,
-  foreign key (eid) references Employee ON DELETE CASCADE);
+  foreign key (cid) references Customer ON DELETE SET NULL,
+  foreign key (eid) references Employee ON DELETE SET NULL);
 grant select on Transactions to public;
 
 

@@ -89,7 +89,7 @@ public class ProductOra {
     public void updateStock(int deltaAmount, String pType) {
         try {
             Statement st = conn.createStatement();
-            String query = "select stockAmount from Product where ptype = " + pType;
+            String query = "select stockAmount from Product where ptype = \'" + pType + "\'";
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
                 int newAmount = rs.getInt("stockAmount") + deltaAmount;

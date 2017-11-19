@@ -69,4 +69,26 @@ public class TransactionsOra {
         else
             return false;
     }
+
+    public List<TransactionsInfo> getTransactionsByEmployee(int eid) {
+        List<TransactionsInfo> ret = new ArrayList<>();
+        try {
+            Statement st = conn.createStatement();
+            String query = "select * from Transactions where eid = " + eid;
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                int tid = rs.getInt("tid");
+                Date tday = rs.getDate("tday");
+                String ttime = rs.getString("ttime");
+                int cid = rs.getInt("cid");
+
+                TransactionsInfo ti = new TransactionsInfo(tid, tday, ttime, cid, eid);
+                ret.add(ti);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ret;
+    }
 }

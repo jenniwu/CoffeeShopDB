@@ -19,8 +19,6 @@ public class EmployeeOra {
         conn = oracleManager.getConnection();
     }
 
-
-
     public List<EmployeeInfo> getEmployees() {
         List<EmployeeInfo> ret = new ArrayList<>();
 
@@ -45,10 +43,10 @@ public class EmployeeOra {
         return ret;
     }
 
-    public void InsertEmployee(EmployeeInfo e, int eid , String ename , String position ,  int tier , int mmid){
+    public void insertEmployee(EmployeeInfo e, int eid , String ename , String position ,  int tier , int mmid){
         String sqlCommand1 = "insert into Employee values("
-                +  eid  + ", "
-                +  ename + ", "
+                + eid  + ", "
+                + ename + ", "
                 + position + ", "
                 + tier + ", "
                 + mmid+  "'" + ")";
