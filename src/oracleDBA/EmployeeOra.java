@@ -146,21 +146,17 @@ public class EmployeeOra {
 
 
 
-    public boolean updateEmployeePosition(int eid, String position) {
-        oracleManager.getConnection();
-        String query = "UPDATE Employee SET position = '"
-                + position
-                + "' WHERE eid = "
-                + eid + ";";
-        System.out.println(query);
-        int rowCount = oracleManager.execute(query);
-        oracleManager.disconnect();
-
-        if (rowCount != 1)
-            return false;
-        else
-            return true;
-
+    public void updateEmployeePosition(int eid, String position) {
+        try {
+            PreparedStatement ps = conn.prepareStatement("update Employee set position = ? where eid = ?");
+            ps.setString(1, position);
+            ps.setInt(2, eid);
+            ps.executeUpdate();
+            conn.commit();
+            ps.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 
