@@ -151,7 +151,7 @@ public class EmployeeOra {
         String query = "UPDATE Employee SET position = '"
                 + position
                 + "' WHERE eid = "
-                + eid;
+                + eid + ";";
         System.out.println(query);
         int rowCount = oracleManager.execute(query);
         oracleManager.disconnect();

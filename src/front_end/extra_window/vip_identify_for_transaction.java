@@ -4,6 +4,7 @@ import front_end.mainPage.mainPageEmployee;
 import front_end.mainPage.mainPageManager;
 import front_end.mainPage.mainPageTemp;
 import front_end.mainPage.mainPageVIP;
+import front_end.view_information.vip;
 import oracleDBA.VIPOra;
 
 import javax.swing.*;
@@ -12,7 +13,7 @@ import java.awt.*;
 /**
  * Created by user on 11/16/2017.
  */
-public class VIP_identify_for_info {
+public class vip_identify_for_transaction {
     private static final int width = 450;
     private static final int height = 400;
 
@@ -21,14 +22,14 @@ public class VIP_identify_for_info {
     private JPanel panelMiddle;
     private JButton submitButton;
     private JButton backButton;
-    private JLabel labelEmployeeId;
-    private JTextField eId;
+    private JLabel lablePhone;
+    private JTextField phone;
 
     private JLabel invalid;
 
     private String back_user_type;
 
-    public VIP_identify_for_info(String userType)
+    public vip_identify_for_transaction(String userType)
     {
         this.back_user_type = userType;
         gui();
@@ -44,15 +45,15 @@ public class VIP_identify_for_info {
         panelTop = new JPanel(new GridLayout(5,2));
         panelMiddle = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
-        labelEmployeeId = new JLabel("phone numebr:");
+        lablePhone = new JLabel("vip phone:");
         submitButton = new JButton("Submit");
         backButton = new JButton("Back to main page");
-        eId = new JTextField(5);
+        phone = new JTextField(5);
         invalid = new JLabel();
 
 
-        panelTop.add(labelEmployeeId);
-        panelTop.add(eId);
+        panelTop.add(lablePhone);
+        panelTop.add(phone);
         panelMiddle.add(submitButton);
         panelMiddle.add(backButton);
         panelMiddle.add(invalid,BorderLayout.AFTER_LINE_ENDS);
@@ -63,17 +64,17 @@ public class VIP_identify_for_info {
         frame.setVisible(true);
 
         submitButton.addActionListener(e -> {
-            String id = eId.getText();
-            int eId = Integer.parseInt(id);
+            String p = phone.getText();
+
             VIPOra vipOra = new VIPOra();
 
-//            if() {
-//                invalid.setText("Invalid Phone");
-//                invalid.setForeground(Color.red);
-//                return;
-//            }else {
-//                new vip(employeeOra.getEmployeeByOwn(eId),"employee");
-//            }
+            if(!vipOra.isValidPhone(p)) {
+                invalid.setText("Invalid phone");
+                invalid.setForeground(Color.red);
+                return;
+            }else {
+                new vip(vipOra.getVipFromOwn(p),"vip");
+            }
 
         });
 
