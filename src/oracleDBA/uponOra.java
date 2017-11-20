@@ -72,14 +72,14 @@ public class uponOra {
         }
     }
 
-    public List<TransactionsSumInfo> groupByTID() {
+    public List<TransactionsSumInfo> groupByPtype() {
         List<TransactionsSumInfo> ret = new ArrayList<>();
         try {
             createTransJoinProd();
 
             Statement st = conn.createStatement();
-            String query = "select tid, tamount, tday, ttime, cid, eid, sum(price) from trans_upon_prod "
-                         + "group by tid";
+            String query = "select tid, tamount, tday, ttime, cid, eid, sum(price), ptype from trans_upon_prod "
+                         + "group by ptype";
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {

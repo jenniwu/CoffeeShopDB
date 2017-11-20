@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6219c361-4379-4fd3-a563-1faa6b6a06dd" name="Default" comment="fixed salary join">
+    <list default="true" id="6219c361-4379-4fd3-a563-1faa6b6a06dd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/oracleDBA/VIPOra.class" afterPath="$PROJECT_DIR$/out/production/J 2/oracleDBA/VIPOra.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/uponOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/uponOra.java" />
     </list>
     <ignored path="CoffeeShopDB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,6 +25,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="TransactionsOra.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1511159500254" expanded="true" signature="637:663" ph="select * fro... Transactions" />
+                <marker date="1511159500254" expanded="true" signature="1754:1799" ph="insert into Transactions... " />
+                <marker date="1511159500254" expanded="true" signature="2302:2341" ph="select 1 fro... Transactions" />
+                <marker date="1511159500254" expanded="true" signature="2786:2816" ph="select * fro... trans_input_empl" />
+                <marker date="1511159500254" expanded="true" signature="3886:3958" ph="select tid, trans_input_empl" />
+                <marker date="1511159500254" expanded="true" signature="4807:4894" ph="select * fro... Transactions" />
+                <marker date="1511159500254" expanded="true" signature="5793:5945" ph="select tid, trans_input_empl" />
+                <marker date="1511159500254" expanded="true" signature="6695:7050" ph="create view trans_input_empl... " />
+                <marker date="1511159500254" expanded="true" signature="6752:7050" ph="select Emplo... Employee" />
+                <marker date="1511159500254" expanded="true" signature="7307:7333" ph="drop view tr... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uponOra.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/oracleDBA/uponOra.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding>
+                <marker date="1511162217607" expanded="true" signature="480:498" ph="select * fro... upon" />
+                <marker date="1511162217607" expanded="true" signature="1025:1275" ph="select Trans... " />
+                <marker date="1511162217607" expanded="true" signature="1969:1998" ph="insert into upon... " />
+                <marker date="1511162217607" expanded="true" signature="2479:2601" ph="select tid, trans_upon_prod" />
+                <marker date="1511162217607" expanded="true" signature="2479:2606" ph="select tid, trans_upon_prod" />
+                <marker date="1511162217607" expanded="true" signature="3457:3897" ph="create view trans_upon_product... " />
+                <marker date="1511162217607" expanded="true" signature="3521:3897" ph="select upon.... Transactions" />
+                <marker date="1511162217607" expanded="true" signature="4154:4182" ph="drop view tr... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SalaryOra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/SalaryOra.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,43 +89,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="joinedSalary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/front_end/view_information/joinedSalary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deleteEmployee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/front_end/import_and_export/deleteEmployee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeOra.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmployeeOra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="142" column="32" lean-forward="true" selection-start-line="142" selection-start-column="32" selection-end-line="142" selection-end-column="32" />
+            <state relative-caret-position="784">
+              <caret line="151" column="38" lean-forward="true" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1511161640557" expanded="true" signature="589:611" ph="select * fro... Employee" />
-                <marker date="1511161640557" expanded="true" signature="1412:1451" ph="insert into Employee... " />
-                <marker date="1511161640557" expanded="true" signature="2031:2066" ph="select 1 fro... Employee" />
-                <marker date="1511161640557" expanded="true" signature="2426:2480" ph="select eid f... Employee" />
-                <marker date="1511161640557" expanded="true" signature="2898:2934" ph="select * fro... Employee" />
-                <marker date="1511161640557" expanded="true" signature="3670:3705" ph="select * fro... Employee" />
-                <marker date="1511161640557" expanded="true" signature="4357:4389" ph="delete from " />
-                <marker date="1511161640557" expanded="true" signature="4357:4390" ph="delete from " />
-                <marker date="1511161640557" expanded="true" signature="4709:4755" ph="update Emplo... " />
+                <marker date="1511161834065" expanded="true" signature="589:611" ph="select * fro... Employee" />
+                <marker date="1511161834065" expanded="true" signature="1412:1451" ph="insert into Employee... " />
+                <marker date="1511161834065" expanded="true" signature="2031:2066" ph="select 1 fro... Employee" />
+                <marker date="1511161834065" expanded="true" signature="2426:2480" ph="select eid f... Employee" />
+                <marker date="1511161834065" expanded="true" signature="2898:2934" ph="select * fro... Employee" />
+                <marker date="1511161834065" expanded="true" signature="3670:3705" ph="select * fro... Employee" />
+                <marker date="1511161834065" expanded="true" signature="4357:4389" ph="delete from " />
+                <marker date="1511161834065" expanded="true" signature="4357:4390" ph="delete from " />
+                <marker date="1511161834065" expanded="true" signature="4709:4755" ph="update Emplo... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OracleManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/oracleDBA/OracleManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="46" column="79" lean-forward="false" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,14 +154,19 @@
             <state relative-caret-position="207">
               <caret line="155" column="13" lean-forward="false" selection-start-line="155" selection-start-column="13" selection-end-line="155" selection-end-column="13" />
               <folding>
-                <marker date="1511160697693" expanded="true" signature="540:557" ph="select * fro... Vip" />
-                <marker date="1511160697693" expanded="true" signature="1397:1444" ph="select * fro... Vip" />
-                <marker date="1511160697693" expanded="true" signature="3981:4017" ph="insert into Vip... " />
-                <marker date="1511160697693" expanded="true" signature="4552:4583" ph="select 1 fro... Vip" />
-                <marker date="1511160697693" expanded="true" signature="4552:4584" ph="select 1 fro... Vip" />
-                <marker date="1511160697693" expanded="true" signature="4552:4585" ph="select 1 fro... Vip" />
-                <marker date="1511160697693" expanded="true" signature="4552:4589" ph="select 1 fro... Vip" />
-                <marker date="1511160697693" expanded="true" signature="4552:4599" ph="select 1 fro... Vip" />
+                <marker date="1511161836284" expanded="true" signature="540:557" ph="select * fro... Vip" />
+                <marker date="1511161836284" expanded="true" signature="1397:1444" ph="select * fro... Vip" />
+                <marker date="1511161836284" expanded="true" signature="2405:2816" ph="{...}" />
+                <marker date="1511161836284" expanded="true" signature="2883:3304" ph="{...}" />
+                <marker date="1511161836284" expanded="true" signature="3375:3796" ph="{...}" />
+                <marker date="1511161836284" expanded="true" signature="3910:4412" ph="{...}" />
+                <marker date="1511161836284" expanded="true" signature="3984:4020" ph="insert into Vip... " />
+                <marker date="1511161836284" expanded="true" signature="4460:4802" ph="{...}" />
+                <marker date="1511161836284" expanded="true" signature="4555:4586" ph="select 1 fro... Vip" />
+                <marker date="1511161836284" expanded="true" signature="4555:4587" ph="select 1 fro... Vip" />
+                <marker date="1511161836284" expanded="true" signature="4555:4588" ph="select 1 fro... Vip" />
+                <marker date="1511161836284" expanded="true" signature="4555:4592" ph="select 1 fro... Vip" />
+                <marker date="1511161836284" expanded="true" signature="4555:4602" ph="select 1 fro... Vip" />
               </folding>
             </state>
           </provider>
@@ -139,16 +177,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="341">
               <caret line="128" column="35" lean-forward="false" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/objects/EmployeeInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -212,7 +240,6 @@
         <option value="$PROJECT_DIR$/src/front_end/registration/register_VIP.java" />
         <option value="$PROJECT_DIR$/src/objects/joinUponInfo.java" />
         <option value="$PROJECT_DIR$/src/objects/TransactionsSumInfo.java" />
-        <option value="$PROJECT_DIR$/src/oracleDBA/uponOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java" />
         <option value="$PROJECT_DIR$/src/front_end/extra_window/employee_identify_for_infor.java" />
         <option value="$PROJECT_DIR$/src/front_end/mainPage/mainPageEmployee.java" />
@@ -231,6 +258,7 @@
         <option value="$PROJECT_DIR$/src/objects/joinSalaryInfo.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/SalaryOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" />
+        <option value="$PROJECT_DIR$/src/oracleDBA/uponOra.java" />
       </list>
     </option>
   </component>
@@ -273,6 +301,12 @@
               <item name="CoffeeShopDB" type="b2602c69:ProjectViewProjectNode" />
               <item name="CoffeeShopDB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CoffeeShopDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoffeeShopDB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="front_end" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CoffeeShopDB" type="b2602c69:ProjectViewProjectNode" />
@@ -530,7 +564,7 @@
       <workItem from="1511055334733" duration="2376000" />
       <workItem from="1511078153304" duration="3027000" />
       <workItem from="1511147362226" duration="3015000" />
-      <workItem from="1511159505324" duration="2168000" />
+      <workItem from="1511159505324" duration="2703000" />
     </task>
     <task id="LOCAL-00001" summary="At least this version of code has all the tables and the attributes.">
       <created>1510999908339</created>
@@ -658,11 +692,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511161474089</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fixed employee update">
+      <created>1511161701761</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1511161701761</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14986000" />
+    <option name="totallyTimeSpent" value="15521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="23" width="1398" height="823" extended-state="0" />
@@ -677,13 +718,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30226365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267442" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19098713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -695,7 +737,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32790697" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -745,7 +786,8 @@
     <MESSAGE value="fixed execute function error" />
     <MESSAGE value="isvalidphone" />
     <MESSAGE value="fixed salary join" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed salary join" />
+    <MESSAGE value="fixed employee update" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed employee update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -754,14 +796,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/oracleDBA/CustomerOra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/WeChat Files/Just-Leslie/Files/cs_database(6).sql" />
     <entry file="file://$PROJECT_DIR$/src/front_end/view_information/makes.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -874,14 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="178" column="35" lean-forward="false" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/oracleDBA/uponOra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="80" column="47" lean-forward="false" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1087,26 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="69" column="9" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1511159500254" expanded="true" signature="637:663" ph="select * fro... Transactions" />
-            <marker date="1511159500254" expanded="true" signature="1754:1799" ph="insert into Transactions... " />
-            <marker date="1511159500254" expanded="true" signature="2302:2341" ph="select 1 fro... Transactions" />
-            <marker date="1511159500254" expanded="true" signature="2786:2816" ph="select * fro... trans_input_empl" />
-            <marker date="1511159500254" expanded="true" signature="3886:3958" ph="select tid, trans_input_empl" />
-            <marker date="1511159500254" expanded="true" signature="4807:4894" ph="select * fro... Transactions" />
-            <marker date="1511159500254" expanded="true" signature="5793:5945" ph="select tid, trans_input_empl" />
-            <marker date="1511159500254" expanded="true" signature="6695:7050" ph="create view trans_input_empl... " />
-            <marker date="1511159500254" expanded="true" signature="6752:7050" ph="select Emplo... Employee" />
-            <marker date="1511159500254" expanded="true" signature="7307:7333" ph="drop view tr... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/EmployeeInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18">
@@ -1128,14 +1134,19 @@
         <state relative-caret-position="207">
           <caret line="155" column="13" lean-forward="false" selection-start-line="155" selection-start-column="13" selection-end-line="155" selection-end-column="13" />
           <folding>
-            <marker date="1511160697693" expanded="true" signature="540:557" ph="select * fro... Vip" />
-            <marker date="1511160697693" expanded="true" signature="1397:1444" ph="select * fro... Vip" />
-            <marker date="1511160697693" expanded="true" signature="3981:4017" ph="insert into Vip... " />
-            <marker date="1511160697693" expanded="true" signature="4552:4583" ph="select 1 fro... Vip" />
-            <marker date="1511160697693" expanded="true" signature="4552:4584" ph="select 1 fro... Vip" />
-            <marker date="1511160697693" expanded="true" signature="4552:4585" ph="select 1 fro... Vip" />
-            <marker date="1511160697693" expanded="true" signature="4552:4589" ph="select 1 fro... Vip" />
-            <marker date="1511160697693" expanded="true" signature="4552:4599" ph="select 1 fro... Vip" />
+            <marker date="1511161836284" expanded="true" signature="540:557" ph="select * fro... Vip" />
+            <marker date="1511161836284" expanded="true" signature="1397:1444" ph="select * fro... Vip" />
+            <marker date="1511161836284" expanded="true" signature="2405:2816" ph="{...}" />
+            <marker date="1511161836284" expanded="true" signature="2883:3304" ph="{...}" />
+            <marker date="1511161836284" expanded="true" signature="3375:3796" ph="{...}" />
+            <marker date="1511161836284" expanded="true" signature="3910:4412" ph="{...}" />
+            <marker date="1511161836284" expanded="true" signature="3984:4020" ph="insert into Vip... " />
+            <marker date="1511161836284" expanded="true" signature="4460:4802" ph="{...}" />
+            <marker date="1511161836284" expanded="true" signature="4555:4586" ph="select 1 fro... Vip" />
+            <marker date="1511161836284" expanded="true" signature="4555:4587" ph="select 1 fro... Vip" />
+            <marker date="1511161836284" expanded="true" signature="4555:4588" ph="select 1 fro... Vip" />
+            <marker date="1511161836284" expanded="true" signature="4555:4592" ph="select 1 fro... Vip" />
+            <marker date="1511161836284" expanded="true" signature="4555:4602" ph="select 1 fro... Vip" />
           </folding>
         </state>
       </provider>
@@ -1185,19 +1196,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="142" column="32" lean-forward="true" selection-start-line="142" selection-start-column="32" selection-end-line="142" selection-end-column="32" />
+        <state relative-caret-position="784">
+          <caret line="151" column="38" lean-forward="true" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1511161640557" expanded="true" signature="589:611" ph="select * fro... Employee" />
-            <marker date="1511161640557" expanded="true" signature="1412:1451" ph="insert into Employee... " />
-            <marker date="1511161640557" expanded="true" signature="2031:2066" ph="select 1 fro... Employee" />
-            <marker date="1511161640557" expanded="true" signature="2426:2480" ph="select eid f... Employee" />
-            <marker date="1511161640557" expanded="true" signature="2898:2934" ph="select * fro... Employee" />
-            <marker date="1511161640557" expanded="true" signature="3670:3705" ph="select * fro... Employee" />
-            <marker date="1511161640557" expanded="true" signature="4357:4389" ph="delete from " />
-            <marker date="1511161640557" expanded="true" signature="4357:4390" ph="delete from " />
-            <marker date="1511161640557" expanded="true" signature="4709:4755" ph="update Emplo... " />
+            <marker date="1511161834065" expanded="true" signature="589:611" ph="select * fro... Employee" />
+            <marker date="1511161834065" expanded="true" signature="1412:1451" ph="insert into Employee... " />
+            <marker date="1511161834065" expanded="true" signature="2031:2066" ph="select 1 fro... Employee" />
+            <marker date="1511161834065" expanded="true" signature="2426:2480" ph="select eid f... Employee" />
+            <marker date="1511161834065" expanded="true" signature="2898:2934" ph="select * fro... Employee" />
+            <marker date="1511161834065" expanded="true" signature="3670:3705" ph="select * fro... Employee" />
+            <marker date="1511161834065" expanded="true" signature="4357:4389" ph="delete from " />
+            <marker date="1511161834065" expanded="true" signature="4357:4390" ph="delete from " />
+            <marker date="1511161834065" expanded="true" signature="4709:4755" ph="update Emplo... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oracleDBA/OracleManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="46" column="79" lean-forward="false" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1511159500254" expanded="true" signature="637:663" ph="select * fro... Transactions" />
+            <marker date="1511159500254" expanded="true" signature="1754:1799" ph="insert into Transactions... " />
+            <marker date="1511159500254" expanded="true" signature="2302:2341" ph="select 1 fro... Transactions" />
+            <marker date="1511159500254" expanded="true" signature="2786:2816" ph="select * fro... trans_input_empl" />
+            <marker date="1511159500254" expanded="true" signature="3886:3958" ph="select tid, trans_input_empl" />
+            <marker date="1511159500254" expanded="true" signature="4807:4894" ph="select * fro... Transactions" />
+            <marker date="1511159500254" expanded="true" signature="5793:5945" ph="select tid, trans_input_empl" />
+            <marker date="1511159500254" expanded="true" signature="6695:7050" ph="create view trans_input_empl... " />
+            <marker date="1511159500254" expanded="true" signature="6752:7050" ph="select Emplo... Employee" />
+            <marker date="1511159500254" expanded="true" signature="7307:7333" ph="drop view tr... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oracleDBA/uponOra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <marker date="1511162217607" expanded="true" signature="480:498" ph="select * fro... upon" />
+            <marker date="1511162217607" expanded="true" signature="1025:1275" ph="select Trans... " />
+            <marker date="1511162217607" expanded="true" signature="1969:1998" ph="insert into upon... " />
+            <marker date="1511162217607" expanded="true" signature="2479:2601" ph="select tid, trans_upon_prod" />
+            <marker date="1511162217607" expanded="true" signature="2479:2606" ph="select tid, trans_upon_prod" />
+            <marker date="1511162217607" expanded="true" signature="3457:3897" ph="create view trans_upon_product... " />
+            <marker date="1511162217607" expanded="true" signature="3521:3897" ph="select upon.... Transactions" />
+            <marker date="1511162217607" expanded="true" signature="4154:4182" ph="drop view tr... " />
           </folding>
         </state>
       </provider>
