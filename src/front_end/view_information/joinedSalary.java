@@ -26,7 +26,7 @@ public class joinedSalary extends JFrame
                 "employee id", "employee name", "position", "tier", "manager id"
         };
         //actual data for the table in a 2d array
-        Object[][] data = new Object[list.size()][3];
+        Object[][] data = new Object[list.size()][5];
 
         for (int y = 0; y < list.size(); y++)
         {

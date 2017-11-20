@@ -1,7 +1,7 @@
 package objects;
 
 public class SalaryInfo {
-    int TIER     ;
+    int TIER;
     String FREQUENCY ;
     int BONUS;
 

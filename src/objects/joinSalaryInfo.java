@@ -18,7 +18,7 @@ public class joinSalaryInfo extends SalaryInfo{
     }
 
     public int getTIER(){
-        return TIER;
+        return super.TIER;
     }
     public String getFREQUENCY(){
         return FREQUENCY;

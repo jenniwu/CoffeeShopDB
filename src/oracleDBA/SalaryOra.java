@@ -71,9 +71,9 @@ public class SalaryOra {
 
         try {
             Statement st = conn.createStatement();
-            String query = "select Employee.eid, Employee.ename, Employee.position, Employee.mmid"
-                            + "Salary.tier, Salary.frequency, Salary.bonus from Employee "
-                            + "join Salary on Employee.tier = Salary.tier";
+            String query = "select Employee.eid, Employee.ename, Employee.position, Employee.mmid, "
+                    + "Salary.tier, Salary.frequency, Salary.bonus from Employee "
+                    + "join Salary on Employee.tier = Salary.tier";
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
                 int tier = rs.getInt("tier");
@@ -92,6 +92,4 @@ public class SalaryOra {
 
         return ret;
     }
-
-
 }
