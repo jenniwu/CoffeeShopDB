@@ -4,6 +4,8 @@ package oracleDBA;
  * Created by shadongliu on 2017-11-18.
  */
 
+import objects.CustomerInfo;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

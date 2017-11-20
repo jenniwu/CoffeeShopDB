@@ -1,5 +1,7 @@
 package oracleDBA;
 
+import objects.EmployeeInfo;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

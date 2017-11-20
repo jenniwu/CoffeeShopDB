@@ -1,5 +1,7 @@
 package oracleDBA;
 
+import objects.SalaryInfo;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

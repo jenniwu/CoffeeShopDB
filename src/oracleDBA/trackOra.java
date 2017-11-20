@@ -1,5 +1,8 @@
 package oracleDBA;
 
+import objects.joinTrackInfo;
+import objects.trackInfo;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

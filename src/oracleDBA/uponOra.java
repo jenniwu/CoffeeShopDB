@@ -1,5 +1,8 @@
 package oracleDBA;
 
+import objects.joinUponInfo;
+import objects.uponInfo;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

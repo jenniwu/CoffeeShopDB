@@ -6,7 +6,7 @@ import front_end.mainPage.mainPageEmployee;
 import front_end.mainPage.mainPageManager;
 import front_end.mainPage.mainPageTemp;
 import front_end.mainPage.mainPageVIP;
-import oracleDBA.uponInfo;
+import objects.uponInfo;
 
 import javax.swing.*;
 import java.awt.*;

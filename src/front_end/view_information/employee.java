@@ -6,7 +6,7 @@ import front_end.mainPage.mainPageEmployee;
 import front_end.mainPage.mainPageManager;
 import front_end.mainPage.mainPageTemp;
 import front_end.mainPage.mainPageVIP;
-import oracleDBA.EmployeeInfo;
+import objects.EmployeeInfo;
 
 import javax.swing.*;
 import java.awt.*;

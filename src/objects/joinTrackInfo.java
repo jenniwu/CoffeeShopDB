@@ -1,4 +1,4 @@
-package oracleDBA;
+package objects;
 
 public class joinTrackInfo extends trackInfo {
     int price;
