@@ -4,7 +4,7 @@ import objects.VIPInfo;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 
@@ -45,11 +45,35 @@ public class VIPOra {
         return ret;
     }
 
+    public List<VIPInfo> getVipFromOwn(String phone) {
+        List<VIPInfo> ret = new ArrayList<>();
+
+        try {
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery("select * from Vip where phone = '" + phone + "'");
+
+            while(rs.next()) {
+                String email = rs.getString("email");
+                int loyaltyPoints = rs.getInt("loyaltyPoints");
+                Date birthday = rs.getDate("birthday");
+                int dollarBalance = rs.getInt("dollarBalance");
+                int eid = rs.getInt("eid");
+
+                VIPInfo v = new VIPInfo(phone,email,loyaltyPoints,birthday,dollarBalance,eid);
+                ret.add(v);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return ret;
+    }
+
     public boolean deleteVipInDB(int phone) {
         oracleManager.getConnection();
 
-        int rowCount = oracleManager.execute("DELETE from Vip WHERE phone = "
-                + phone);
+        int rowCount = oracleManager.execute("DELETE from Vip WHERE phone = '"
+                + phone + "'");
 
         oracleManager.disconnect();
 
@@ -110,12 +134,12 @@ public class VIPOra {
 
     }
 
-    public void addVip(String phone, String email, Date birthday, int dollarBalance, int eid) {
+    public void insertVip(String phone, String email, Date birthday, int dollarBalance, int eid) {
         try {
             PreparedStatement ps = conn.prepareStatement("insert into Vip values (?,?,?,?)");
             ps.setString(1, phone);
             ps.setString(2, email);
-            ps.setDate(3, (java.sql.Date) birthday);
+            ps.setDate(3, birthday);
             ps.setInt(4, dollarBalance);
             ps.setInt(5, eid);
             ps.executeUpdate();

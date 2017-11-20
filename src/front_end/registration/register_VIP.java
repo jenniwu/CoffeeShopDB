@@ -4,6 +4,7 @@ import front_end.mainPage.mainPageEmployee;
 import front_end.mainPage.mainPageManager;
 import front_end.mainPage.mainPageTemp;
 import front_end.mainPage.mainPageVIP;
+import oracleDBA.VIPOra;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,14 +23,14 @@ public class register_VIP {
     private JButton submitButton;
     private JButton backButton;
     private JLabel title;
-    private JLabel labelvName;
     private JLabel labelphone;
     private JLabel labelemail;
-    private JTextField vName;
+    private JLabel labelBirthday;
     private JTextField vPhone;
     private JTextField vEmail;
+    private JTextField vBirthday;
 
-    private JLabel invalid;
+   private JLabel invalid;
 
     private String back_user_type;
 
@@ -47,27 +48,27 @@ public class register_VIP {
         frame.setSize(width,height);
 
         panelTop = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        panelMiddle = new JPanel(new GridLayout(3,2));
+        panelMiddle = new JPanel(new GridLayout(4,2));
         panelBottom = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
         title = new JLabel("VIP Register");
-        labelvName = new JLabel("name:");
         labelphone = new JLabel("phone #:");
         labelemail = new JLabel("email:");
+        labelBirthday = new JLabel("birthday:");
         submitButton = new JButton("Submit");
         backButton = new JButton("Back to main page");
-        vName = new JTextField(5);
         vPhone = new JTextField(5);
         vEmail = new JTextField(5);
+        vBirthday = new JTextField(5);
         invalid = new JLabel();
 
         panelTop.add(title);
-        panelMiddle.add(labelvName);
-        panelMiddle.add(vName);
         panelMiddle.add(labelphone);
         panelMiddle.add(vPhone);
         panelMiddle.add(labelemail);
         panelMiddle.add(vEmail);
+        panelMiddle.add(labelBirthday);
+        panelMiddle.add(vBirthday);
         panelBottom.add(submitButton);
         panelBottom.add(backButton);
         panelBottom.add(invalid);
@@ -79,24 +80,23 @@ public class register_VIP {
         frame.setVisible(true);
 
         submitButton.addActionListener(e -> {
-            String VIPname = vName.getText();
             String VIPphone = vPhone.getText();
-            if(VIPname.equals("") || VIPphone.length()!=10) {
+            String VIPEmail = vEmail.getText();
+            String VIPBirthday = vBirthday.getText();
+            java.sql.Date sqlDate = java.sql.Date.valueOf(VIPBirthday);
+
+            if(VIPphone.length() == 0 || VIPEmail.length() == 0 || VIPBirthday.length() == 0) {
                 System.out.println("Invalid inputs");
                 invalid.setText("Missing user info");
                 invalid.setForeground(Color.red);
                 return;
             }
-            frame.setVisible(false);
-            if(back_user_type.equals("vip")){
-                new mainPageVIP();
-            }else if(back_user_type.equals("employee")){
-                new mainPageEmployee();
-            }else if(back_user_type.equals("manager")){
-                new mainPageManager();
-            }else {
-                new mainPageTemp();
-            }
+
+            VIPOra vipOra = new VIPOra();
+            vipOra.addVip(VIPphone,VIPEmail,0,sqlDate,0,1234);
+            invalid.setText("Register Successfully");
+            invalid.setForeground(Color.GREEN);
+
         });
 
         backButton.addActionListener(e -> {

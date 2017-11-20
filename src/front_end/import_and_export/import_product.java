@@ -104,16 +104,8 @@ public class import_product {
             productOra.updateStock(b,"coffee beans");
             productOra.updateStock(c,"coffee machine");
 
-            frame.setVisible(false);
-            if(back_user_type.equals("vip")){
-                new mainPageVIP();
-            }else if(back_user_type.equals("employee")){
-                new mainPageEmployee();
-            }else if(back_user_type.equals("manager")){
-                new mainPageManager();
-            }else {
-                new mainPageTemp();
-            }
+            invalid.setText("Add Product Successfully");
+            invalid.setForeground(Color.GREEN);
         });
 
         backButton.addActionListener(e -> {
