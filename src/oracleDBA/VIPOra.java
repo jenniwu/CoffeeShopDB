@@ -152,4 +152,16 @@ public class VIPOra {
         }
     }
 
+    public boolean isValidPhone(String phone) {
+        try {
+            Statement st = conn.createStatement();
+            String query = "select 1 from Vip where phone = '" + phone + "'";
+            ResultSet rs = st.executeQuery(query);
+            if (!rs.next()) return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
 }

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6219c361-4379-4fd3-a563-1faa6b6a06dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/oracleDBA/OracleManager.class" afterPath="$PROJECT_DIR$/out/production/J 2/oracleDBA/OracleManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cs_database.sql" afterPath="$PROJECT_DIR$/src/cs_database.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/OracleManager.java" afterPath="$PROJECT_DIR$/src/oracleDBA/OracleManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/uponOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/uponOra.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/VIPOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/VIPOra.java" />
     </list>
     <ignored path="CoffeeShopDB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeOra.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmployeeOra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="148" column="62" lean-forward="false" selection-start-line="148" selection-start-column="62" selection-end-line="148" selection-end-column="62" />
+            <state relative-caret-position="251">
+              <caret line="66" column="8" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="74" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1511159580506" expanded="true" signature="589:611" ph="select * fro... Employee" />
@@ -102,6 +98,45 @@
                 <marker date="1511159580506" expanded="true" signature="4357:4389" ph="delete from " />
                 <marker date="1511159580506" expanded="true" signature="4357:4390" ph="delete from " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VIPInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/objects/VIPInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VIPOra.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/oracleDBA/VIPOra.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="163" column="20" lean-forward="true" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="20" />
+              <folding>
+                <marker date="1511160697693" expanded="true" signature="540:557" ph="select * fro... Vip" />
+                <marker date="1511160697693" expanded="true" signature="1397:1444" ph="select * fro... Vip" />
+                <marker date="1511160697693" expanded="true" signature="3981:4017" ph="insert into Vip... " />
+                <marker date="1511160697693" expanded="true" signature="4552:4583" ph="select 1 fro... Vip" />
+                <marker date="1511160697693" expanded="true" signature="4552:4584" ph="select 1 fro... Vip" />
+                <marker date="1511160697693" expanded="true" signature="4552:4585" ph="select 1 fro... Vip" />
+                <marker date="1511160697693" expanded="true" signature="4552:4589" ph="select 1 fro... Vip" />
+                <marker date="1511160697693" expanded="true" signature="4552:4599" ph="select 1 fro... Vip" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/objects/EmployeeInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-18">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,7 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/oracleDBA/OracleManager.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/ProductInfo.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/CustomerOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/trackInfo.java" />
@@ -164,7 +198,6 @@
         <option value="$PROJECT_DIR$/src/front_end/import_and_export/import_product.java" />
         <option value="$PROJECT_DIR$/src/front_end/import_and_export/make_order.java" />
         <option value="$PROJECT_DIR$/src/front_end/registration/register_employee.java" />
-        <option value="$PROJECT_DIR$/src/oracleDBA/VIPOra.java" />
         <option value="$PROJECT_DIR$/src/front_end/registration/register_VIP.java" />
         <option value="$PROJECT_DIR$/src/objects/joinUponInfo.java" />
         <option value="$PROJECT_DIR$/src/objects/TransactionsSumInfo.java" />
@@ -183,6 +216,8 @@
         <option value="$PROJECT_DIR$/src/front_end/view_information/joinedSalary.java" />
         <option value="$PROJECT_DIR$/src/front_end/extra_window/employee_identify_for_salary.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" />
+        <option value="$PROJECT_DIR$/src/objects/VIPInfo.java" />
+        <option value="$PROJECT_DIR$/src/oracleDBA/VIPOra.java" />
       </list>
     </option>
   </component>
@@ -193,9 +228,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="174" />
+    <option name="x" value="37" />
     <option name="y" value="23" />
-    <option name="width" value="1137" />
+    <option name="width" value="1398" />
     <option name="height" value="823" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -214,7 +249,34 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CoffeeShopDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoffeeShopDB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CoffeeShopDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoffeeShopDB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CoffeeShopDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoffeeShopDB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CoffeeShopDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoffeeShopDB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="oracleDBA" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="Scratches" />
@@ -461,7 +523,7 @@
       <workItem from="1511055334733" duration="2376000" />
       <workItem from="1511078153304" duration="3027000" />
       <workItem from="1511147362226" duration="3015000" />
-      <workItem from="1511159505324" duration="114000" />
+      <workItem from="1511159505324" duration="1197000" />
     </task>
     <task id="LOCAL-00001" summary="At least this version of code has all the tables and the attributes.">
       <created>1510999908339</created>
@@ -568,14 +630,21 @@
       <option name="project" value="LOCAL" />
       <updated>1511148907292</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fixed execute function error">
+      <created>1511159633089</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1511159633089</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12932000" />
+    <option name="totallyTimeSpent" value="14015000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="174" y="23" width="1137" height="823" extended-state="0" />
+    <frame x="37" y="23" width="1398" height="823" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -592,7 +661,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29551452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19098713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -652,7 +721,8 @@
     <MESSAGE value="VIP can be registered by Manager" />
     <MESSAGE value="added logout button to UI" />
     <MESSAGE value="fixed transaction query by eid" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed transaction query by eid" />
+    <MESSAGE value="fixed execute function error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed execute function error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -669,14 +739,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/oracleDBA/ManagerOra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="75" column="34" lean-forward="false" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/CustomerOra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -775,21 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/VIPInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/oracleDBA/VIPOra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="108" column="34" lean-forward="false" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/front_end/registration/register_VIP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -820,6 +867,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="178" column="35" lean-forward="false" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -866,6 +914,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="e#629#630#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1082,10 +1133,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/objects/EmployeeInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/objects/VIPInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="148" column="62" lean-forward="false" selection-start-line="148" selection-start-column="62" selection-end-line="148" selection-end-column="62" />
+        <state relative-caret-position="251">
+          <caret line="66" column="8" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="74" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511159580506" expanded="true" signature="589:611" ph="select * fro... Employee" />
@@ -1096,6 +1163,23 @@
             <marker date="1511159580506" expanded="true" signature="3670:3705" ph="select * fro... Employee" />
             <marker date="1511159580506" expanded="true" signature="4357:4389" ph="delete from " />
             <marker date="1511159580506" expanded="true" signature="4357:4390" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oracleDBA/VIPOra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="163" column="20" lean-forward="true" selection-start-line="163" selection-start-column="20" selection-end-line="163" selection-end-column="20" />
+          <folding>
+            <marker date="1511160697693" expanded="true" signature="540:557" ph="select * fro... Vip" />
+            <marker date="1511160697693" expanded="true" signature="1397:1444" ph="select * fro... Vip" />
+            <marker date="1511160697693" expanded="true" signature="3981:4017" ph="insert into Vip... " />
+            <marker date="1511160697693" expanded="true" signature="4552:4583" ph="select 1 fro... Vip" />
+            <marker date="1511160697693" expanded="true" signature="4552:4584" ph="select 1 fro... Vip" />
+            <marker date="1511160697693" expanded="true" signature="4552:4585" ph="select 1 fro... Vip" />
+            <marker date="1511160697693" expanded="true" signature="4552:4589" ph="select 1 fro... Vip" />
+            <marker date="1511160697693" expanded="true" signature="4552:4599" ph="select 1 fro... Vip" />
           </folding>
         </state>
       </provider>
