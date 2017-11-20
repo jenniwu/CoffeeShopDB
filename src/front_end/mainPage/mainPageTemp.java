@@ -1,4 +1,4 @@
-package front_end;
+package front_end.mainPage;
 
 import front_end.import_and_export.import_product;
 import front_end.import_and_export.make_order;
@@ -9,10 +9,7 @@ import oracleDBA.*;
 
 import javax.swing.*;
 
-/**
- * Created by user on 11/16/2017.
- */
-public class mainPage {
+public class mainPageTemp {
     private static final int width = 450;
     private static final int height = 650;
 
@@ -34,7 +31,7 @@ public class mainPage {
     private JButton uponInformation;
     private JButton trackInformation;
 
-    public mainPage()
+    public mainPageTemp()
     {
         gui();
     }
@@ -78,8 +75,6 @@ public class mainPage {
         frame = new JFrame("Main");
         panel = new JPanel();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        GroupLayout layout = new GroupLayout(panel);
-//        panel.setLayout(layout);
 
         registerNewEmployee = new JButton("Register Employee");
         registerNewVIP = new JButton("Register VIP");
@@ -97,48 +92,8 @@ public class mainPage {
         uponInformation = new JButton("Table <Upon> ???");
         trackInformation = new JButton("Table <Track> ???");
 
-//        GroupLayout.SequentialGroup leftToRight = layout.createSequentialGroup();
-//
-//        GroupLayout.ParallelGroup column1 = layout.createParallelGroup();
-//        column1.addComponent(registerNewVIP);
-//        column1.addComponent(registerNewEmployee);
-//        leftToRight.addGroup(column1);
-//        GroupLayout.ParallelGroup column2 = layout.createParallelGroup();
-//        column2.addComponent(makeOrder);
-//        column2.addComponent(addProduct);
-//        leftToRight.addGroup(column2);
-//        GroupLayout.ParallelGroup column3 = layout.createParallelGroup();
-//        column3.addComponent(VIPInformation);
-//        column3.addComponent(employeeInformation);
-//        column3.addComponent(productInformation);
-//        column3.addComponent(supplierInformation);
-//        column3.addComponent(transactionInformation);
-//        column3.addComponent(salaryInformation);
-//        column3.addComponent(customerInformation);
-//
-//        GroupLayout.SequentialGroup topToBottom = layout.createSequentialGroup();
-//
-//        GroupLayout.ParallelGroup row1 = layout.createParallelGroup();
-//        row1.addComponent(registerNewVIP);
-//        row1.addComponent(makeOrder);
-//        row1.addComponent(VIPInformation);
-//        topToBottom.addGroup(row1);
-//        GroupLayout.ParallelGroup row2 = layout.createParallelGroup();
-//        row2.addComponent(registerNewEmployee);
-//        row2.addComponent(addProduct);
-//        row2.addComponent(employeeInformation);
-//        topToBottom.addGroup(row2);
-//        topToBottom.addComponent(productInformation);
-//        topToBottom.addComponent(supplierInformation);
-//        topToBottom.addComponent(transactionInformation);
-//        topToBottom.addComponent(salaryInformation);
-//        topToBottom.addComponent(customerInformation);
-//
-//        layout.setHorizontalGroup(leftToRight);
-//        layout.setVerticalGroup(topToBottom);
 
         BoxOfButton();
-
 
         frame.add(panel);
         frame.pack();
@@ -148,89 +103,87 @@ public class mainPage {
 
         registerNewEmployee.addActionListener(e -> {
             frame.setVisible(false);
-            new register_employee();
+            new register_employee("temp");
         });
 
         registerNewVIP.addActionListener(e -> {
             frame.setVisible(false);
-            new register_VIP();
+            new register_VIP("temp");
         });
         makeOrder.addActionListener(e -> {
             frame.setVisible(false);
-            new make_order();
+            new make_order("temp");
         });
         addProduct.addActionListener(e -> {
             frame.setVisible(false);
-            new import_product();
+            new import_product("temp");
         });
         customerInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             CustomerOra customerOra = new CustomerOra();
-            new customer(customerOra.getCustomer());
+            new customer(customerOra.getCustomer(),"temp");
         });
 
         VIPInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             VIPOra vipOra = new VIPOra();
-            new vip(vipOra.getVIPs());
+            new vip(vipOra.getVIPs(),"temp");
         });
         transactionInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             TransactionsOra transactionOra = new TransactionsOra();
-            new transaction(transactionOra.getTransactions());
+            new transaction(transactionOra.getTransactions(),"temp");
         });
         productInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             ProductOra productOra = new ProductOra();
-            new product(productOra.getProducts());
+            new product(productOra.getProducts(),"temp");
         });
         supplierInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             SupplierOra supplierOra = new SupplierOra();
-            new supplier(supplierOra.getSuppliers());
+            new supplier(supplierOra.getSuppliers(),"temp");
         });
         managerInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             ManagerOra managerOra = new ManagerOra();
-            new manager(managerOra.getManagers());
+            new manager(managerOra.getManagers(),"temp");
         });
         employeeInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             EmployeeOra employeeOra = new EmployeeOra();
-            new employee(employeeOra.getEmployees());
+            new employee(employeeOra.getEmployees(),"temp");
         });
         salaryInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view salary information
             SalaryOra salaryOra = new SalaryOra();
-            new salary(salaryOra.getSalaries());
+            new salary(salaryOra.getSalaries(),"temp");
         });
         makesInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view salary information
             makesOra make = new makesOra();
-            new makes(make.getMakes());
+            new makes(make.getMakes(),"temp");
         });
         uponInformation.addActionListener(e -> {
             frame.setVisible(false);
-//            List<uponInfo> temp = new ArrayList<uponInfo>();
-//            uponInfo a = new uponInfo(1,2);
-//            temp.add(a);
-//            new upon(temp);
+            // TODO: only view salary information
             uponOra up = new uponOra();
-            new upon(up.getUpons());
+            new upon(up.getUpons(),"temp");
         });
         trackInformation.addActionListener(e -> {
             frame.setVisible(false);
+            // TODO: only view salary information
             trackOra t = new trackOra();
-            new track(t.getTracks());
+            new track(t.getTracks(),"temp");
         });
     }
 }

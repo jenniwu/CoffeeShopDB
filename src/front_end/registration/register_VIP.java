@@ -1,6 +1,9 @@
 package front_end.registration;
 
-import front_end.mainPage;
+import front_end.mainPage.mainPageEmployee;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
+import front_end.mainPage.mainPageVIP;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,8 +31,11 @@ public class register_VIP {
 
     private JLabel invalid;
 
-    public register_VIP()
+    private String back_user_type;
+
+    public register_VIP(String userType)
     {
+        this.back_user_type = userType;
         gui();
     }
 
@@ -82,12 +88,28 @@ public class register_VIP {
                 return;
             }
             frame.setVisible(false);
-            new mainPage();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
 
         backButton.addActionListener(e -> {
             frame.setVisible(false);
-            new mainPage();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }

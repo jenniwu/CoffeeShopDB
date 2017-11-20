@@ -1,6 +1,9 @@
 package front_end.import_and_export;
 
-import front_end.mainPage;
+import front_end.mainPage.mainPageEmployee;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
+import front_end.mainPage.mainPageVIP;
 import oracleDBA.ProductOra;
 
 import javax.swing.*;
@@ -28,9 +31,11 @@ public class import_product {
     private JTextField coffeeMachine;
 
     private JLabel invalid;
+    private String back_user_type;
 
-    public import_product()
+    public import_product(String back)
     {
+        this.back_user_type = back;
         gui();
     }
 
@@ -100,12 +105,28 @@ public class import_product {
             productOra.updateStock(c,"coffee machine");
 
             frame.setVisible(false);
-            new mainPage();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
 
         backButton.addActionListener(e -> {
             frame.setVisible(false);
-            new mainPage();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }
