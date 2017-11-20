@@ -1,15 +1,9 @@
 package oracleDBA;
 
-import jdk.internal.util.xml.impl.Input;
 import objects.InputInfo;
 import objects.TransactionsInfo;
 
-import javax.xml.transform.Result;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Date;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -163,7 +157,7 @@ public class TransactionsOra {
             createTransJoinEmpl();
             Statement st = conn.createStatement();
             String query = "select tid, tday, ttime, cid, eid from trans_input_empl "
-                         + "where ( tday between '" + fromDay + "' and '" + toDay + "' ) and eid = " + eid;
+                    + "where ( tday between '" + fromDay + "' and '" + toDay + "' ) and eid = " + eid;
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {

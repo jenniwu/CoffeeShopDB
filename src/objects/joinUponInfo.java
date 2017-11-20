@@ -14,5 +14,15 @@ public class joinUponInfo extends uponInfo {
         this.price = price;
     }
 
+    public Date getTday() {
+        return tday;
+    }
 
+    public String getTtime() {
+        return ttime;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 }
