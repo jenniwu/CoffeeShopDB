@@ -2,7 +2,7 @@ package front_end.view_information;
 
 import front_end.mainPage.mainPageManager;
 import front_end.mainPage.mainPageTemp;
-import oracleDBA.trackInfo;
+import objects.trackInfo;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,5 +1,7 @@
 package oracleDBA;
 
+import objects.ManagerInfo;
+
 import java.sql.*;
 import java.util.*;
 

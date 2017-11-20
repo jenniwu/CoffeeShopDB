@@ -1,5 +1,7 @@
 package oracleDBA;
 
+import objects.VIPInfo;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;

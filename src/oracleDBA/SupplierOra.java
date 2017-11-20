@@ -1,5 +1,7 @@
 package oracleDBA;
 
+import objects.SupplierInfo;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
 /**
  * Created by zhanghuanxin on 2017-11-17.
  */
-package oracleDBA;
+package objects;
 
 public class EmployeeInfo {
 
