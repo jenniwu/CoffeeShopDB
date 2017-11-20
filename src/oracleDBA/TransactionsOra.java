@@ -1,18 +1,18 @@
 package oracleDBA;
 
+import jdk.internal.util.xml.impl.Input;
+import objects.InputInfo;
 import objects.TransactionsInfo;
 
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.Date;
 
-/**
- * Created by shadongliu on 2017-11-18.
- */
 public class TransactionsOra {
     OracleManager om;
     Connection conn;
@@ -72,12 +72,71 @@ public class TransactionsOra {
             return false;
     }
 
-    public List<TransactionsInfo> getTransactionsByEmployee(int eid) {
-        List<TransactionsInfo> ret = new ArrayList<>();
+    public void createTransJoinEmpl() {
         try {
             Statement st = conn.createStatement();
-            String query = "select * from Transactions where eid = " + eid;
+            String query = "create view trans_input_empl as "
+                         + "select Employee.ename, Employee.eid, Employee.position, Employee.tier, Employee.mmid, "
+                         + "Transactions.tid, Transactions.tday, Transactions.ttime, Transactions.cid "
+                         + "from Employee join Transactions on Employee.eid = Transactions.eid";
+            st.executeQuery(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void dropTransJoinEmpl() {
+        try {
+            Statement st = conn.createStatement();
+            st.executeQuery("drop view trans_input_empl");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<InputInfo> getTransactionsJoinEmployee() {
+        List<InputInfo> ret = new ArrayList<>();
+
+        try {
+            createTransJoinEmpl();
+            Statement st = conn.createStatement();
+            String query = "select * from trans_input_empl";
             ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                String ename = rs.getString("ename");
+                int eid = rs.getInt("eid");
+                String pos = rs.getString("position");
+                int tier = rs.getInt("tier");
+                int mmid = rs.getInt("mmid");
+                int tid = rs.getInt("tid");
+                java.sql.Date tday = rs.getDate("tday");
+                String ttime = rs.getString("ttime");
+                int cid = rs.getInt("cid");
+
+                InputInfo ii = new InputInfo(tid, tday, ttime, tier, mmid, eid, ename, pos, cid);
+                ret.add(ii);
+            }
+
+            dropTransJoinEmpl();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return ret;
+    }
+
+    public List<TransactionsInfo> getTransactionsByEmployee(String ename) {
+        List<TransactionsInfo> ret = new ArrayList<>();
+
+        try {
+            createTransJoinEmpl();
+            Statement st = conn.createStatement();
+            String query = "select tid, tday, ttime, cid from trans_input_empl where ename = '" + ename + "'";
+            ResultSet rs = st.executeQuery(query);
+            EmployeeOra employeeOra = new EmployeeOra();
+            int eid = employeeOra.getEID(ename);
 
             while (rs.next()) {
                 int tid = rs.getInt("tid");
@@ -88,9 +147,65 @@ public class TransactionsOra {
                 TransactionsInfo ti = new TransactionsInfo(tid, tday, ttime, cid, eid);
                 ret.add(ti);
             }
+
+            dropTransJoinEmpl();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return ret;
+    }
+
+    public List<TransactionsInfo> getTransactionsByDate(Date fromDay, Date toDay) {
+        List<TransactionsInfo> ret = new ArrayList<>();
+
+        try {
+            Statement st = conn.createStatement();
+            String query = "select * from Transactions where tday between fromDay and toDay";
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                int tid = rs.getInt("tid");
+                Date tday = rs.getDate("tday");
+                String ttime = rs.getString("ttime");
+                int cid = rs.getInt("cid");
+                int eid = rs.getInt("eid");
+
+                TransactionsInfo ti = new TransactionsInfo(tid, tday, ttime, cid, eid);
+                ret.add(ti);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ret;
+    }
+
+    public List<TransactionsInfo> getTransactionsEmpDate(String ename, Date fromDay, Date toDay) {
+        List<TransactionsInfo> ret = new ArrayList<>();
+
+        try {
+            createTransJoinEmpl();
+            Statement st = conn.createStatement();
+            String query = "select tid, tday, ttime, cid, eid from trans_input_empl "
+                         + "where ( tday between fromDay and toDay ) and ename = '" + ename + "'";
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                int tid = rs.getInt("tid");
+                Date tday = rs.getDate("tday");
+                String ttime = rs.getString("ttime");
+                int cid = rs.getInt("cid");
+                int eid = rs.getInt("eid");
+
+                TransactionsInfo ti = new TransactionsInfo(tid, tday, ttime, cid, eid);
+                ret.add(ti);
+            }
+
+            dropTransJoinEmpl();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return ret;
     }
 }
