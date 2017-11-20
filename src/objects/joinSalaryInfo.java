@@ -7,14 +7,14 @@ public class joinSalaryInfo extends SalaryInfo{
     int EID;
     String ENAME ;
     String POSITION ;
-    int TIER ;
     int MMID ;
 
-    public joinSalaryInfo(int tier , String  frequency , int bonus, int EID , String ENAME, String POSITION, int TIER, int MMID ){
+    public joinSalaryInfo(int tier, String frequency, int bonus, int EID, String ENAME, String POSITION, int MMID) {
         super(tier, frequency, bonus);
-        this.TIER = tier;
-        this.FREQUENCY = frequency;
-        this.BONUS = bonus;
+        this.EID = EID;
+        this.ENAME = ENAME;
+        this.POSITION = POSITION;
+        this.MMID = MMID;
     }
 
     public int getTIER(){

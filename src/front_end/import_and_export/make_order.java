@@ -120,7 +120,6 @@ public class make_order {
                 invalid.setForeground(Color.red);
                 return;
             } else {
-                int tid = transactionsOra.generateTID();
                 int aPrice = productOra.getPrice("coffee");
                 int bPrice = productOra.getPrice("coffee beans");
                 int cPrice = productOra.getPrice("coffee machine");
@@ -128,16 +127,19 @@ public class make_order {
                 int bAmount = b*bPrice;
                 int cAmount = c*cPrice;
                 if (aAmount != 0) {
+                    int tid = transactionsOra.generateTID();
                     transactionsOra.insertTransactions(tid, aAmount, 1, 1234);
                     uo.insertUpon(tid, "coffee");
                     productOra.updateStock(-a,"coffee");
                 }
                 if (bAmount != 0) {
+                    int tid = transactionsOra.generateTID();
                     transactionsOra.insertTransactions(tid, bAmount, 1, 1234);
                     uo.insertUpon(tid, "coffee beans");
                     productOra.updateStock(-b,"coffee beans");
                 }
                 if (cAmount != 0) {
+                    int tid = transactionsOra.generateTID();
                     transactionsOra.insertTransactions(tid, cAmount, 1, 1234);
                     uo.insertUpon(tid, "coffee machine");
                     productOra.updateStock(-c,"coffee machine");
