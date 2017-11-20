@@ -25,7 +25,7 @@ public class vip extends JFrame
         back_user_type = userType;
         //headers for the table
         String[] columns = new String[] {
-                "phone", "email", "loyalty points", "birthday", "balance", "VIP#"
+                "phone", "email", "loyalty points", "birthday", "balance", "employee id"
         };
         //actual data for the table in a 2d array
         Object[][] data = new Object[list.size()][6];
