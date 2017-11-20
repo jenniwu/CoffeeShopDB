@@ -1,11 +1,9 @@
 package front_end.mainPage;
 
+import front_end.extra_window.vip_identify_for_infor;
+import front_end.extra_window.vip_identify_for_transaction;
 import front_end.import_and_export.make_order;
 import front_end.login;
-import front_end.view_information.transaction;
-import front_end.view_information.vip;
-import oracleDBA.TransactionsOra;
-import oracleDBA.VIPOra;
 
 import javax.swing.*;
 
@@ -65,14 +63,12 @@ public class mainPageVIP {
         VIPInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
-            VIPOra vipOra = new VIPOra();
-            new vip(vipOra.getVIPs(),"vip");
+            new vip_identify_for_infor("vip");
         });
         transactionInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
-            TransactionsOra transactionOra = new TransactionsOra();
-            new transaction(transactionOra.getTransactions(),"vip");
+            new vip_identify_for_transaction("vip");
         });
         logout.addActionListener(e -> {
             frame.setVisible(false);

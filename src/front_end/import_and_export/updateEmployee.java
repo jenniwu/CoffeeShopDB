@@ -94,14 +94,15 @@ public class updateEmployee {
                 EmployeeOra employeeOra = new EmployeeOra();
                 if(employeeOra.isValidEID(idNum)){
                     employeeOra.updateEmployeePosition(idNum,position);
+
+                    invalid.setText("Update Success");
+                    invalid.setForeground(Color.GREEN);
                 }else{
                     invalid.setText("Invalid EID");
                     invalid.setForeground(Color.red);
                     return;
                 }
-
-                invalid.setText("Update Success");
-                invalid.setForeground(Color.GREEN);
+                return;
             }
         });
 
