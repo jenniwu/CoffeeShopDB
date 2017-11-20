@@ -7,7 +7,7 @@ public class uponInfo {
     int tid;
     String ptype;
 
-    public uponInfo(int tid, String ptype){
+    public uponInfo(int tid, String ptype) {
         this.tid = tid;
         this.ptype = ptype;
     }

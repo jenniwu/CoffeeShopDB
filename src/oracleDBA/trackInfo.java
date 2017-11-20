@@ -1,8 +1,5 @@
 package oracleDBA;
 
-/**
- * Created by shadongliu on 2017-11-18.
- */
 public class trackInfo {
     String ptype;
     String sphone;

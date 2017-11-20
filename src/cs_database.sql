@@ -84,7 +84,7 @@ create table Vip
   loyaltyPoints int not null,
   birthday date not null,
   dollarBalance int,
-  eid int not null,
+  eid int,
   primary key (phone),
   foreign key (eid) references Employee ON DELETE CASCADE);
 grant select on Vip to public;
@@ -122,34 +122,34 @@ grant select on makes to public;
 
 create table upon
   (tid int not null,
-  pid int not null,
-  primary key (tid, pid),
+  ptype varchar(30) not null,
+  primary key (tid, ptype),
   foreign key (tid) references Transactions ON DELETE CASCADE,
-  foreign key (pid) references Product ON DELETE CASCADE);
+  foreign key (ptype) references Product ON DELETE SET NULL);
 grant select on upon to public;
 
 
 
 create table track
-  (pid int not null,
+  (ptype varchar(30) not null,
   sphone char(20) not null,
   mmid int not null,
-  primary key (pid, sphone, mmid),
-  foreign key (mmid) references Manager ON DELETE CASCADE,
-  foreign key (pid) references Product ON DELETE CASCADE,
-  foreign key (sphone) references Supplier ON DELETE CASCADE);
+  primary key (ptype, sphone, mmid),
+  foreign key (mmid) references Manager ON DELETE SET NULL,
+  foreign key (ptype) references Product ON DELETE CASCADE,
+  foreign key (sphone) references Supplier ON DELETE SET NULL);
 grant select on track to public;
 commit;
 
 -- insert data into diffrent tables
 
 insert into Product values
---(pid,price,stockamount,return?,ptype)
-(123456, 20, 10, 'NO', 'coffee');
+--(price,stockamount,return?,ptype)
+(20, 10, 'NO', 'coffee');
 insert into Product values
-(234567, 150, 10, 'YES', 'coffee beans');
+(150, 10, 'YES', 'coffee beans');
 insert into Product values
-(345678, 5, 50, 'YES', 'coffee machine');
+(5, 50, 'YES', 'coffee machine');
 
 
 insert into Supplier values
@@ -241,20 +241,17 @@ insert into makes values
 (5);
 
 insert into upon values
---(tid,pid)
-(12345,123456);
+--(tid,ptype)
+(12345,'coffee');
 insert into upon values
-(23456,234567);
+(23456,'coffee beans' );
 insert into upon values
-(67821,345678);
+(67821,'coffee machine');
 
 insert into track values
---(pid,sphone,mmid)
-(123456,'778-893-3079',123);
+--(ptype,sphone,mmid)
+('coffee','778-893-3079',123);
 insert into track values
-(234567,'778-893-3079',123);
+('coffee beans','778-893-3079',123);
 insert into track values
-(345678,'778-803-5783',206);
-
-
-
+('coffee machine','778-803-5783',206);
