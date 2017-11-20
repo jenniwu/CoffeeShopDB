@@ -127,16 +127,14 @@ public class TransactionsOra {
         return ret;
     }
 
-    public List<TransactionsInfo> getTransactionsByEmployee(String ename) {
+    public List<TransactionsInfo> getTransactionsByEmployee(int eid) {
         List<TransactionsInfo> ret = new ArrayList<>();
 
         try {
             createTransJoinEmpl();
             Statement st = conn.createStatement();
-            String query = "select tid, tday, ttime, cid from trans_input_empl where ename = '" + ename + "'";
+            String query = "select tid, tday, ttime, cid from trans_input_empl where eid = " + eid;
             ResultSet rs = st.executeQuery(query);
-            EmployeeOra employeeOra = new EmployeeOra();
-            int eid = employeeOra.getEID(ename);
 
             while (rs.next()) {
                 int tid = rs.getInt("tid");
@@ -180,14 +178,14 @@ public class TransactionsOra {
         return ret;
     }
 
-    public List<TransactionsInfo> getTransactionsEmpDate(String ename, Date fromDay, Date toDay) {
+    public List<TransactionsInfo> getTransactionsEmpDate(int eid, Date fromDay, Date toDay) {
         List<TransactionsInfo> ret = new ArrayList<>();
 
         try {
             createTransJoinEmpl();
             Statement st = conn.createStatement();
             String query = "select tid, tday, ttime, cid, eid from trans_input_empl "
-                         + "where ( tday between fromDay and toDay ) and ename = '" + ename + "'";
+                         + "where ( tday between fromDay and toDay ) and eid = " + eid;
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {
@@ -195,7 +193,6 @@ public class TransactionsOra {
                 Date tday = rs.getDate("tday");
                 String ttime = rs.getString("ttime");
                 int cid = rs.getInt("cid");
-                int eid = rs.getInt("eid");
 
                 TransactionsInfo ti = new TransactionsInfo(tid, tday, ttime, cid, eid);
                 ret.add(ti);

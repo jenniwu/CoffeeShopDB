@@ -46,8 +46,9 @@ public class uponOra {
         List<joinUponInfo> ret = new ArrayList<>();
         try {
             Statement st = conn.createStatement();
-            String query = "select Transactions.tday, Transactions.ttime, Transactions.tid, upon.ptype "
-                         + "from Transactions join upon on upon.tid = Transactions.tid";
+            String query = "select Transactions.tday, Transactions.ttime, Transactions.tid, upon.ptype, Product.price"
+                         + "from Transactions join upon on upon.tid = Transactions.tid "
+                         + "join Product on Product.ptype = upon.ptype";
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {
@@ -55,8 +56,9 @@ public class uponOra {
                 Date tday = rs.getDate("tday");
                 String ttime = rs.getString("ttime");
                 String ptype = rs.getString("ptype");
+                int price = rs.getInt("price");
 
-                joinUponInfo jui = new joinUponInfo(tid, tday, ttime, ptype);
+                joinUponInfo jui = new joinUponInfo(tid, tday, ttime, ptype, price);
                 ret.add(jui);
             }
         } catch (SQLException e) {
