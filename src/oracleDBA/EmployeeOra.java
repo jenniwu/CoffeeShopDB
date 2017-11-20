@@ -134,14 +134,14 @@ public class EmployeeOra {
     }
 
     public void deleteEmployeeInDB(int eid) {
-        oracleManager.getConnection();
-
-        String sqlCommand = "delete from Employee where eid = " + eid;
-        System.out.println(sqlCommand);
-        oracleManager.execute(sqlCommand);
-
-        oracleManager.disconnect();
-
+        try {
+            PreparedStatement ps = conn.prepareStatement("delete from Employee where eid = " + eid);
+            ps.executeUpdate();
+            conn.commit();
+            ps.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 

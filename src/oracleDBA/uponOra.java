@@ -78,7 +78,7 @@ public class uponOra {
             createTransJoinProd();
 
             Statement st = conn.createStatement();
-            String query = "select tid, tday, ttime, cid, eid, sum(price) from trans_upon_prod "
+            String query = "select tid, tamount, tday, ttime, cid, eid, sum(price) from trans_upon_prod "
                          + "group by tid";
             ResultSet rs = st.executeQuery(query);
 
@@ -94,6 +94,8 @@ public class uponOra {
                 TransactionsSumInfo tsi = new TransactionsSumInfo(tid, tamount, tday, ttime, cid, eid, sum);
                 ret.add(tsi);
             }
+
+            dropTransJoinProd();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -104,7 +106,7 @@ public class uponOra {
         try {
             Statement st = conn.createStatement();
             String query = "create view trans_upon_product as "
-                         + "select upon.tid, Transactions.tday, Transactions.ttime, Transactions.cid, Transactions.eid, "
+                         + "select upon.tid, Transactions.tamount, Transactions.tday, Transactions.ttime, Transactions.cid, Transactions.eid, "
                          + "upon.ptype, Product.price, Product.stockAmount, Product.returnableFlag from Transactions "
                          + "join upon on upon.tid = Transactions.tid "
                          + "join Product on upon.ptype = Product.ptype";
@@ -117,7 +119,7 @@ public class uponOra {
     private void dropTransJoinProd() {
         try {
             Statement st = conn.createStatement();
-            st.executeQuery("trans_upon_product");
+            st.executeQuery("drop view trans_upon_product");
         } catch (SQLException e) {
             e.printStackTrace();
         }

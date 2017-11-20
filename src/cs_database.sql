@@ -142,6 +142,12 @@ create table track
 grant select on track to public;
 commit;
 
+
+
+
+
+
+
 -- insert data into diffrent tables
 
 insert into Product values
@@ -161,11 +167,13 @@ insert into Supplier values
 insert into Supplier values
 ('778-093-2761', 'Jacob');
 
+
 insert into Manager values
 --(mmid,mname)
 (123, 'Knorr');
 insert into Manager values
 (206, 'Mike');
+
 
 insert into Salary values
 --(tier, frequency, bonus)
@@ -175,6 +183,7 @@ insert into Salary values
 insert into Salary values
 (3, 'monthly', 0);
 
+
 insert into Employee values
 --(eid,ename,position,tier,emid)
 (1234, 'A', 'sales clerk', 1, 123);
@@ -182,6 +191,7 @@ insert into Employee values
 (2234, 'B', 'skilled worker', 1, 123);
 insert into Employee values
 (8265, 'C', 'dustman', 3, 206);
+
 
 insert into Vip values
 --(phone, email, loyaltypoints,birthday,dollarbalance,eid)
@@ -199,30 +209,31 @@ insert into Customer values
 (2, 'B. Ben', '778-674-5692');
 insert into Customer values
 (3, 'C. Chris', '778-294-3298');
--- insert into Customer values
--- (4, 'D. Dennis', '778-123-1342');
--- insert into Customer values
--- (5, 'E. Eddie', '778-456-5635');
--- insert into Customer values
--- (6, 'F. Frank', '778-723-0985');
--- insert into Customer values
--- (7, 'G. Ganster', '778-522-0784');
--- insert into Customer values
--- (8, 'H. Henry', '778-678-3985');
--- insert into Customer values
--- (9, 'I. Iris', '778-990-6784');
--- insert into Customer values
--- (10, 'J. Jenny', '778-255-0275');
--- insert into Customer values
--- (11, 'K. Kanye', '778-670-9065');
--- insert into Customer values
--- (12, 'L. Leonaldo', '778-359-8391');
--- insert into Customer values
--- (13, 'M. Mundo', '778-782-1298');
--- insert into Customer values
--- (14, 'N. Natasha', '778-091-1234');
--- insert into Customer values
--- (15, 'O. Oliver', '778-123-2345');
+insert into Customer values
+(4, 'D. Dennis', '778-123-1342');
+insert into Customer values
+(5, 'E. Eddie', '778-456-5635');
+insert into Customer values
+(6, 'F. Frank', '778-723-0985');
+insert into Customer values
+(7, 'G. Ganster', '778-522-0784');
+insert into Customer values
+(8, 'H. Henry', '778-678-3985');
+insert into Customer values
+(9, 'I. Iris', '778-990-6784');
+insert into Customer values
+(10, 'J. Jenny', '778-255-0275');
+insert into Customer values
+(11, 'K. Kanye', '778-670-9065');
+insert into Customer values
+(12, 'L. Leonaldo', '778-359-8391');
+insert into Customer values
+(13, 'M. Mundo', '778-782-1298');
+insert into Customer values
+(14, 'N. Natasha', '778-091-1234');
+insert into Customer values
+(15, 'O. Oliver', '778-123-2345');
+
 
 insert into Transactions values
 --(tid,tamount,tday,ttime,cid,eid)
@@ -240,6 +251,7 @@ insert into makes values
 (6);
 insert into makes values
 (5);
+
 
 insert into upon values
 --(tid,ptype)

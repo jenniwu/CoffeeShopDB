@@ -58,19 +58,6 @@ public class OracleManager {
         return rowCount;
     }
 
-    //stringForQuery is the sql command for query
-    public ResultSet query(String stringForQuery){
-        ResultSet rs = null;
-        if(stmt == null)
-            System.out.println("NULL QUERY");
-        try {
-            rs = stmt.executeQuery(stringForQuery);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return rs;
-    }
-
     public void disconnect(){
         try {
             conn.close();
@@ -78,22 +65,6 @@ public class OracleManager {
             e.printStackTrace();
             System.out.println("disconnect fails");
         }
-    }
-
-    public boolean getIsOpen() {
-        Statement stmt = null;
-        ResultSet rs =null;
-        try {
-            stmt = conn.createStatement();
-            rs = stmt.executeQuery("SELECT 1 FROM Dual");
-
-            if (rs.next())
-                return true;
-        }
-        catch (SQLException e) {
-            return false;
-        }
-        return false;
     }
 
 }
