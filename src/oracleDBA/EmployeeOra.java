@@ -74,6 +74,19 @@ public class EmployeeOra {
         return true;
     }
 
+    public int getEID(String ename) {
+        int eid = 0;
+        try {
+            Statement st = conn.createStatement();
+            String query = "select eid from Employee where ename = '" + ename + "'";
+            ResultSet rs = st.executeQuery(query);
+            if (rs.next()) eid = rs.getInt("eid");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return eid;
+    }
+
     public List<EmployeeInfo> getEmployeeByManager(int mmid) {
         List<EmployeeInfo> ret = new ArrayList<>();
         try {

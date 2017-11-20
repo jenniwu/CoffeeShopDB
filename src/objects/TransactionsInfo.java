@@ -12,7 +12,7 @@ public class TransactionsInfo {
     int cid;
     int eid;
 
-    public TransactionsInfo(int tid, Date tday, String ttime, int cid, int eid){
+    public TransactionsInfo(int tid, Date tday, String ttime, int cid, int eid) {
         this.tid = tid;
         this.tday = tday;
         this.ttime = ttime;
