@@ -54,13 +54,20 @@ public class TransactionsOra {
         Date tday = new Date(date.getTime());
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         String ttime = sdf.format(date);
-        String sqlCommand1 = "insert into Transactions values ("
-                    + tid + ", "
-                    + tamount + ", "
-                    + "'" + tday + "', "
-                    + "'" + ttime + "',"
-                    + cid + ", " + eid + ")";
-            om.execute(sqlCommand1);
+        try {
+            PreparedStatement ps = conn.prepareStatement("insert into Transactions values (?,?,?,?,?,?)");
+            ps.setInt(1, tid);
+            ps.setInt(2, tamount);
+            ps.setDate(3, tday);
+            ps.setString(4, ttime);
+            ps.setInt(5, cid);
+            ps.setInt(6, eid);
+            ps.executeUpdate();
+            conn.commit();
+            ps.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public boolean isValidTID(int tid) {

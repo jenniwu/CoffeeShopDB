@@ -5,8 +5,8 @@ import java.sql.Date;
 public class TransactionsSumInfo extends TransactionsInfo {
     int sum;
 
-    public TransactionsSumInfo(int tid, Date tday, String ttime, int cid, int eid, int sum) {
-        super(tid, tday, ttime, cid, eid);
+    public TransactionsSumInfo(int tid, int tamount, Date tday, String ttime, int cid, int eid, int sum) {
+        super(tid, tamount, tday, ttime, cid, eid);
         this.sum = sum;
     }
 

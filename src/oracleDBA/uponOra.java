@@ -2,12 +2,8 @@ package oracleDBA;
 
 import objects.*;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
-import java.sql.Date;
 import java.util.List;
 
 public class uponOra {
@@ -63,6 +59,19 @@ public class uponOra {
         return ret;
     }
 
+    public void insertUpon(int tid, String ptype) {
+        try {
+            PreparedStatement ps = conn.prepareStatement("insert into upon values (?,?)");
+            ps.setInt(1, tid);
+            ps.setString(2, ptype);
+            ps.executeUpdate();
+            conn.commit();
+            ps.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public List<TransactionsSumInfo> groupByTID() {
         List<TransactionsSumInfo> ret = new ArrayList<>();
         try {
@@ -75,13 +84,14 @@ public class uponOra {
 
             while (rs.next()) {
                 int tid = rs.getInt("tid");
+                int tamount = rs.getInt("tamount");
                 Date tday = rs.getDate("tday");
                 String ttime = rs.getString("ttime");
                 int cid = rs.getInt("cid");
                 int eid = rs.getInt("eid");
                 int sum = rs.getInt("sum(price)");
 
-                TransactionsSumInfo tsi = new TransactionsSumInfo(tid, tday, ttime, cid, eid, sum);
+                TransactionsSumInfo tsi = new TransactionsSumInfo(tid, tamount, tday, ttime, cid, eid, sum);
                 ret.add(tsi);
             }
         } catch (SQLException e) {

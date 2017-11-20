@@ -6,6 +6,7 @@ import front_end.mainPage.mainPageTemp;
 import front_end.mainPage.mainPageVIP;
 import oracleDBA.ProductOra;
 import oracleDBA.TransactionsOra;
+import oracleDBA.uponOra;
 
 import javax.swing.*;
 import java.awt.*;
@@ -52,6 +53,7 @@ public class make_order {
         frame.setSize(width,height);
         ProductOra productOra = new ProductOra();
         TransactionsOra transactionsOra = new TransactionsOra();
+        uponOra uo = new uponOra();
 
         panelTop = new JPanel(new FlowLayout(FlowLayout.CENTER));
         panelMiddle = new JPanel(new GridLayout(3,2));
@@ -118,10 +120,28 @@ public class make_order {
                 invalid.setForeground(Color.red);
                 return;
             } else {
-                productOra.updateStock(-a,"coffee");
-                productOra.updateStock(-b,"coffee beans");
-                productOra.updateStock(-c,"coffee machine");
                 int tid = transactionsOra.generateTID();
+                int aPrice = productOra.getPrice("coffee");
+                int bPrice = productOra.getPrice("coffee beans");
+                int cPrice = productOra.getPrice("coffee machine");
+                int aAmount = a*aPrice;
+                int bAmount = b*bPrice;
+                int cAmount = c*cPrice;
+                if (aAmount != 0) {
+                    transactionsOra.insertTransactions(tid, aAmount, 1, 1234);
+                    uo.insertUpon(tid, "coffee");
+                    productOra.updateStock(-a,"coffee");
+                }
+                if (bAmount != 0) {
+                    transactionsOra.insertTransactions(tid, bAmount, 1, 1234);
+                    uo.insertUpon(tid, "coffee beans");
+                    productOra.updateStock(-b,"coffee beans");
+                }
+                if (cAmount != 0) {
+                    transactionsOra.insertTransactions(tid, cAmount, 1, 1234);
+                    uo.insertUpon(tid, "coffee machine");
+                    productOra.updateStock(-c,"coffee machine");
+                }
             }
 
             invalid.setText("Make Order Successful");

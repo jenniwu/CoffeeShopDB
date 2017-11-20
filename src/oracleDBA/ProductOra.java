@@ -123,4 +123,19 @@ public class ProductOra {
 
         return 0;
     }
+
+    public int getPrice(String pType) {
+        try {
+            Statement st = conn.createStatement();
+            String query = "select price from Product where ptype = \'" + pType + "\'";
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                return rs.getInt("price");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return 0;
+    }
 }
