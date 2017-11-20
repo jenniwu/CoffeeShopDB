@@ -1,5 +1,7 @@
 package objects;
 
+import java.sql.Date;
+
 public class TransactionsSumInfo {
     int sum;
     String ptype;

@@ -242,6 +242,8 @@ insert into Transactions values
 (23456, 5, '2017-11-02', '18:30:00',2,2234);
 insert into Transactions values
 (67821, 50, '2017-08-15', '23:08:36',3,8265);
+insert into Transactions values
+(85310, 50, '2017-08-19', '21:38:46',1,2234);
 
 
 insert into makes values
@@ -260,6 +262,8 @@ insert into upon values
 (23456,'coffee beans' );
 insert into upon values
 (67821,'coffee machine');
+insert into upon values
+(85310,'coffee machine');
 
 insert into track values
 --(ptype,sphone,mmid)

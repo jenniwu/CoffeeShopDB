@@ -12,10 +12,13 @@ create view trans_upon_product as
        join Product on upon.ptype = Product.ptype;
 
 
--- group transactions by transaction id
-select tid, tamount, tday, ttime, cid, eid, sum(price)
+create view trans_upon_product as select upon.tid, Transactions.tamount, Transactions.tday, Transactions.ttime, Transactions.cid, Transactions.eid, upon.ptype, Product.price, Product.stockAmount, Product.returnableFlag from Transactions join upon on upon.tid = Transactions.tid join Product on upon.ptype = Product.ptype;
+
+
+-- group transactions by ptype
+select select sum(tamount), ptype
 from trans_upon_prod
-group by tid;
+group by ptype;
 
 
 -- drop trans_upon_product view

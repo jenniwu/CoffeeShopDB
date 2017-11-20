@@ -78,8 +78,8 @@ public class uponOra {
             createTransJoinProd();
 
             Statement st = conn.createStatement();
-            String query = "select sum(tamount), ptype from trans_upon_prod "
-                    + "group by ptype";
+            String query = "select sum(tamount), ptype from trans_upon_product "
+                         + "group by ptype";
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {
