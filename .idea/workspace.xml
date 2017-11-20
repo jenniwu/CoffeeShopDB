@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6219c361-4379-4fd3-a563-1faa6b6a06dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/import_and_export/make_order.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/import_and_export/make_order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/transaction.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/transaction.java" />
+    <list default="true" id="6219c361-4379-4fd3-a563-1faa6b6a06dd" name="Default" comment="changed uponORa">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cs_database.sql" afterPath="$PROJECT_DIR$/src/cs_database.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/TransactionsSumInfo.java" afterPath="$PROJECT_DIR$/src/objects/TransactionsSumInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/uponOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/uponOra.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/supporting_sql.sql" afterPath="$PROJECT_DIR$/src/supporting_sql.sql" />
@@ -30,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/objects/TransactionsSumInfo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding>
                 <element signature="e#247#248#0" expanded="true" />
                 <element signature="e#273#274#0" expanded="true" />
@@ -43,8 +43,8 @@
       <file leaf-file-name="TransactionsOra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+            <state relative-caret-position="273">
+              <caret line="65" column="26" lean-forward="true" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1511159500254" expanded="true" signature="637:663" ph="select * fro... Transactions" />
@@ -65,27 +65,37 @@
       <file leaf-file-name="uponOra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/uponOra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="80" column="76" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="76" />
+            <state relative-caret-position="251">
+              <caret line="92" column="32" lean-forward="true" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
               <folding>
-                <marker date="1511162493217" expanded="true" signature="480:498" ph="select * fro... upon" />
-                <marker date="1511162493217" expanded="true" signature="1025:1275" ph="select Trans... " />
-                <marker date="1511162493217" expanded="true" signature="1969:1998" ph="insert into upon... " />
-                <marker date="1511162493217" expanded="true" signature="2479:2566" ph="select tid, trans_upon_prod" />
-                <marker date="1511162493217" expanded="true" signature="2479:2571" ph="select tid, trans_upon_prod" />
-                <marker date="1511162493217" expanded="true" signature="3170:3610" ph="create view trans_upon_product... " />
-                <marker date="1511162493217" expanded="true" signature="3234:3610" ph="select upon.... Transactions" />
-                <marker date="1511162493217" expanded="true" signature="3867:3895" ph="drop view tr... " />
+                <marker date="1511163222251" expanded="true" signature="480:498" ph="select * fro... upon" />
+                <marker date="1511163222251" expanded="true" signature="1025:1275" ph="select Trans... " />
+                <marker date="1511163222251" expanded="true" signature="1969:1998" ph="insert into upon... " />
+                <marker date="1511163222251" expanded="true" signature="2479:2569" ph="select tid, trans_upon_prod" />
+                <marker date="1511163222251" expanded="true" signature="2479:2574" ph="select tid, trans_upon_prod" />
+                <marker date="1511163222251" expanded="true" signature="3173:3613" ph="create view trans_upon_product... " />
+                <marker date="1511163222251" expanded="true" signature="3237:3613" ph="select upon.... Transactions" />
+                <marker date="1511163222251" expanded="true" signature="3870:3898" ph="drop view tr... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="supporting_sql.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cs_database.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cs_database.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="263" column="25" lean-forward="true" selection-start-line="263" selection-start-column="25" selection-end-line="263" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="supporting_sql.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/supporting_sql.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+            <state relative-caret-position="465">
+              <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -138,8 +148,8 @@
       <file leaf-file-name="OracleManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/OracleManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="46" column="79" lean-forward="false" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
+            <state relative-caret-position="284">
+              <caret line="47" column="48" lean-forward="false" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -159,16 +169,6 @@
                 <marker date="1511155989389" expanded="true" signature="3898:3961" ph="select stock... Product" />
                 <marker date="1511155989389" expanded="true" signature="4347:4404" ph="select price... Product" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="make_order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/front_end/import_and_export/make_order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="128" column="35" lean-forward="false" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -202,7 +202,6 @@
         <option value="$PROJECT_DIR$/src/oracleDBA/trackInfo.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/trackOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/uponInfo.java" />
-        <option value="$PROJECT_DIR$/src/cs_database.sql" />
         <option value="$PROJECT_DIR$/src/oracleDBA/ProductOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/ManagerOra.java" />
         <option value="$PROJECT_DIR$/src/front_end/mainPage.java" />
@@ -248,8 +247,9 @@
         <option value="$PROJECT_DIR$/src/oracleDBA/SalaryOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" />
         <option value="$PROJECT_DIR$/src/objects/TransactionsSumInfo.java" />
-        <option value="$PROJECT_DIR$/src/oracleDBA/uponOra.java" />
         <option value="$PROJECT_DIR$/src/supporting_sql.sql" />
+        <option value="$PROJECT_DIR$/src/oracleDBA/uponOra.java" />
+        <option value="$PROJECT_DIR$/src/cs_database.sql" />
       </list>
     </option>
   </component>
@@ -562,7 +562,7 @@
       <workItem from="1511078153304" duration="3027000" />
       <workItem from="1511147362226" duration="3015000" />
       <workItem from="1511159505324" duration="2703000" />
-      <workItem from="1511162300914" duration="276000" />
+      <workItem from="1511162300914" duration="980000" />
     </task>
     <task id="LOCAL-00001" summary="At least this version of code has all the tables and the attributes.">
       <created>1510999908339</created>
@@ -697,11 +697,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511161701761</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="changed uponORa">
+      <created>1511162590145</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1511162590145</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15797000" />
+    <option name="totallyTimeSpent" value="16501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="23" width="1398" height="823" extended-state="0" />
@@ -785,7 +792,8 @@
     <MESSAGE value="isvalidphone" />
     <MESSAGE value="fixed salary join" />
     <MESSAGE value="fixed employee update" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed employee update" />
+    <MESSAGE value="changed uponORa" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed uponORa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -895,13 +903,6 @@
         <state relative-caret-position="0">
           <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs_database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="178" column="35" lean-forward="false" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1184,16 +1185,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/OracleManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="46" column="79" lean-forward="false" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
+        <state relative-caret-position="284">
+          <caret line="47" column="48" lean-forward="false" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/objects/TransactionsSumInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/oracleDBA/uponOra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="92" column="32" lean-forward="true" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+          <folding>
+            <marker date="1511163222251" expanded="true" signature="480:498" ph="select * fro... upon" />
+            <marker date="1511163222251" expanded="true" signature="1025:1275" ph="select Trans... " />
+            <marker date="1511163222251" expanded="true" signature="1969:1998" ph="insert into upon... " />
+            <marker date="1511163222251" expanded="true" signature="2479:2569" ph="select tid, trans_upon_prod" />
+            <marker date="1511163222251" expanded="true" signature="2479:2574" ph="select tid, trans_upon_prod" />
+            <marker date="1511163222251" expanded="true" signature="3173:3613" ph="create view trans_upon_product... " />
+            <marker date="1511163222251" expanded="true" signature="3237:3613" ph="select upon.... Transactions" />
+            <marker date="1511163222251" expanded="true" signature="3870:3898" ph="drop view tr... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+        <state relative-caret-position="273">
+          <caret line="65" column="26" lean-forward="true" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511159500254" expanded="true" signature="637:663" ph="select * fro... Transactions" />
@@ -1210,39 +1240,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/TransactionsSumInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding>
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/oracleDBA/uponOra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="80" column="76" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="76" />
-          <folding>
-            <marker date="1511162493217" expanded="true" signature="480:498" ph="select * fro... upon" />
-            <marker date="1511162493217" expanded="true" signature="1025:1275" ph="select Trans... " />
-            <marker date="1511162493217" expanded="true" signature="1969:1998" ph="insert into upon... " />
-            <marker date="1511162493217" expanded="true" signature="2479:2566" ph="select tid, trans_upon_prod" />
-            <marker date="1511162493217" expanded="true" signature="2479:2571" ph="select tid, trans_upon_prod" />
-            <marker date="1511162493217" expanded="true" signature="3170:3610" ph="create view trans_upon_product... " />
-            <marker date="1511162493217" expanded="true" signature="3234:3610" ph="select upon.... Transactions" />
-            <marker date="1511162493217" expanded="true" signature="3867:3895" ph="drop view tr... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/supporting_sql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        <state relative-caret-position="465">
+          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs_database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="263" column="25" lean-forward="true" selection-start-line="263" selection-start-column="25" selection-end-line="263" selection-end-column="25" />
           <folding />
         </state>
       </provider>

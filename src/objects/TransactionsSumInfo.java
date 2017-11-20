@@ -2,15 +2,20 @@ package objects;
 
 import java.sql.Date;
 
-public class TransactionsSumInfo extends TransactionsInfo {
+public class TransactionsSumInfo {
     int sum;
+    String ptype;
 
-    public TransactionsSumInfo(int tid, int tamount, Date tday, String ttime, int cid, int eid, int sum) {
-        super(tid, tamount, tday, ttime, cid, eid);
+    public TransactionsSumInfo(int sum, String ptype) {
         this.sum = sum;
+        this.ptype = ptype;
     }
 
     public int getSum() {
         return sum;
+    }
+
+    public String getPtype() {
+        return ptype;
     }
 }
