@@ -68,8 +68,15 @@ public class uponOra {
         return ret;
     }
 
-    public List<TransactionsSumInfo> getTransactionsByProd(String ptype) {
+    public List<TransactionsSumInfo> groupTransactionsByProd(String ptype) {
         List<TransactionsSumInfo> ret = new ArrayList<>();
+        try {
+            Statement st = conn.createStatement();
+            String query = "select sum(price), tday, ttime, tid, ptype from trans_upon_prod ";
+            ResultSet rs = st.executeQuery(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 //        try {
 ////            Statement st = conn.createStatement();
 ////            String query = "select Transactions.tday, Transactions.ttime, Transactions.tid, upon.ptype, Product.price"
@@ -87,9 +94,7 @@ public class uponOra {
 ////                joinUponInfo jui = new joinUponInfo(tid, tday, ttime, ptype, price);
 ////                ret.add(jui);
 ////            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
+
 
         return ret;
     }
