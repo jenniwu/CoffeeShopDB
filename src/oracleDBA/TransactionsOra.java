@@ -72,28 +72,6 @@ public class TransactionsOra {
             return false;
     }
 
-    public void createTransJoinEmpl() {
-        try {
-            Statement st = conn.createStatement();
-            String query = "create view trans_input_empl as "
-                         + "select Employee.ename, Employee.eid, Employee.position, Employee.tier, Employee.mmid, "
-                         + "Transactions.tid, Transactions.tday, Transactions.ttime, Transactions.cid "
-                         + "from Employee join Transactions on Employee.eid = Transactions.eid";
-            st.executeQuery(query);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void dropTransJoinEmpl() {
-        try {
-            Statement st = conn.createStatement();
-            st.executeQuery("drop view trans_input_empl");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     public List<InputInfo> getTransactionsJoinEmployee() {
         List<InputInfo> ret = new ArrayList<>();
 
@@ -158,7 +136,7 @@ public class TransactionsOra {
 
         try {
             Statement st = conn.createStatement();
-            String query = "select * from Transactions where tday between fromDay and toDay";
+            String query = "select * from Transactions where tday between '" + fromDay + "' and '" + toDay + "'";
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {
@@ -185,7 +163,7 @@ public class TransactionsOra {
             createTransJoinEmpl();
             Statement st = conn.createStatement();
             String query = "select tid, tday, ttime, cid, eid from trans_input_empl "
-                         + "where ( tday between fromDay and toDay ) and eid = " + eid;
+                         + "where ( tday between '" + fromDay + "' and '" + toDay + "' ) and eid = " + eid;
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {
@@ -204,5 +182,27 @@ public class TransactionsOra {
         }
 
         return ret;
+    }
+
+    private void createTransJoinEmpl() {
+        try {
+            Statement st = conn.createStatement();
+            String query = "create view trans_input_empl as "
+                    + "select Employee.ename, Employee.eid, Employee.position, Employee.tier, Employee.mmid, "
+                    + "Transactions.tid, Transactions.tday, Transactions.ttime, Transactions.cid "
+                    + "from Employee join Transactions on Employee.eid = Transactions.eid";
+            st.executeQuery(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void dropTransJoinEmpl() {
+        try {
+            Statement st = conn.createStatement();
+            st.executeQuery("drop view trans_input_empl");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
