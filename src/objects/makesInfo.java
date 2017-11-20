@@ -1,7 +1,7 @@
 package objects;
 
 /**
- * Created by shadongliu on 2017-11-18.
+ * Created by shadongliu on 2017-11-19.
  */
 public class makesInfo {
     int rating;

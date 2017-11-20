@@ -6,6 +6,7 @@ import front_end.mainPage.mainPageEmployee;
 import front_end.mainPage.mainPageManager;
 import front_end.mainPage.mainPageTemp;
 import front_end.mainPage.mainPageVIP;
+import objects.joinMakesInfo;
 import objects.makesInfo;
 
 import javax.swing.*;
@@ -20,7 +21,7 @@ public class makes extends JFrame
 
     private String back_user_type;
 
-    public makes(List<makesInfo> list,String userType)
+    public makes(List<makesInfo> list, String userType)
     {
         this.back_user_type = userType;
         //headers for the table
