@@ -32,12 +32,12 @@ public class vip extends JFrame
 
         for (int x = 0; x < list.size(); x++)
         {
-            data[x][0] = list.get(x).getPHONE();
-            data[x][1] = list.get(x).getEMAIL();
-            data[x][2] = list.get(x).getLOYALTYPOINTS();
-            data[x][3] = list.get(x).getBIRTHDAY();
-            data[x][4] = list.get(x).getBALANCE();
-            data[x][5] = list.get(x).getVIPNUM();
+            data[x][0] = list.get(x).getPhone();
+            data[x][1] = list.get(x).getEmail();
+            data[x][2] = list.get(x).getLotaltypoints();
+            data[x][3] = list.get(x).getBirthday();
+            data[x][4] = list.get(x).getDollarBalance();
+            data[x][5] = list.get(x).getEid();
 
         }
 

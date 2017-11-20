@@ -1,6 +1,6 @@
 package objects;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * Created by shadongliu on 2017-11-18.

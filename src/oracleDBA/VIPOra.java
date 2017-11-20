@@ -134,14 +134,15 @@ public class VIPOra {
 
     }
 
-    public void insertVip(String phone, String email, Date birthday, int dollarBalance, int eid) {
+    public void addVip(String phone, String email,int loyaltypoints, Date birthday, int dollarBalance, int eid) {
         try {
-            PreparedStatement ps = conn.prepareStatement("insert into Vip values (?,?,?,?)");
+            PreparedStatement ps = conn.prepareStatement("insert into Vip values (?,?,?,?,?,?)");
             ps.setString(1, phone);
             ps.setString(2, email);
-            ps.setDate(3, birthday);
-            ps.setInt(4, dollarBalance);
-            ps.setInt(5, eid);
+            ps.setInt(3,loyaltypoints);
+            ps.setDate(4, birthday);
+            ps.setInt(5, dollarBalance);
+            ps.setInt(6, eid);
             ps.executeUpdate();
             conn.commit();
             ps.close();
