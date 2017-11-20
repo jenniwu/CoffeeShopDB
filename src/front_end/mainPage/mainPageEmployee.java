@@ -1,6 +1,7 @@
 package front_end.mainPage;
 
 import front_end.import_and_export.make_order;
+import front_end.login;
 import front_end.registration.register_VIP;
 import front_end.view_information.*;
 import oracleDBA.*;
@@ -22,6 +23,7 @@ public class mainPageEmployee {
     private JButton transactionInformation;
     // TODO: enable to see employee himself/herslf salary information, we require a new window to type in eid.
     private JButton salaryInformation;
+    private JButton logout;
 
     public mainPageEmployee()
     {
@@ -43,6 +45,8 @@ public class mainPageEmployee {
         box.add(employeeInformation);
         box.add(Box.createVerticalStrut(10));
         box.add(salaryInformation);
+        box.add(Box.createVerticalStrut(10));
+        box.add(logout);
 
         panel.add(box);
     }
@@ -59,6 +63,7 @@ public class mainPageEmployee {
         productInformation = new JButton("Product Information");
         transactionInformation = new JButton("Transaction Information");
         salaryInformation = new JButton("Salary Information");
+        logout = new JButton("Logout");
 
         BoxOfButton();
 
@@ -106,6 +111,10 @@ public class mainPageEmployee {
             // TODO: only view salary information
             SalaryOra salaryOra = new SalaryOra();
             new salary(salaryOra.getSalaries(),"employee");
+        });
+        logout.addActionListener(e -> {
+            frame.setVisible(false);
+            new login();
         });
     }
 }

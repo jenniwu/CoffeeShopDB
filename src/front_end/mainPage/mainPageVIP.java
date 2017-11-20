@@ -1,6 +1,7 @@
 package front_end.mainPage;
 
 import front_end.import_and_export.make_order;
+import front_end.login;
 import front_end.view_information.transaction;
 import front_end.view_information.vip;
 import oracleDBA.TransactionsOra;
@@ -19,6 +20,7 @@ public class mainPageVIP {
     private JButton VIPInformation;
     // TODO: enable to see VIP himself/herslf vip information, we require a new window to type in phone(PK).
     private JButton transactionInformation;
+    private JButton logout;
 
     public mainPageVIP()
     {
@@ -32,6 +34,8 @@ public class mainPageVIP {
         box.add(VIPInformation);
         box.add(Box.createVerticalStrut(10));
         box.add(transactionInformation);
+        box.add(Box.createVerticalStrut(10));
+        box.add(logout);
 
         panel.add(box);
     }
@@ -44,7 +48,7 @@ public class mainPageVIP {
         makeOrder = new JButton("Make Order");
         VIPInformation = new JButton("VIP Information");
         transactionInformation = new JButton("Transaction Information");
-
+        logout = new JButton("Logout");
 
         BoxOfButton();
 
@@ -69,6 +73,10 @@ public class mainPageVIP {
             // TODO: only view Salary information
             TransactionsOra transactionOra = new TransactionsOra();
             new transaction(transactionOra.getTransactions(),"vip");
+        });
+        logout.addActionListener(e -> {
+            frame.setVisible(false);
+            new login();
         });
     }
 }
