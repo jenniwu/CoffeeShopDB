@@ -1,6 +1,8 @@
 package front_end.mainPage;
 
+import front_end.extra_window.transaction_for_manager;
 import front_end.import_and_export.import_product;
+import front_end.login;
 import front_end.registration.register_employee;
 import front_end.view_information.employee;
 import front_end.view_information.manager;
@@ -24,6 +26,8 @@ public class mainPageManager {
     private JButton salaryInformation;
     private JButton managerInformation;
     private JButton trackInformation;
+    private JButton transactionView;
+    private JButton logout;
 
     public mainPageManager()
     {
@@ -43,6 +47,10 @@ public class mainPageManager {
         box.add(salaryInformation);
         box.add(Box.createVerticalStrut(10));
         box.add(trackInformation);
+        box.add(Box.createVerticalStrut(10));
+        box.add(transactionView);
+        box.add(Box.createVerticalStrut(10));
+        box.add(logout);
 
         panel.add(box);
     }
@@ -58,7 +66,8 @@ public class mainPageManager {
         salaryInformation = new JButton("Salary Information");
         managerInformation = new JButton("Manager Information");
         trackInformation = new JButton("Table <Product> and <Supplier> Information");
-
+        transactionView = new JButton("View Transactions");
+        logout = new JButton("Logout");
 
         BoxOfButton();
 
@@ -99,6 +108,14 @@ public class mainPageManager {
             frame.setVisible(false);
             // TODO: only view salary information
             new front_end.mainPage.track_for_manager();
+        });
+        transactionView.addActionListener(e -> {
+            frame.setVisible(false);
+            new transaction_for_manager("manager");
+        });
+        logout.addActionListener(e -> {
+            frame.setVisible(false);
+            new login();
         });
     }
 }

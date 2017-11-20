@@ -20,6 +20,9 @@ public class make_order {
     private JPanel panelTop;
     private JPanel panelMiddle;
     private JPanel panelBottom;
+    private JPanel coffeePanel;
+    private JPanel coffeeBeanPanel;
+    private JPanel coffeeMachinePanel;
     private JButton submitButton;
     private JButton backButton;
     private JLabel title;
@@ -46,15 +49,19 @@ public class make_order {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setSize(width,height);
+        ProductOra productOra = new ProductOra();
 
         panelTop = new JPanel(new FlowLayout(FlowLayout.CENTER));
         panelMiddle = new JPanel(new GridLayout(3,2));
         panelBottom = new JPanel(new FlowLayout(FlowLayout.CENTER));
-
+        coffeePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        coffeeBeanPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        coffeeMachinePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         title = new JLabel("Make Order");
         labelCoffee = new JLabel("Coffee:");
         labelCoffeeBean = new JLabel("Coffee Bean:");
         labelCoffeeMachine = new JLabel("Coffee Machine:");
+
         submitButton = new JButton("Submit");
         backButton = new JButton("Back to main page");
         coffee = new JTextField(5);
@@ -63,11 +70,15 @@ public class make_order {
         invalid = new JLabel();
 
         panelTop.add(title);
-        panelMiddle.add(labelCoffee);
+        coffeePanel.add(labelCoffee);
+        coffeeBeanPanel.add(labelCoffeeBean);
+        coffeeMachinePanel.add(labelCoffeeMachine);
+
+        panelMiddle.add(coffeePanel);
         panelMiddle.add(coffee);
-        panelMiddle.add(labelCoffeeBean);
+        panelMiddle.add(coffeeBeanPanel);
         panelMiddle.add(coffeeBean);
-        panelMiddle.add(labelCoffeeMachine);
+        panelMiddle.add(coffeeMachinePanel);
         panelMiddle.add(coffeeMachine);
         panelBottom.add(submitButton);
         panelBottom.add(backButton);
@@ -100,8 +111,6 @@ public class make_order {
                 invalid.setForeground(Color.red);
                 return;
             }
-
-            ProductOra productOra = new ProductOra();
             if(!productOra.isAvailable(a,"coffee")|| !productOra.isAvailable(b,"coffee beans")|| !productOra.isAvailable(c,"coffee machine")){
                 invalid.setText("Not enough products in stock");
                 invalid.setForeground(Color.red);

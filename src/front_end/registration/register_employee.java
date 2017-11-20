@@ -140,7 +140,7 @@ public class register_employee {
                 }
                 employeeOra.insertEmployee(name,position,tierNum,mIDInt);
 
-                invalid.setText("Make Order Successfully");
+                invalid.setText("Register Employee Successfully");
                 invalid.setForeground(Color.GREEN);
             }
 

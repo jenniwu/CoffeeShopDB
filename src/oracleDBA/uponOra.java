@@ -1,5 +1,6 @@
 package oracleDBA;
 
+import objects.TransactionsSumInfo;
 import objects.joinUponInfo;
 import objects.uponInfo;
 
@@ -46,8 +47,9 @@ public class uponOra {
         List<joinUponInfo> ret = new ArrayList<>();
         try {
             Statement st = conn.createStatement();
-            String query = "select Transactions.tday, Transactions.ttime, Transactions.tid, upon.ptype "
-                         + "from Transactions join upon on upon.tid = Transactions.tid";
+            String query = "select Transactions.tday, Transactions.ttime, Transactions.tid, upon.ptype, Product.price"
+                         + "from Transactions join upon on upon.tid = Transactions.tid "
+                         + "join Product on Product.ptype = upon.ptype";
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {
@@ -55,13 +57,68 @@ public class uponOra {
                 Date tday = rs.getDate("tday");
                 String ttime = rs.getString("ttime");
                 String ptype = rs.getString("ptype");
+                int price = rs.getInt("price");
 
-                joinUponInfo jui = new joinUponInfo(tid, tday, ttime, ptype);
+                joinUponInfo jui = new joinUponInfo(tid, tday, ttime, ptype, price);
                 ret.add(jui);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return ret;
+    }
+
+    public List<TransactionsSumInfo> groupTransactionsByProd(String ptype) {
+        List<TransactionsSumInfo> ret = new ArrayList<>();
+        try {
+            Statement st = conn.createStatement();
+            String query = "select sum(price), tday, ttime, tid, ptype from trans_upon_prod ";
+            ResultSet rs = st.executeQuery(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+//        try {
+////            Statement st = conn.createStatement();
+////            String query = "select Transactions.tday, Transactions.ttime, Transactions.tid, upon.ptype, Product.price"
+////                    + "from Transactions join upon on upon.tid = Transactions.tid "
+////                    + "join Product on Product.ptype = upon.ptype";
+////            ResultSet rs = st.executeQuery(query);
+////
+////            while (rs.next()) {
+////                int tid = rs.getInt("tid");
+////                Date tday = rs.getDate("tday");
+////                String ttime = rs.getString("ttime");
+////                String ptype = rs.getString("ptype");
+////                int price = rs.getInt("price");
+////
+////                joinUponInfo jui = new joinUponInfo(tid, tday, ttime, ptype, price);
+////                ret.add(jui);
+////            }
+
+
+        return ret;
+    }
+
+    private void createTransJoinProd() {
+        try {
+            Statement st = conn.createStatement();
+            String query = "create view trans_upon_product as "
+                         + "select upon.tid, Transactions.tday, Transactions.ttime, Transactions.cid, Transactions.eid, "
+                         + "upon.ptype, Product.price, Product.stockAmount, Product.returnableFlag from Transactions "
+                         + "join upon on upon.tid = Transactions.tid "
+                         + "join Product on upon.ptype = Product.ptype";
+            st.executeQuery(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void dropTransJoinProd() {
+        try {
+            Statement st = conn.createStatement();
+            st.executeQuery("trans_upon_product");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
