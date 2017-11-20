@@ -112,16 +112,8 @@ public class make_order {
                 productOra.updateStock(-c,"coffee machine");
             }
 
-            frame.setVisible(false);
-            if(back_user_type.equals("vip")){
-                new mainPageVIP();
-            }else if(back_user_type.equals("employee")){
-                new mainPageEmployee();
-            }else if(back_user_type.equals("manager")){
-                new mainPageManager();
-            }else {
-                new mainPageTemp();
-            }
+            invalid.setText("Make Order Successfully");
+            invalid.setForeground(Color.GREEN);
         });
 
         backButton.addActionListener(e -> {
