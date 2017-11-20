@@ -93,7 +93,7 @@ public class register_VIP {
             }
 
             VIPOra vipOra = new VIPOra();
-            vipOra.addVip(VIPphone,VIPEmail,sqlDate,0,1234);
+            vipOra.addVip(VIPphone,VIPEmail,0,sqlDate,0,1234);
             invalid.setText("Register Successfully");
             invalid.setForeground(Color.GREEN);
 
