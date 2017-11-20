@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6219c361-4379-4fd3-a563-1faa6b6a06dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/objects/groupPtypePrice.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cs_database.sql" afterPath="$PROJECT_DIR$/src/cs_database.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/import_and_export/make_order.java" afterPath="$PROJECT_DIR$/src/front_end/import_and_export/make_order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/TransactionsInfo.java" afterPath="$PROJECT_DIR$/src/objects/TransactionsInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/uponOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/uponOra.java" />
     </list>
     <ignored path="CoffeeShopDB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,8 +92,8 @@
       <file leaf-file-name="TransactionsOra.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2955">
-              <caret line="197" column="63" lean-forward="false" selection-start-line="197" selection-start-column="63" selection-end-line="197" selection-end-column="63" />
+            <state relative-caret-position="576">
+              <caret line="59" column="40" lean-forward="true" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1511155148769" expanded="true" signature="637:663" ph="select * fro... Transactions" />
@@ -566,7 +559,7 @@
       <workItem from="1511055334733" duration="2376000" />
       <workItem from="1511078153304" duration="3027000" />
       <workItem from="1511147362226" duration="3015000" />
-      <workItem from="1511151691165" duration="3443000" />
+      <workItem from="1511151691165" duration="3734000" />
     </task>
     <task id="LOCAL-00001" summary="At least this version of code has all the tables and the attributes.">
       <created>1510999908339</created>
@@ -680,11 +673,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511151736427</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="wtf?">
+      <created>1511155169589</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1511155169589</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16261000" />
+    <option name="totallyTimeSpent" value="16552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="275" y="23" width="1164" height="823" extended-state="0" />
@@ -1209,8 +1209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2955">
-          <caret line="197" column="63" lean-forward="false" selection-start-line="197" selection-start-column="63" selection-end-line="197" selection-end-column="63" />
+        <state relative-caret-position="576">
+          <caret line="59" column="40" lean-forward="true" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511155148769" expanded="true" signature="637:663" ph="select * fro... Transactions" />
