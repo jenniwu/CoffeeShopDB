@@ -1,4 +1,4 @@
-package front_end;
+package front_end.mainPage;
 
 import front_end.import_and_export.make_order;
 import front_end.registration.register_VIP;
@@ -9,7 +9,7 @@ import javax.swing.*;
 
 public class mainPageEmployee {
     private static final int width = 450;
-    private static final int height = 650;
+    private static final int height = 450;
 
     private JFrame frame;
     private JPanel panel;
@@ -70,42 +70,42 @@ public class mainPageEmployee {
 
         registerNewVIP.addActionListener(e -> {
             frame.setVisible(false);
-            new register_VIP();
+            new register_VIP("employee");
         });
         makeOrder.addActionListener(e -> {
             frame.setVisible(false);
-            new make_order();
+            new make_order("employee");
         });
 
         VIPInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             VIPOra vipOra = new VIPOra();
-            new vip(vipOra.getVIPs());
+            new vip(vipOra.getVIPs(),"employee");
         });
         transactionInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             TransactionsOra transactionOra = new TransactionsOra();
-            new transaction(transactionOra.getTransactions());
+            new transaction(transactionOra.getTransactions(),"employee");
         });
         productInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             ProductOra productOra = new ProductOra();
-            new product(productOra.getProducts());
+            new product(productOra.getProducts(),"employee");
         });
         employeeInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             EmployeeOra employeeOra = new EmployeeOra();
-            new employee(employeeOra.getEmployees());
+            new employee(employeeOra.getEmployees(),"employee");
         });
         salaryInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view salary information
             SalaryOra salaryOra = new SalaryOra();
-            new salary(salaryOra.getSalaries());
+            new salary(salaryOra.getSalaries(),"employee");
         });
     }
 }

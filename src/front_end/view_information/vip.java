@@ -2,7 +2,10 @@ package front_end.view_information; /**
  * Created by zhanghuanxin on 2017-11-16.
  */
 
-import front_end.mainPageVIP;
+import front_end.mainPage.mainPageEmployee;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
+import front_end.mainPage.mainPageVIP;
 import oracleDBA.VIPInfo;
 
 import javax.swing.*;
@@ -15,8 +18,11 @@ public class vip extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public vip(List<VIPInfo> list)
+    private String back_user_type;
+
+    public vip(List<VIPInfo> list,String userType)
     {
+        back_user_type = userType;
         //headers for the table
         String[] columns = new String[] {
                 "phone", "email", "loyalty points", "birthday", "balance", "VIP#"
@@ -58,7 +64,15 @@ public class vip extends JFrame
 
         backButton.addActionListener(e -> {
             setVisible(false);
-            new mainPageVIP();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }

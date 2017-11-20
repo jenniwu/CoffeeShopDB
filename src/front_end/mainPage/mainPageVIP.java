@@ -1,4 +1,4 @@
-package front_end;
+package front_end.mainPage;
 
 import front_end.import_and_export.make_order;
 import front_end.view_information.transaction;
@@ -10,7 +10,7 @@ import javax.swing.*;
 
 public class mainPageVIP {
     private static final int width = 450;
-    private static final int height = 650;
+    private static final int height = 450;
 
     private JFrame frame;
     private JPanel panel;
@@ -56,19 +56,19 @@ public class mainPageVIP {
 
         makeOrder.addActionListener(e -> {
             frame.setVisible(false);
-            new make_order();
+            new make_order("vip");
         });
         VIPInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             VIPOra vipOra = new VIPOra();
-            new vip(vipOra.getVIPs());
+            new vip(vipOra.getVIPs(),"vip");
         });
         transactionInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
             TransactionsOra transactionOra = new TransactionsOra();
-            new transaction(transactionOra.getTransactions());
+            new transaction(transactionOra.getTransactions(),"vip");
         });
     }
 }

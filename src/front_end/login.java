@@ -1,5 +1,9 @@
 package front_end;
 
+import front_end.mainPage.mainPageEmployee;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageVIP;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

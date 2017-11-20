@@ -1,6 +1,9 @@
 package front_end.import_and_export;
 
-import front_end.mainPageVIP;
+import front_end.mainPage.mainPageEmployee;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
+import front_end.mainPage.mainPageVIP;
 import oracleDBA.ProductOra;
 
 import javax.swing.*;
@@ -29,8 +32,11 @@ public class make_order {
 
     private JLabel invalid;
 
-    public make_order()
+    private String back_user_type;
+
+    public make_order(String type)
     {
+        this.back_user_type = type;
         gui();
     }
 
@@ -107,12 +113,28 @@ public class make_order {
             }
 
             frame.setVisible(false);
-            new mainPageVIP();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
 
         backButton.addActionListener(e -> {
             frame.setVisible(false);
-            new mainPageVIP();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }

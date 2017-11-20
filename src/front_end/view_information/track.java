@@ -1,6 +1,7 @@
 package front_end.view_information;
 
-import front_end.mainPageVIP;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
 import oracleDBA.trackInfo;
 
 import javax.swing.*;
@@ -12,8 +13,11 @@ public class track extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public track(List<trackInfo> list)
+    private String back_user_type;
+
+    public track(List<trackInfo> list,String userType)
     {
+        this.back_user_type = userType;
         //headers for the table
         String[] columns = new String[] {
                 "product id","phone","mid"
@@ -50,7 +54,11 @@ public class track extends JFrame
 
         back.addActionListener(e -> {
             setVisible(false);
-            new mainPageVIP();
+            if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }

@@ -1,6 +1,9 @@
 package front_end.registration;
 
-import front_end.mainPageVIP;
+import front_end.mainPage.mainPageEmployee;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
+import front_end.mainPage.mainPageVIP;
 import oracleDBA.EmployeeOra;
 import oracleDBA.ManagerOra;
 
@@ -37,8 +40,11 @@ public class register_employee {
     private JCheckBox tierTwoCheckBox;
     private JCheckBox tierThreeCheckBox;
 
-    public register_employee()
+    private String back_user_type;
+
+    public register_employee(String userType)
     {
+        this.back_user_type = userType;
         gui();
     }
 
@@ -135,14 +141,30 @@ public class register_employee {
                 employeeOra.insertEmployee(name,position,tierNum,mIDInt);
 
                 frame.setVisible(false);
-                new mainPageVIP();
+                if(back_user_type.equals("vip")){
+                    new mainPageVIP();
+                }else if(back_user_type.equals("employee")){
+                    new mainPageEmployee();
+                }else if(back_user_type.equals("manager")){
+                    new mainPageManager();
+                }else {
+                    new mainPageTemp();
+                }
             }
 
         });
 
         backButton.addActionListener(e -> {
             frame.setVisible(false);
-            new mainPageVIP();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }

@@ -1,6 +1,9 @@
 package front_end.view_information;
 
-import front_end.mainPageVIP;
+import front_end.mainPage.mainPageEmployee;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
+import front_end.mainPage.mainPageVIP;
 import oracleDBA.SalaryInfo;
 
 import javax.swing.*;
@@ -13,8 +16,11 @@ public class salary extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public salary(List<SalaryInfo> list)
+    private String back_user_type;
+
+    public salary(List<SalaryInfo> list,String userType)
     {
+        this.back_user_type = userType;
         //headers for the table
         String[] columns = new String[] {
                 "tier", "frequency", "bonus"
@@ -52,7 +58,15 @@ public class salary extends JFrame
 
         back.addActionListener(e -> {
             setVisible(false);
-            new mainPageVIP();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }
