@@ -69,7 +69,7 @@ public class VIPOra {
         return ret;
     }
 
-    public boolean deleteVipInDB(int phone) {
+    public boolean deleteVipInDB(String phone) {
         oracleManager.getConnection();
 
         int rowCount = oracleManager.execute("DELETE from Vip WHERE phone = '"

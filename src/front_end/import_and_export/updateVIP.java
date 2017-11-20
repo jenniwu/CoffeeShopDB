@@ -1,6 +1,9 @@
 package front_end.import_and_export;
 
 import front_end.mainPage.mainPageEmployee;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
+import front_end.mainPage.mainPageVIP;
 
 import javax.swing.*;
 import java.awt.*;
@@ -32,8 +35,11 @@ public class updateVIP {
 
     private JLabel invalid;
 
-    public updateVIP()
+    private String back_user_type;
+
+    public updateVIP(String userType)
     {
+        this.back_user_type = userType;
         gui();
     }
 
@@ -102,7 +108,15 @@ public class updateVIP {
 
         backButton.addActionListener(e -> {
             frame.setVisible(false);
-            new mainPageEmployee();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }

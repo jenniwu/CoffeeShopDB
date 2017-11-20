@@ -4,7 +4,10 @@ package front_end.import_and_export;
  * Created by zhanghuanxin on 2017-11-19.
  */
 
+import front_end.mainPage.mainPageEmployee;
 import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
+import front_end.mainPage.mainPageVIP;
 import oracleDBA.EmployeeOra;
 
 import javax.swing.*;
@@ -108,7 +111,15 @@ public class updateEmployee {
 
         backButton.addActionListener(e -> {
             frame.setVisible(false);
-            new mainPageManager();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }

@@ -1,9 +1,9 @@
 package front_end.mainPage;
 
 import front_end.extra_window.transaction_for_manager;
-import front_end.import_and_export.deleteEmployee;
+import front_end.import_and_export.deleteVIP;
 import front_end.import_and_export.import_product;
-import front_end.import_and_export.updateEmployee;
+import front_end.import_and_export.updateVIP;
 import front_end.login;
 import front_end.registration.register_employee;
 import front_end.view_information.employee;
@@ -31,8 +31,8 @@ public class mainPageManager {
     private JButton managerInformation;
     private JButton trackInformation;
     private JButton transactionView;
-    private JButton deleteEmplouee;
-    private JButton updateEmplouee;
+    private JButton deleteEmployee;
+    private JButton updateEmployee;
     private JButton logout;
 
     public mainPageManager()
@@ -56,9 +56,9 @@ public class mainPageManager {
         box.add(Box.createVerticalStrut(10));
         box.add(transactionView);
         box.add(Box.createVerticalStrut(10));
-        box.add(deleteEmplouee);
+        box.add(deleteEmployee);
         box.add(Box.createVerticalStrut(10));
-        box.add(updateEmplouee);
+        box.add(updateEmployee);
         box.add(Box.createVerticalStrut(10));
         box.add(logout);
 
@@ -77,8 +77,8 @@ public class mainPageManager {
         managerInformation = new JButton("Manager Information");
         trackInformation = new JButton("Table <Product> and <Supplier> Information");
         transactionView = new JButton("View Transactions");
-        deleteEmplouee = new JButton("Delete Employee");
-        updateEmplouee = new JButton("Update Employee");
+        deleteEmployee = new JButton("Delete Employee");
+        updateEmployee = new JButton("Update Employee");
         logout = new JButton("Logout");
 
         BoxOfButton();
@@ -125,18 +125,18 @@ public class mainPageManager {
             frame.setVisible(false);
             new transaction_for_manager("manager");
         });
-        deleteEmplouee.addActionListener(new ActionListener() {
+        deleteEmployee.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new deleteEmployee("manager");
+                new deleteVIP("manager");
             }
         });
-        updateEmplouee.addActionListener(new ActionListener() {
+        updateEmployee.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new updateEmployee("manager");
+                new updateVIP("manager");
             }
         });
         logout.addActionListener(e -> {

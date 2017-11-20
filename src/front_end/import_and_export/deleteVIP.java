@@ -4,7 +4,11 @@ package front_end.import_and_export;
  * Created by zhanghuanxin on 2017-11-19.
  */
 
+import front_end.mainPage.mainPageEmployee;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
 import front_end.mainPage.mainPageVIP;
+import oracleDBA.VIPOra;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,8 +35,11 @@ public class deleteVIP {
 
     private JLabel invalid;
 
-    public deleteVIP()
+    private String back_user_type;
+
+    public deleteVIP(String userType)
     {
+        this.back_user_type = userType;
         gui();
     }
 
@@ -75,15 +82,31 @@ public class deleteVIP {
 
         submitButton.addActionListener(e -> {
 
-            String VIPphone = vPhone.getText();
+            String p = vPhone.getText();
+            VIPOra vipOra = new VIPOra();
+            if(vipOra.isValidPhone(p)){
+                vipOra.deleteVipInDB(p);
+            }else{
+                invalid.setText("Invalid");
+                invalid.setForeground(Color.red);
+                return;
+            }
 
-            frame.setVisible(false);
-            new mainPageVIP();
+            invalid.setText("Success");
+            invalid.setForeground(Color.GREEN);
         });
 
         backButton.addActionListener(e -> {
             frame.setVisible(false);
-            new mainPageVIP();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }
