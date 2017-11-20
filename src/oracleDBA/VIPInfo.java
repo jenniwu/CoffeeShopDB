@@ -7,66 +7,44 @@ import java.util.Date;
 
 public class VIPInfo {
 
-    String PHONE;
-    String EMAIL;
-    int  LOYALTYPOINTS;
-    Date BIRTHDAY;
-    int BALANCE;
-    int VIPNUM;
+    String phone;
+    String email;
+    int  lotaltypoints;
+    Date birthday;
+    int dollarBalance;
+    int eid;
 
-    public VIPInfo(String phone, String email, int loyapoints, Date birthday, int balance, int vipnum){
-        this.PHONE = phone;
-        this.EMAIL  = email;
-        this.LOYALTYPOINTS  = loyapoints;
-        this.BIRTHDAY= birthday;
-        this.BALANCE=balance;
-        this.VIPNUM=vipnum;
-    }
-
-    public String getPHONE(){
-        return  PHONE;
+    public VIPInfo(String phone, String email, int loyaltypoints, Date birthday, int dollarBalance, int eid){
+        this.phone = phone;
+        this.email  = email;
+        this.lotaltypoints  = loyaltypoints;
+        this.birthday= birthday;
+        this.dollarBalance= dollarBalance;
+        this.eid=eid;
     }
 
-    public String getEMAIL(){
-        return EMAIL;
+    public String getPhone() {
+        return phone;
     }
 
-    public int getLOYALTYPOINTS(){
-        return LOYALTYPOINTS;
+    public String getEmail() {
+        return email;
     }
 
-    public Date getBIRTHDAY(){
-        return BIRTHDAY;
-    }
-    public int getBALANCE(){
-        return BALANCE;
-    }
-    public int getVIPNUM(){
-        return VIPNUM;
+    public int getLotaltypoints() {
+        return lotaltypoints;
     }
 
-    public void setPHONE(String p ){
-        this.PHONE=p ;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setEMAIL(String e){
-        this.EMAIL=e;
+    public int getDollarBalance() {
+        return dollarBalance;
     }
 
-    public void setLOYALTYPOINTS(int l){
-        this.LOYALTYPOINTS=l;
+    public int getEid() {
+        return eid;
     }
-
-    public void setBIRTHDAY(Date d ){
-        this.BIRTHDAY=d;
-    }
-    public void setBALANCE(int b){
-         BALANCE=b;
-    }
-    public void setVIPNUM(int v){
-         VIPNUM=v;
-    }
-
-
 }
 

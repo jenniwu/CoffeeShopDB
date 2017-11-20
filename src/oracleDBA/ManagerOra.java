@@ -1,8 +1,7 @@
 package oracleDBA;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ManagerOra {
     OracleManager oraMgr;
@@ -47,6 +46,26 @@ public class ManagerOra {
             e.printStackTrace();
         }
     }
+
+    public void addProduct(int price, int stockAmount, String returnable, String pType) {
+        try {
+            PreparedStatement ps = conn.prepareStatement("insert into Product values (?,?,?,?)");
+            ps.setInt(1, price);
+            ps.setInt(2, stockAmount);
+            ps.setString(3, returnable);
+            ps.setString(4, pType);
+            ps.executeUpdate();
+            conn.commit();
+            ps.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
 
     public boolean isValidMID(int mid) {
         try {
