@@ -1,9 +1,9 @@
 package front_end.mainPage;
 
 import front_end.extra_window.transaction_for_manager;
-import front_end.import_and_export.deleteVIP;
+import front_end.import_and_export.deleteEmployee;
 import front_end.import_and_export.import_product;
-import front_end.import_and_export.updateVIP;
+import front_end.import_and_export.updateEmployee;
 import front_end.login;
 import front_end.registration.register_employee;
 import front_end.view_information.employee;
@@ -129,14 +129,14 @@ public class mainPageManager {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new deleteVIP("manager");
+                new deleteEmployee("manager");
             }
         });
         updateEmployee.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new updateVIP("manager");
+                new updateEmployee("manager");
             }
         });
         logout.addActionListener(e -> {
