@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6219c361-4379-4fd3-a563-1faa6b6a06dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/oracleDBA/VIPOra.class" afterPath="$PROJECT_DIR$/out/production/J 2/oracleDBA/VIPOra.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/J 2/front_end/import_and_export/make_order.class" afterPath="$PROJECT_DIR$/out/production/J 2/front_end/import_and_export/make_order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/front_end/view_information/transaction.java" afterPath="$PROJECT_DIR$/src/front_end/view_information/transaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/TransactionsSumInfo.java" afterPath="$PROJECT_DIR$/src/objects/TransactionsSumInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/oracleDBA/uponOra.java" afterPath="$PROJECT_DIR$/src/oracleDBA/uponOra.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/supporting_sql.sql" afterPath="$PROJECT_DIR$/src/supporting_sql.sql" />
     </list>
     <ignored path="CoffeeShopDB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +26,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="TransactionsSumInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/objects/TransactionsSumInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <folding>
+                <element signature="e#247#248#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#333#334#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TransactionsOra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+            <state relative-caret-position="930">
+              <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1511159500254" expanded="true" signature="637:663" ph="select * fro... Transactions" />
@@ -47,21 +62,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uponOra.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="uponOra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/uponOra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="332">
+              <caret line="80" column="76" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="76" />
               <folding>
-                <marker date="1511162217607" expanded="true" signature="480:498" ph="select * fro... upon" />
-                <marker date="1511162217607" expanded="true" signature="1025:1275" ph="select Trans... " />
-                <marker date="1511162217607" expanded="true" signature="1969:1998" ph="insert into upon... " />
-                <marker date="1511162217607" expanded="true" signature="2479:2601" ph="select tid, trans_upon_prod" />
-                <marker date="1511162217607" expanded="true" signature="2479:2606" ph="select tid, trans_upon_prod" />
-                <marker date="1511162217607" expanded="true" signature="3457:3897" ph="create view trans_upon_product... " />
-                <marker date="1511162217607" expanded="true" signature="3521:3897" ph="select upon.... Transactions" />
-                <marker date="1511162217607" expanded="true" signature="4154:4182" ph="drop view tr... " />
+                <marker date="1511162493217" expanded="true" signature="480:498" ph="select * fro... upon" />
+                <marker date="1511162493217" expanded="true" signature="1025:1275" ph="select Trans... " />
+                <marker date="1511162493217" expanded="true" signature="1969:1998" ph="insert into upon... " />
+                <marker date="1511162493217" expanded="true" signature="2479:2566" ph="select tid, trans_upon_prod" />
+                <marker date="1511162493217" expanded="true" signature="2479:2571" ph="select tid, trans_upon_prod" />
+                <marker date="1511162493217" expanded="true" signature="3170:3610" ph="create view trans_upon_product... " />
+                <marker date="1511162493217" expanded="true" signature="3234:3610" ph="select upon.... Transactions" />
+                <marker date="1511162493217" expanded="true" signature="3867:3895" ph="drop view tr... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="supporting_sql.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/supporting_sql.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,8 +94,8 @@
       <file leaf-file-name="SalaryOra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/SalaryOra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="84" column="45" lean-forward="true" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+            <state relative-caret-position="1140">
+              <caret line="84" column="45" lean-forward="false" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
               <folding>
                 <marker date="1511161438936" expanded="true" signature="669:689" ph="select * fro... Salary" />
                 <marker date="1511161438936" expanded="true" signature="2111:2346" ph="select Emplo... Employee" />
@@ -92,8 +117,8 @@
       <file leaf-file-name="EmployeeOra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="151" column="38" lean-forward="true" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
+            <state relative-caret-position="2265">
+              <caret line="151" column="38" lean-forward="false" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1511161834065" expanded="true" signature="589:611" ph="select * fro... Employee" />
@@ -113,7 +138,7 @@
       <file leaf-file-name="OracleManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/OracleManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
+            <state relative-caret-position="660">
               <caret line="46" column="79" lean-forward="false" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
               <folding />
             </state>
@@ -123,8 +148,8 @@
       <file leaf-file-name="ProductOra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/oracleDBA/ProductOra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="93" column="8" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="108" selection-end-column="9" />
+            <state relative-caret-position="1335">
+              <caret line="93" column="8" lean-forward="false" selection-start-line="93" selection-start-column="8" selection-end-line="108" selection-end-column="9" />
               <folding>
                 <marker date="1511155989389" expanded="true" signature="613:634" ph="select * fro... Product" />
                 <marker date="1511155989389" expanded="true" signature="1628:1664" ph="insert into Product... " />
@@ -138,44 +163,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VIPInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/objects/VIPInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VIPOra.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/oracleDBA/VIPOra.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="155" column="13" lean-forward="false" selection-start-line="155" selection-start-column="13" selection-end-line="155" selection-end-column="13" />
-              <folding>
-                <marker date="1511161836284" expanded="true" signature="540:557" ph="select * fro... Vip" />
-                <marker date="1511161836284" expanded="true" signature="1397:1444" ph="select * fro... Vip" />
-                <marker date="1511161836284" expanded="true" signature="2405:2816" ph="{...}" />
-                <marker date="1511161836284" expanded="true" signature="2883:3304" ph="{...}" />
-                <marker date="1511161836284" expanded="true" signature="3375:3796" ph="{...}" />
-                <marker date="1511161836284" expanded="true" signature="3910:4412" ph="{...}" />
-                <marker date="1511161836284" expanded="true" signature="3984:4020" ph="insert into Vip... " />
-                <marker date="1511161836284" expanded="true" signature="4460:4802" ph="{...}" />
-                <marker date="1511161836284" expanded="true" signature="4555:4586" ph="select 1 fro... Vip" />
-                <marker date="1511161836284" expanded="true" signature="4555:4587" ph="select 1 fro... Vip" />
-                <marker date="1511161836284" expanded="true" signature="4555:4588" ph="select 1 fro... Vip" />
-                <marker date="1511161836284" expanded="true" signature="4555:4592" ph="select 1 fro... Vip" />
-                <marker date="1511161836284" expanded="true" signature="4555:4602" ph="select 1 fro... Vip" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="make_order.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/front_end/import_and_export/make_order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
+            <state relative-caret-position="1785">
               <caret line="128" column="35" lean-forward="false" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
               <folding />
             </state>
@@ -208,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/oracleDBA/CustomerOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/trackInfo.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/trackOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/uponInfo.java" />
@@ -239,7 +229,6 @@
         <option value="$PROJECT_DIR$/src/front_end/registration/register_employee.java" />
         <option value="$PROJECT_DIR$/src/front_end/registration/register_VIP.java" />
         <option value="$PROJECT_DIR$/src/objects/joinUponInfo.java" />
-        <option value="$PROJECT_DIR$/src/objects/TransactionsSumInfo.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java" />
         <option value="$PROJECT_DIR$/src/front_end/extra_window/employee_identify_for_infor.java" />
         <option value="$PROJECT_DIR$/src/front_end/mainPage/mainPageEmployee.java" />
@@ -258,7 +247,9 @@
         <option value="$PROJECT_DIR$/src/objects/joinSalaryInfo.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/SalaryOra.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java" />
+        <option value="$PROJECT_DIR$/src/objects/TransactionsSumInfo.java" />
         <option value="$PROJECT_DIR$/src/oracleDBA/uponOra.java" />
+        <option value="$PROJECT_DIR$/src/supporting_sql.sql" />
       </list>
     </option>
   </component>
@@ -290,6 +281,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,16 +307,18 @@
               <item name="CoffeeShopDB" type="b2602c69:ProjectViewProjectNode" />
               <item name="CoffeeShopDB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CoffeeShopDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoffeeShopDB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="oracleDBA" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,6 +562,7 @@
       <workItem from="1511078153304" duration="3027000" />
       <workItem from="1511147362226" duration="3015000" />
       <workItem from="1511159505324" duration="2703000" />
+      <workItem from="1511162300914" duration="276000" />
     </task>
     <task id="LOCAL-00001" summary="At least this version of code has all the tables and the attributes.">
       <created>1510999908339</created>
@@ -703,7 +701,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15521000" />
+    <option name="totallyTimeSpent" value="15797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="23" width="1398" height="823" extended-state="0" />
@@ -711,13 +709,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30226365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30226365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -725,7 +722,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19098713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -736,7 +732,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -796,7 +794,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Documents/WeChat Files/Just-Leslie/Files/cs_database(6).sql" />
     <entry file="file://$PROJECT_DIR$/src/front_end/view_information/makes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -882,9 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="89" column="53" lean-forward="false" selection-start-line="89" selection-start-column="53" selection-end-line="89" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -908,7 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="178" column="35" lean-forward="false" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -949,17 +942,6 @@
           <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
           <folding>
             <element signature="e#629#630#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/TransactionsSumInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding>
-            <element signature="e#329#330#0" expanded="false" />
-            <element signature="e#355#356#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1035,14 +1017,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/front_end/extra_window/VIP_identify_for_info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="60" column="59" lean-forward="false" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/front_end/extra_window/VIP_identify_for_info.java" />
     <entry file="file://$PROJECT_DIR$/src/front_end/import_and_export/deleteVIP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1101,7 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1123,7 +1097,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/VIPInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="495">
           <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
           <folding />
         </state>
@@ -1131,17 +1105,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/VIPOra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state relative-caret-position="2250">
           <caret line="155" column="13" lean-forward="false" selection-start-line="155" selection-start-column="13" selection-end-line="155" selection-end-column="13" />
           <folding>
             <marker date="1511161836284" expanded="true" signature="540:557" ph="select * fro... Vip" />
             <marker date="1511161836284" expanded="true" signature="1397:1444" ph="select * fro... Vip" />
-            <marker date="1511161836284" expanded="true" signature="2405:2816" ph="{...}" />
-            <marker date="1511161836284" expanded="true" signature="2883:3304" ph="{...}" />
-            <marker date="1511161836284" expanded="true" signature="3375:3796" ph="{...}" />
-            <marker date="1511161836284" expanded="true" signature="3910:4412" ph="{...}" />
             <marker date="1511161836284" expanded="true" signature="3984:4020" ph="insert into Vip... " />
-            <marker date="1511161836284" expanded="true" signature="4460:4802" ph="{...}" />
             <marker date="1511161836284" expanded="true" signature="4555:4586" ph="select 1 fro... Vip" />
             <marker date="1511161836284" expanded="true" signature="4555:4587" ph="select 1 fro... Vip" />
             <marker date="1511161836284" expanded="true" signature="4555:4588" ph="select 1 fro... Vip" />
@@ -1153,7 +1122,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/front_end/import_and_export/make_order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
+        <state relative-caret-position="1785">
           <caret line="128" column="35" lean-forward="false" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
           <folding />
         </state>
@@ -1169,8 +1138,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/SalaryOra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="84" column="45" lean-forward="true" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+        <state relative-caret-position="1140">
+          <caret line="84" column="45" lean-forward="false" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
           <folding>
             <marker date="1511161438936" expanded="true" signature="669:689" ph="select * fro... Salary" />
             <marker date="1511161438936" expanded="true" signature="2111:2346" ph="select Emplo... Employee" />
@@ -1180,8 +1149,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/ProductOra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="93" column="8" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="108" selection-end-column="9" />
+        <state relative-caret-position="1335">
+          <caret line="93" column="8" lean-forward="false" selection-start-line="93" selection-start-column="8" selection-end-line="108" selection-end-column="9" />
           <folding>
             <marker date="1511155989389" expanded="true" signature="613:634" ph="select * fro... Product" />
             <marker date="1511155989389" expanded="true" signature="1628:1664" ph="insert into Product... " />
@@ -1196,8 +1165,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/EmployeeOra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="151" column="38" lean-forward="true" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
+        <state relative-caret-position="2265">
+          <caret line="151" column="38" lean-forward="false" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511161834065" expanded="true" signature="589:611" ph="select * fro... Employee" />
@@ -1215,7 +1184,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/OracleManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
+        <state relative-caret-position="660">
           <caret line="46" column="79" lean-forward="false" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
           <folding />
         </state>
@@ -1223,8 +1192,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/TransactionsOra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+        <state relative-caret-position="930">
+          <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511159500254" expanded="true" signature="637:663" ph="select * fro... Transactions" />
@@ -1241,20 +1210,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/objects/TransactionsSumInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/oracleDBA/uponOra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="332">
+          <caret line="80" column="76" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="76" />
           <folding>
-            <marker date="1511162217607" expanded="true" signature="480:498" ph="select * fro... upon" />
-            <marker date="1511162217607" expanded="true" signature="1025:1275" ph="select Trans... " />
-            <marker date="1511162217607" expanded="true" signature="1969:1998" ph="insert into upon... " />
-            <marker date="1511162217607" expanded="true" signature="2479:2601" ph="select tid, trans_upon_prod" />
-            <marker date="1511162217607" expanded="true" signature="2479:2606" ph="select tid, trans_upon_prod" />
-            <marker date="1511162217607" expanded="true" signature="3457:3897" ph="create view trans_upon_product... " />
-            <marker date="1511162217607" expanded="true" signature="3521:3897" ph="select upon.... Transactions" />
-            <marker date="1511162217607" expanded="true" signature="4154:4182" ph="drop view tr... " />
+            <marker date="1511162493217" expanded="true" signature="480:498" ph="select * fro... upon" />
+            <marker date="1511162493217" expanded="true" signature="1025:1275" ph="select Trans... " />
+            <marker date="1511162493217" expanded="true" signature="1969:1998" ph="insert into upon... " />
+            <marker date="1511162493217" expanded="true" signature="2479:2566" ph="select tid, trans_upon_prod" />
+            <marker date="1511162493217" expanded="true" signature="2479:2571" ph="select tid, trans_upon_prod" />
+            <marker date="1511162493217" expanded="true" signature="3170:3610" ph="create view trans_upon_product... " />
+            <marker date="1511162493217" expanded="true" signature="3234:3610" ph="select upon.... Transactions" />
+            <marker date="1511162493217" expanded="true" signature="3867:3895" ph="drop view tr... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/supporting_sql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -26,10 +26,10 @@ public class transaction extends JFrame
 
         //headers for the table
         String[] columns = new String[] {
-                "transaction id", "date", "time", "customer id", "employee id"
+                "transaction id", "date", "time", "customer id", "employee id", "amount"
         };
         //actual data for the table in a 2d array
-        Object[][] data = new Object[list.size()][5];
+        Object[][] data = new Object[list.size()][6];
 
         for (int x = 0; x < list.size(); x++)
         {
@@ -38,6 +38,7 @@ public class transaction extends JFrame
             data[x][2] = list.get(x).getTtime();
             data[x][3] = list.get(x).getCid();
             data[x][4] = list.get(x).getEid();
+            data[x][5] = list.get(x).getTamount();
 
         }
 
