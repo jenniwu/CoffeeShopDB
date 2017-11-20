@@ -42,8 +42,8 @@ public class makesOra {
         List<joinMakesInfo> ret = new ArrayList<>();
         try {
             Statement st = conn.createStatement();
-            String query = "select Transactions.tid, Transactions.tday, Transactions.ttime"
-                    + "Vip.phone, Vip.email, Vip.loyaltypoints, Vip.birthday, Vip.dollarBalance"
+            String query = "select Transactions.tid, Transactions.tday, Transactions.ttime,"
+                    + "Vip.phone, Vip.email, Vip.loyaltypoints, Vip.birthday, Vip.dollarBalance,"
                     + "track.rating from Customer"
                     + "join Transactions on Customer.cid = Transactions.cid"
                     + "join makes"

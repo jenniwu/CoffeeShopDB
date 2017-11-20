@@ -1,6 +1,7 @@
 package oracleDBA;
 
 import objects.SalaryInfo;
+import objects.joinSalaryInfo;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -65,18 +66,25 @@ public class SalaryOra {
             return false;
     }
 
-    public List<SalaryInfo> getSalariesByEmployee(int eid) {
-        List<SalaryInfo> ret = new ArrayList<>();
+    public List<joinSalaryInfo> getSalariesByEmployee(int eid) {
+        List<joinSalaryInfo> ret = new ArrayList<>();
 
         try {
             Statement st = conn.createStatement();
-            String query = "select * from Employee where eid = " + eid;
+            String query = "select Employee.eid, Employee.ename,"
+                            + "Salary.tier, Salary.frequency, Salary.bonus from Employee"
+                            + "join Salary on Employee.tier = Salary.tier";
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
                 int tier = rs.getInt("tier");
                 String freq = rs.getString("frequency");
                 int bonus = rs.getInt("bonus");
-                SalaryInfo s = new SalaryInfo(tier, freq, bonus);
+                int EID = rs.getInt("eid");
+                String ENAME = rs.getString("ename");
+                String POSITION = rs.getString("position");
+                int TIER = rs.getInt("tier");
+                int MMID = rs.getInt("mmid");
+                joinSalaryInfo s = new joinSalaryInfo(tier, freq, bonus,EID,ENAME,POSITION,TIER,MMID);
                 ret.add(s);
             }
         } catch (SQLException e) {

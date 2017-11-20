@@ -132,18 +132,15 @@ public class EmployeeOra {
         return ret;
     }
 
-    public boolean deleteEmployeeInDB(int eid) {
+    public void deleteEmployeeInDB(int eid) {
         oracleManager.getConnection();
 
-        int rowCount = oracleManager.execute("DELETE from Employee WHERE eid = "
-                + eid);
+        String sqlCommand = "delete from Employee where eid = " + eid;
+        System.out.println(sqlCommand);
+        oracleManager.execute(sqlCommand);
 
         oracleManager.disconnect();
 
-        if (rowCount == 1)
-            return true;
-        else
-            return false;
     }
 
 
