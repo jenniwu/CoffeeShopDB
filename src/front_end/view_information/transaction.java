@@ -26,7 +26,7 @@ public class transaction extends JFrame
 
         //headers for the table
         String[] columns = new String[] {
-                "transaction id", "date", "time", "customer id", "employee id", "amouont"
+                "transaction id", "date", "time", "customer id", "employee id", "amount"
         };
         //actual data for the table in a 2d array
         Object[][] data = new Object[list.size()][6];
