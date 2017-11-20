@@ -5,11 +5,15 @@ import front_end.mainPage.mainPageManager;
 import front_end.mainPage.mainPageTemp;
 import front_end.mainPage.mainPageVIP;
 import front_end.view_information.transaction;
+import front_end.view_information.transactionSum;
 import oracleDBA.EmployeeOra;
 import oracleDBA.TransactionsOra;
+import oracleDBA.uponOra;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by user on 11/16/2017.
@@ -25,6 +29,7 @@ public class transaction_for_manager {
     private JButton submitButton;
     private JButton backButton;
     private JButton viewAll;
+    private JButton viewByProduct;
     private JLabel labelid;
     private JLabel labelfrom;
     private JLabel labelto;
@@ -59,12 +64,14 @@ public class transaction_for_manager {
         submitButton = new JButton("Submit");
         backButton = new JButton("Back to main page");
         viewAll = new JButton("View All Transactions");
+        viewByProduct = new JButton("View By Product");
         eId = new JTextField(5);
         eFrom = new JTextField(5);
         eTo = new JTextField(5);
         invalid = new JLabel();
 
         panelTop.add(viewAll);
+        panelTop.add(viewByProduct);
         panelMiddle.add(labelid);
         panelMiddle.add(eId);
         panelMiddle.add(labelfrom);
@@ -93,6 +100,15 @@ public class transaction_for_manager {
                 new transaction(transactionsOra.getTransactions(),"manager");
             }else if(back_user_type.equals("temp")){
                 new transaction(transactionsOra.getTransactions(),"temp");
+            }
+        });
+
+        viewByProduct.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                uponOra up = new uponOra();
+                frame.setVisible(false);
+                new transactionSum(up.groupByPtype(),"manager");
             }
         });
 

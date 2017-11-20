@@ -78,20 +78,15 @@ public class uponOra {
             createTransJoinProd();
 
             Statement st = conn.createStatement();
-            String query = "select tid, tamount, tday, ttime, cid, eid, sum(price), ptype from trans_upon_prod "
-                         + "group by ptype";
+            String query = "select sum(tamount), ptype from trans_upon_prod "
+                    + "group by ptype";
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {
-                int tid = rs.getInt("tid");
-                int tamount = rs.getInt("tamount");
-                Date tday = rs.getDate("tday");
-                String ttime = rs.getString("ttime");
-                int cid = rs.getInt("cid");
-                int eid = rs.getInt("eid");
-                int sum = rs.getInt("sum(price)");
+                int tamount = rs.getInt("sum(tamount)");
+                String ptype = rs.getString("ptype");
 
-                TransactionsSumInfo tsi = new TransactionsSumInfo(tid, tamount, tday, ttime, cid, eid, sum);
+                TransactionsSumInfo tsi = new TransactionsSumInfo(tamount, ptype);
                 ret.add(tsi);
             }
 
