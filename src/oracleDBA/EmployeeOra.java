@@ -42,7 +42,7 @@ public class EmployeeOra {
         return ret;
     }
 
-    public void insertEmployee(String ename, String position,  int tier, int mmid) {
+    public void insertEmployee(String ename, String position, int tier, int mmid) {
         rand = new Random();
         int eid = rand.nextInt(9999);
         if (!isValidEID(eid)) {
@@ -59,7 +59,7 @@ public class EmployeeOra {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-        }
+        } else insertEmployee(ename, position, tier, mmid);
     }
 
     public boolean isValidEID(int eid) {

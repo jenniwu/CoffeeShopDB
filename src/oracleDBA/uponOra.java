@@ -1,20 +1,15 @@
 package oracleDBA;
 
-import objects.TransactionsSumInfo;
-import objects.joinUponInfo;
-import objects.uponInfo;
+import objects.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
-/**
- * Created by shadongliu on 2017-11-18.
- */
 public class uponOra {
     OracleManager om;
     Connection conn;
@@ -68,34 +63,30 @@ public class uponOra {
         return ret;
     }
 
-    public List<TransactionsSumInfo> groupTransactionsByProd(String ptype) {
+    public List<TransactionsSumInfo> groupByTID() {
         List<TransactionsSumInfo> ret = new ArrayList<>();
         try {
+            createTransJoinProd();
+
             Statement st = conn.createStatement();
-            String query = "select sum(price), tday, ttime, tid, ptype from trans_upon_prod ";
+            String query = "select tid, tday, ttime, cid, eid, sum(price) from trans_upon_prod "
+                         + "group by tid";
             ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                int tid = rs.getInt("tid");
+                Date tday = rs.getDate("tday");
+                String ttime = rs.getString("ttime");
+                int cid = rs.getInt("cid");
+                int eid = rs.getInt("eid");
+                int sum = rs.getInt("sum(price)");
+
+                TransactionsSumInfo tsi = new TransactionsSumInfo(tid, tday, ttime, cid, eid, sum);
+                ret.add(tsi);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-//        try {
-////            Statement st = conn.createStatement();
-////            String query = "select Transactions.tday, Transactions.ttime, Transactions.tid, upon.ptype, Product.price"
-////                    + "from Transactions join upon on upon.tid = Transactions.tid "
-////                    + "join Product on Product.ptype = upon.ptype";
-////            ResultSet rs = st.executeQuery(query);
-////
-////            while (rs.next()) {
-////                int tid = rs.getInt("tid");
-////                Date tday = rs.getDate("tday");
-////                String ttime = rs.getString("ttime");
-////                String ptype = rs.getString("ptype");
-////                int price = rs.getInt("price");
-////
-////                joinUponInfo jui = new joinUponInfo(tid, tday, ttime, ptype, price);
-////                ret.add(jui);
-////            }
-
-
         return ret;
     }
 

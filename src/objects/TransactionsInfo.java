@@ -7,13 +7,15 @@ import java.sql.Date;
  */
 public class TransactionsInfo {
     int tid;
+    int tamount;
     Date tday;
     String ttime;
     int cid;
     int eid;
 
-    public TransactionsInfo(int tid, Date tday, String ttime, int cid, int eid) {
+    public TransactionsInfo(int tid, int tamount, Date tday, String ttime, int cid, int eid) {
         this.tid = tid;
+        this.tamount = tamount;
         this.tday = tday;
         this.ttime = ttime;
         this.cid = cid;
@@ -22,6 +24,10 @@ public class TransactionsInfo {
 
     public int getTid() {
         return tid;
+    }
+
+    public int getTamount() {
+        return tamount;
     }
 
     public Date getTday() {

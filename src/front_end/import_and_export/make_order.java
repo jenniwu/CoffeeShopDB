@@ -5,6 +5,7 @@ import front_end.mainPage.mainPageManager;
 import front_end.mainPage.mainPageTemp;
 import front_end.mainPage.mainPageVIP;
 import oracleDBA.ProductOra;
+import oracleDBA.TransactionsOra;
 
 import javax.swing.*;
 import java.awt.*;
@@ -50,6 +51,7 @@ public class make_order {
         frame.setLocationRelativeTo(null);
         frame.setSize(width,height);
         ProductOra productOra = new ProductOra();
+        TransactionsOra transactionsOra = new TransactionsOra();
 
         panelTop = new JPanel(new FlowLayout(FlowLayout.CENTER));
         panelMiddle = new JPanel(new GridLayout(3,2));
@@ -115,13 +117,14 @@ public class make_order {
                 invalid.setText("Not enough products in stock");
                 invalid.setForeground(Color.red);
                 return;
-            }else {
+            } else {
                 productOra.updateStock(-a,"coffee");
                 productOra.updateStock(-b,"coffee beans");
                 productOra.updateStock(-c,"coffee machine");
+                int tid = transactionsOra.generateTID();
             }
 
-            invalid.setText("Make Order Successfully");
+            invalid.setText("Make Order Successful");
             invalid.setForeground(Color.GREEN);
         });
 
