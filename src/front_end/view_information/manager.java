@@ -2,7 +2,10 @@ package front_end.view_information; /**
  * Created by zhanghuanxin on 2017-11-16.
  */
 
-import front_end.mainPageVIP;
+import front_end.mainPage.mainPageEmployee;
+import front_end.mainPage.mainPageManager;
+import front_end.mainPage.mainPageTemp;
+import front_end.mainPage.mainPageVIP;
 import oracleDBA.ManagerInfo;
 
 import javax.swing.*;
@@ -15,8 +18,11 @@ public class manager extends JFrame
     private static final int width = 450;
     private static final int height = 400;
 
-    public manager(List<ManagerInfo> list)
+    private String back_user_type;
+
+    public manager(List<ManagerInfo> list,String userType)
     {
+        this.back_user_type = userType;
         //headers for the table
         String[] columns = new String[] {
                 "manager id", "name"
@@ -51,7 +57,15 @@ public class manager extends JFrame
 
         backButton.addActionListener(e -> {
             setVisible(false);
-            new mainPageVIP();
+            if(back_user_type.equals("vip")){
+                new mainPageVIP();
+            }else if(back_user_type.equals("employee")){
+                new mainPageEmployee();
+            }else if(back_user_type.equals("manager")){
+                new mainPageManager();
+            }else {
+                new mainPageTemp();
+            }
         });
     }
 }
