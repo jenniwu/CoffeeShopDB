@@ -103,6 +103,7 @@ grant select on Customer to public;
 
 create table Transactions
   (tid int not null,
+  tamount int not null,
   tday date not null,
   ttime varchar(30) not null,
   cid int not null,
@@ -224,12 +225,12 @@ insert into Customer values
 -- (15, 'O. Oliver', '778-123-2345');
 
 insert into Transactions values
---(tid,tday,ttime,cid,eid)
-(12345, '2017-11-15', '20:20:20',1,1234);
+--(tid,tamount,tday,ttime,cid,eid)
+(12345, 20, '2017-11-15', '20:20:20',1,1234);
 insert into Transactions values
-(23456, '2017-11-02', '18:30:00',2,2234);
+(23456, 5, '2017-11-02', '18:30:00',2,2234);
 insert into Transactions values
-(67821, '2017-08-15', '23:08:36',3,8265);
+(67821, 50, '2017-08-15', '23:08:36',3,8265);
 
 
 insert into makes values

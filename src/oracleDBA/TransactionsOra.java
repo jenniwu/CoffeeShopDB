@@ -4,12 +4,15 @@ import objects.InputInfo;
 import objects.TransactionsInfo;
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class TransactionsOra {
     OracleManager om;
     Connection conn;
+    Random rand;
 
     public TransactionsOra() {
         om = OracleManager.getInstance();
@@ -24,12 +27,13 @@ public class TransactionsOra {
 
             while (rs.next()) {
                 int tid = rs.getInt("tid");
+                int tamount = rs.getInt("tamount");
                 Date tday = rs.getDate("tday");
                 String ttime = rs.getString("ttime");
                 int cid = rs.getInt("cid");
                 int eid = rs.getInt("eid");
 
-                TransactionsInfo ti = new TransactionsInfo(tid, tday, ttime, cid, eid);
+                TransactionsInfo ti = new TransactionsInfo(tid, tamount, tday, ttime, cid, eid);
                 ret.add(ti);
             }
         } catch (SQLException e) {
@@ -38,32 +42,37 @@ public class TransactionsOra {
         return ret;
     }
 
-    public void insertTransactions(int tid, Date tday, String ttime, int cid, int eid){
-        String sqlCommand1 = "insert into Transactions values("
-                +  tid  + ", "
-                + "'" + tday + "'" + ", "
-                + cid + ", " + eid
-                + ")";
-        om.execute(sqlCommand1);
+    public int generateTID() {
+        rand = new Random();
+        int tid = rand.nextInt(99999);
+        if(isValidTID(tid)) generateTID();
+        return tid;
     }
 
-    public boolean updateTransactionsInDB(int tid , Date tday , String ttime, int cid, int eid) {
-        om.getConnection();
-        int rowCount = om.execute("UPDATE Transactions SET tday = "
-                + tday
-                + " , ttime = "
-                + ttime
-                + " , cid = "
-                + cid
-                + " , eid = "
-                + eid
-                + " WHERE tid = "
-                + tid);
-        om.disconnect();
-        if (rowCount == 1)
-            return true;
-        else
-            return false;
+    public void insertTransactions(int tid, int tamount, int cid, int eid) {
+        java.util.Date date = new java.util.Date();
+        Date tday = new Date(date.getTime());
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        String ttime = sdf.format(date);
+        String sqlCommand1 = "insert into Transactions values ("
+                    + tid + ", "
+                    + tamount + ", "
+                    + "'" + tday + "', "
+                    + "'" + ttime + "',"
+                    + cid + ", " + eid + ")";
+            om.execute(sqlCommand1);
+    }
+
+    public boolean isValidTID(int tid) {
+        try {
+            Statement st = conn.createStatement();
+            String query = "select 1 from Transactions where tid = " + tid;
+            ResultSet rs = st.executeQuery(query);
+            if (!rs.next()) return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
     }
 
     public List<InputInfo> getTransactionsJoinEmployee() {
@@ -105,16 +114,17 @@ public class TransactionsOra {
         try {
             createTransJoinEmpl();
             Statement st = conn.createStatement();
-            String query = "select tid, tday, ttime, cid from trans_input_empl where eid = " + eid;
+            String query = "select tid, tamount, tday, ttime, cid from trans_input_empl where eid = " + eid;
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {
                 int tid = rs.getInt("tid");
+                int tamount = rs.getInt("tamount");
                 Date tday = rs.getDate("tday");
                 String ttime = rs.getString("ttime");
                 int cid = rs.getInt("cid");
 
-                TransactionsInfo ti = new TransactionsInfo(tid, tday, ttime, cid, eid);
+                TransactionsInfo ti = new TransactionsInfo(tid, tamount, tday, ttime, cid, eid);
                 ret.add(ti);
             }
 
@@ -135,12 +145,13 @@ public class TransactionsOra {
 
             while (rs.next()) {
                 int tid = rs.getInt("tid");
+                int tamount = rs.getInt("tamount");
                 Date tday = rs.getDate("tday");
                 String ttime = rs.getString("ttime");
                 int cid = rs.getInt("cid");
                 int eid = rs.getInt("eid");
 
-                TransactionsInfo ti = new TransactionsInfo(tid, tday, ttime, cid, eid);
+                TransactionsInfo ti = new TransactionsInfo(tid, tamount, tday, ttime, cid, eid);
                 ret.add(ti);
             }
 
@@ -162,11 +173,12 @@ public class TransactionsOra {
 
             while (rs.next()) {
                 int tid = rs.getInt("tid");
+                int tamount = rs.getInt("tamount");
                 Date tday = rs.getDate("tday");
                 String ttime = rs.getString("ttime");
                 int cid = rs.getInt("cid");
 
-                TransactionsInfo ti = new TransactionsInfo(tid, tday, ttime, cid, eid);
+                TransactionsInfo ti = new TransactionsInfo(tid, tamount, tday, ttime, cid, eid);
                 ret.add(ti);
             }
 
@@ -183,7 +195,7 @@ public class TransactionsOra {
             Statement st = conn.createStatement();
             String query = "create view trans_input_empl as "
                     + "select Employee.ename, Employee.eid, Employee.position, Employee.tier, Employee.mmid, "
-                    + "Transactions.tid, Transactions.tday, Transactions.ttime, Transactions.cid "
+                    + "Transactions.tid, Transactions.tamount, Transactions.tday, Transactions.ttime, Transactions.cid "
                     + "from Employee join Transactions on Employee.eid = Transactions.eid";
             st.executeQuery(query);
         } catch (SQLException e) {
