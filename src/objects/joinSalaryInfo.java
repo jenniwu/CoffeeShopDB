@@ -26,4 +26,20 @@ public class joinSalaryInfo extends SalaryInfo{
     public int getBONUS(){
         return BONUS;
     }
+
+    public int getEID() {
+        return EID;
+    }
+
+    public String getENAME() {
+        return ENAME;
+    }
+
+    public int getMMID() {
+        return MMID;
+    }
+
+    public String getPOSITION() {
+        return POSITION;
+    }
 }

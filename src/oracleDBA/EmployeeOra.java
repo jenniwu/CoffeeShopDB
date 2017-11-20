@@ -3,8 +3,9 @@ package oracleDBA;
 import objects.EmployeeInfo;
 
 import java.sql.*;
-import java.util.*;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 
 public class EmployeeOra {
@@ -147,9 +148,9 @@ public class EmployeeOra {
 
     public boolean updateEmployeePosition(int eid, String position) {
         oracleManager.getConnection();
-        String query = "UPDATE Employee SET position = "
+        String query = "UPDATE Employee SET position = '"
                 + position
-                + " WHERE eid = "
+                + "' WHERE eid = "
                 + eid;
         System.out.println(query);
         int rowCount = oracleManager.execute(query);

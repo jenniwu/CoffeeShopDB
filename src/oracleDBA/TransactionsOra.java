@@ -147,7 +147,7 @@ public class TransactionsOra {
 
         try {
             Statement st = conn.createStatement();
-            String query = "select * from Transactions where tday between '" + fromDay + "' and '" + toDay + "'";
+            String query = "select * from Transactions where tday between \'" + fromDay + "\' and \'" + toDay + "\'";
             ResultSet rs = st.executeQuery(query);
 
             while (rs.next()) {

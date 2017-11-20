@@ -1,7 +1,9 @@
 package front_end.mainPage;
 
 import front_end.extra_window.transaction_for_manager;
+import front_end.import_and_export.deleteEmployee;
 import front_end.import_and_export.import_product;
+import front_end.import_and_export.updateEmployee;
 import front_end.login;
 import front_end.registration.register_employee;
 import front_end.view_information.employee;
@@ -12,10 +14,12 @@ import oracleDBA.ManagerOra;
 import oracleDBA.SalaryOra;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class mainPageManager {
     private static final int width = 450;
-    private static final int height = 300;
+    private static final int height = 450;
 
     private JFrame frame;
     private JPanel panel;
@@ -27,6 +31,8 @@ public class mainPageManager {
     private JButton managerInformation;
     private JButton trackInformation;
     private JButton transactionView;
+    private JButton deleteEmplouee;
+    private JButton updateEmplouee;
     private JButton logout;
 
     public mainPageManager()
@@ -50,6 +56,10 @@ public class mainPageManager {
         box.add(Box.createVerticalStrut(10));
         box.add(transactionView);
         box.add(Box.createVerticalStrut(10));
+        box.add(deleteEmplouee);
+        box.add(Box.createVerticalStrut(10));
+        box.add(updateEmplouee);
+        box.add(Box.createVerticalStrut(10));
         box.add(logout);
 
         panel.add(box);
@@ -67,6 +77,8 @@ public class mainPageManager {
         managerInformation = new JButton("Manager Information");
         trackInformation = new JButton("Table <Product> and <Supplier> Information");
         transactionView = new JButton("View Transactions");
+        deleteEmplouee = new JButton("Delete Employee");
+        updateEmplouee = new JButton("Update Employee");
         logout = new JButton("Logout");
 
         BoxOfButton();
@@ -112,6 +124,20 @@ public class mainPageManager {
         transactionView.addActionListener(e -> {
             frame.setVisible(false);
             new transaction_for_manager("manager");
+        });
+        deleteEmplouee.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                new deleteEmployee("manager");
+            }
+        });
+        updateEmplouee.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                new updateEmployee("manager");
+            }
         });
         logout.addActionListener(e -> {
             frame.setVisible(false);

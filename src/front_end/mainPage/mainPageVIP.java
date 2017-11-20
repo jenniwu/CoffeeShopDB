@@ -46,8 +46,8 @@ public class mainPageVIP {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         makeOrder = new JButton("Make Order");
-        VIPInformation = new JButton("VIP Information");
-        transactionInformation = new JButton("Transaction Information");
+        VIPInformation = new JButton("VIP Information (yourself)");
+        transactionInformation = new JButton("Transaction Information (yourself)");
         logout = new JButton("Logout");
 
         BoxOfButton();

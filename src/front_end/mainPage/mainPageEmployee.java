@@ -1,10 +1,16 @@
 package front_end.mainPage;
 
+import front_end.extra_window.employee_identify_for_infor;
+import front_end.extra_window.employee_identify_for_salary;
 import front_end.import_and_export.make_order;
 import front_end.login;
 import front_end.registration.register_VIP;
-import front_end.view_information.*;
-import oracleDBA.*;
+import front_end.view_information.product;
+import front_end.view_information.transaction;
+import front_end.view_information.vip;
+import oracleDBA.ProductOra;
+import oracleDBA.TransactionsOra;
+import oracleDBA.VIPOra;
 
 import javax.swing.*;
 
@@ -59,10 +65,10 @@ public class mainPageEmployee {
         registerNewVIP = new JButton("Register VIP");
         makeOrder = new JButton("Make Order");
         VIPInformation = new JButton("VIP Information");
-        employeeInformation = new JButton("Employee Information");
+        employeeInformation = new JButton("Employee Information (yourself)");
         productInformation = new JButton("Product Information");
         transactionInformation = new JButton("Transaction Information");
-        salaryInformation = new JButton("Salary Information");
+        salaryInformation = new JButton("Salary Information (yourself)");
         logout = new JButton("Logout");
 
         BoxOfButton();
@@ -103,14 +109,12 @@ public class mainPageEmployee {
         employeeInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view Salary information
-            EmployeeOra employeeOra = new EmployeeOra();
-            new employee(employeeOra.getEmployees(),"employee");
+            new employee_identify_for_infor("employee");
         });
         salaryInformation.addActionListener(e -> {
             frame.setVisible(false);
             // TODO: only view salary information
-            SalaryOra salaryOra = new SalaryOra();
-            new salary(salaryOra.getSalaries(),"employee");
+            new employee_identify_for_salary("employee");
         });
         logout.addActionListener(e -> {
             frame.setVisible(false);
