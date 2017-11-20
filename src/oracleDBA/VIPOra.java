@@ -127,4 +127,8 @@ public class VIPOra {
         }
     }
 
+    public void go(int i){
+        i = 0;
+    }
+
 }
